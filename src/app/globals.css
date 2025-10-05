@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
+/* biome-ignore lint/suspicious/noUnknownAtRules: Tailwind theme */
 @theme {
-  --color-brand-navy: #1D3557;
-  --color-brand-steel: #457B9D;
-  --color-brand-beige: #F8F7F4;
-  --color-brand-charcoal: #1C1C1C;
-  --color-brand-amber: #E9C46A;
-  --color-brand-rust: #E76F51;
-  
+  --color-brand-navy: #1d3557;
+  --color-brand-steel: #457b9d;
+  --color-brand-beige: #f8f7f4;
+  --color-brand-charcoal: #1c1c1c;
+  --color-brand-amber: #e9c46a;
+  --color-brand-rust: #e76f51;
+
   --font-family-sora: var(--font-sora), system-ui, sans-serif;
   --font-family-inter: var(--font-inter), system-ui, sans-serif;
 }
@@ -21,7 +22,12 @@ body {
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-sora), system-ui, sans-serif;
 }
 
