@@ -1,0 +1,58 @@
+[
+  {
+    "uuid": "contentstack",
+    "company": "Contentstack",
+    "location": "Virar, India",
+    "roles": [
+      {
+        "uuid": "senior-software-engineer-2",
+        "title": "Senior Software Engineer 2",
+        "period": "Feb 2024 – Present",
+        "achievements": [
+          "Led development of the flagship Visual Editing Platform using Module Federation, enabling secure real-time inline editing with iframe sandboxing and post-message communication, and optimized performance with React Query.",
+          "Built a robust testing infrastructure with React Testing Library and Playwright E2E, integrating Slack alerts to reduce regression issues and accelerate debugging.",
+          "Built an automated Starter App deployment flow for feature testing in isolated playgrounds, using AWS API Gateway for public endpoints, SQS for inter-Lambda messaging, DLQ for error handling, and Slack integration for real-time status updates and logging.",
+          "Developed the Audience Insight App by integrating CDP data and delivering advanced visualizations using Highcharts and D3.js, providing actionable insights to customers."
+        ]
+      },
+      {
+        "uuid": "senior-software-engineer-1",
+        "title": "Senior Software Engineer 1",
+        "period": "Feb 2023 – Feb 2024",
+        "achievements": [
+          "Led the first AI integration within the CMS, leveraging OpenAI APIs to enable content generation. Designed and hosted a secure backend proxy to handle API key protection, streaming responses, and ensure reliability at scale.",
+          "Modernized Preview Services by implementing dedicated REST and GraphQL APIs in NestJS, integrating schema introspection and optimized query handling for scalability, while leveraging gRPC for data fetching and enforcing Role-Based Access Control with OPA policies."
+        ]
+      },
+      {
+        "uuid": "software-engineer-2",
+        "title": "Software Engineer 2",
+        "period": "Feb 2022 – Feb 2023",
+        "achievements": [
+          "Optimized RTE document performance by applying a Copy-on-Write (CoW) strategy and restructuring APIs, reducing response times by 61% for medium content and 94% for large content.",
+          "Architected and delivered commenting support in RTE, designing backend APIs and UI workflows that allowed users to comment, reply, and resolve feedback in real-time."
+        ]
+      },
+      {
+        "uuid": "associate-software-engineer",
+        "title": "Associate Software Engineer",
+        "period": "July 2021 – Feb 2022",
+        "achievements": [
+          "Designed and implemented backend architecture for a JSON-based Rich Text Editor, with block-structured diff storage, versioning, and optimized indexing to support scalable document editing.",
+          "Authored open-source libraries enabling seamless conversion between JSON and HTML RTE formats, driving adoption across internal teams and external developers.",
+          "Built a lightweight image editing app with advanced features (crop, rotate, focal point selection), improving content customization in the CMS."
+        ]
+      },
+      {
+        "uuid": "fullstack-consultant",
+        "title": "Fullstack Consultant",
+        "period": "Aug 2020 – July 2021",
+        "achievements": [
+          "Designed and developed a JSON-based Rich Text Editor (RTE) with advanced features such as drag-and-drop, table support, and seamless copy-paste from Google Docs, MS Word, and other sources. Optimized rendering to handle large documents with minimal latency, improving editor performance by ~40%.",
+          "Engineered reusable higher-order components (HOCs) to extend the JSON RTE into HTML and Markdown variants, enabling flexible integration across multiple workflows.",
+          "Delivered editor components widely adopted in core CMS products, now supporting 1,000+ concurrent users daily with high reliability."
+        ]
+      }
+    ]
+  }
+]

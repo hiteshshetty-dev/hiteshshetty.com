@@ -1,0 +1,26 @@
+[
+  {
+    "uuid": "slate-js",
+    "name": "Slate.js",
+    "description": "Contributed fixes to Slate.js, a leading React-based rich text editor",
+    "stars": "30k+",
+    "url": "https://github.com/ianstormtaylor/slate/pulls?q=is%3Apr+is%3Aclosed+author%3Ahiteshshetty-dev",
+    "contributions": "Bug fixes and enhancements"
+  },
+  {
+    "uuid": "stylex",
+    "name": "Stylex (Meta)",
+    "description": "Contributed enhancements and fixes to Meta's CSS-in-JS styling library",
+    "stars": "8k+",
+    "url": "https://github.com/facebook/stylex/pulls?q=is%3Apr+author%3Ahiteshshetty-dev",
+    "contributions": "Enhancements and fixes"
+  },
+  {
+    "uuid": "offline-detector",
+    "name": "Offline Detector",
+    "description": "Open-source package for reliable offline/online detection in browsers",
+    "stars": "",
+    "url": "https://github.com/hiteshshetty-dev/offline-detector",
+    "contributions": "Author & Maintainer"
+  }
+]

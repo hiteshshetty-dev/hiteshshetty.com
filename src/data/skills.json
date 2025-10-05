@@ -1,0 +1,45 @@
+{
+  "categories": [
+    {
+      "name": "Frontend",
+      "skills": [
+        { "name": "React", "icon": "react" },
+        { "name": "TypeScript", "icon": "typescript" },
+        { "name": "JavaScript", "icon": "javascript" },
+        { "name": "Redux", "icon": "redux" },
+        { "name": "Next.js", "icon": "nextjs" },
+        { "name": "React Query", "icon": "react-query" },
+        { "name": "HTML5", "icon": "html5" },
+        { "name": "CSS3", "icon": "css3" }
+      ]
+    },
+    {
+      "name": "Backend",
+      "skills": [
+        { "name": "Node.js", "icon": "nodejs" },
+        { "name": "Express", "icon": "express" },
+        { "name": "NestJS", "icon": "nestjs" },
+        { "name": "GraphQL", "icon": "graphql" },
+        { "name": "MongoDB", "icon": "mongodb" }
+      ]
+    },
+    {
+      "name": "DevOps & Cloud",
+      "skills": [
+        { "name": "Docker", "icon": "docker" },
+        { "name": "Kubernetes", "icon": "kubernetes" },
+        { "name": "AWS", "icon": "aws" },
+        { "name": "Redis", "icon": "redis" }
+      ]
+    },
+    {
+      "name": "Testing & Tools",
+      "skills": [
+        { "name": "Playwright", "icon": "playwright" },
+        { "name": "React Testing Library", "icon": "react-testing-library" },
+        { "name": "Jest", "icon": "jest" },
+        { "name": "GitHub", "icon": "github" }
+      ]
+    }
+  ]
+}

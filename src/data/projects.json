@@ -1,0 +1,84 @@
+[
+  {
+    "uuid": "virtual-ig",
+    "title": "Virtual IG",
+    "subtitle": "Real-time Interview Platform",
+    "description": "Developed a collaborative coding platform for remote technical interviews, featuring a real-time editor. Enabled live, multi-user code editing without screen sharing, improving interview experience for both interviewer and candidate.",
+    "tech": ["NestJS", "WebSockets", "Yjs", "Slate.js", "React"],
+    "type": "personal",
+    "featured": true,
+    "links": {
+      "demo": "https://virtual-ig.vercel.app/#/"
+    }
+  },
+  {
+    "uuid": "offline-detector",
+    "title": "Offline Detector",
+    "subtitle": "Open Source npm Package",
+    "description": "Built and published an open-source package to provide reliable offline/online detection in browsers, addressing inconsistencies across Chrome, Firefox, and Safari. Designed with a lightweight API and fallback strategies to ensure resilience in real-world network conditions.",
+    "tech": ["TypeScript", "npm"],
+    "type": "personal",
+    "featured": true,
+    "links": {
+      "demo": "https://hiteshshetty-dev.github.io/offline-detector/",
+      "npm": "https://www.npmjs.com/package/offline-detector",
+      "github": "https://github.com/hiteshshetty-dev/offline-detector"
+    }
+  },
+  {
+    "uuid": "visual-editing-platform",
+    "title": "Visual Editing Platform",
+    "subtitle": "Module Federation & Real-time Editing",
+    "description": "Led development of the flagship Visual Editing Platform using Module Federation, enabling secure real-time inline editing with iframe sandboxing and post-message communication, optimized with React Query.",
+    "tech": [
+      "React",
+      "Module Federation",
+      "React Query",
+      "Zustand",
+      "TypeScript"
+    ],
+    "type": "professional",
+    "featured": true,
+    "company": "Contentstack"
+  },
+  {
+    "uuid": "audience-insight-app",
+    "title": "Audience Insight App",
+    "subtitle": "CDP Integration & Data Visualization",
+    "description": "Developed an analytics application by integrating CDP data and delivering advanced visualizations using Highcharts and D3.js, providing actionable insights to customers.",
+    "tech": ["React", "Highcharts", "D3.js", "CDP"],
+    "type": "professional",
+    "featured": false,
+    "company": "Contentstack"
+  },
+  {
+    "uuid": "json-rich-text-editor",
+    "title": "JSON Rich Text Editor",
+    "subtitle": "Advanced Document Editor",
+    "description": "Designed and developed a JSON-based Rich Text Editor with advanced features such as drag-and-drop, table support, and seamless copy-paste from Google Docs and MS Word. Optimized rendering to handle large documents with minimal latency, improving performance by ~40%.",
+    "tech": ["React", "State.js", "React-DND", "Prism.js", "Storybook"],
+    "type": "professional",
+    "featured": true,
+    "company": "Contentstack"
+  },
+  {
+    "uuid": "ai-assistant",
+    "title": "AI Assistant",
+    "subtitle": "OpenAI Integration",
+    "description": "Led the first AI integration within the CMS, leveraging OpenAI APIs to enable content generation. Designed and hosted a secure backend proxy to handle API key protection, streaming responses, and ensure reliability at scale.",
+    "tech": ["OpenAI API", "NestJS", "React", "TypeScript"],
+    "type": "professional",
+    "featured": false,
+    "company": "Contentstack"
+  },
+  {
+    "uuid": "preview-services",
+    "title": "Preview Services",
+    "subtitle": "REST & GraphQL APIs",
+    "description": "Modernized Preview Services by implementing dedicated REST and GraphQL APIs in NestJS, integrating schema introspection and optimized query handling for scalability, with gRPC for data fetching and RBAC with OPA policies.",
+    "tech": ["NestJS", "GraphQL", "gRPC", "OPA", "REST API"],
+    "type": "professional",
+    "featured": false,
+    "company": "Contentstack"
+  }
+]

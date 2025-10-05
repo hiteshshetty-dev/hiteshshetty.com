@@ -1,0 +1,90 @@
+import Image from "next/image";
+import { HiMail } from "react-icons/hi";
+import { SiCodepen, SiGithub, SiLeetcode, SiLinkedin } from "react-icons/si";
+import profileData from "@/data/profile.json";
+
+export default function Hero() {
+  return (
+    <section className="min-h-screen flex items-center justify-center bg-brand-beige py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-brand-navy font-sora">
+              {profileData.name}
+            </h1>
+
+            <h2 className="text-2xl md:text-3xl text-brand-steel mb-4 font-medium">
+              {profileData.title}
+            </h2>
+
+            <p className="text-lg md:text-xl text-brand-navy/70 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              {profileData.bio}
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8">
+              <a
+                href={profileData.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-3 bg-brand-amber text-brand-charcoal font-medium rounded-lg hover:bg-brand-amber/90 transition-colors shadow-lg"
+              >
+                <SiLinkedin size={20} />
+                Let's Talk
+              </a>
+              <a
+                href={profileData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-3 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors shadow-lg"
+              >
+                <SiGithub size={20} />
+                View GitHub
+              </a>
+            </div>
+
+            <div className="flex items-center justify-center lg:justify-start gap-4">
+              <a
+                href={`mailto:${profileData.email}`}
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-navy/10 hover:bg-brand-navy hover:text-brand-beige text-brand-navy transition-all"
+                aria-label="Email"
+              >
+                <HiMail size={24} />
+              </a>
+              <a
+                href={profileData.codepen}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-navy/10 hover:bg-brand-navy hover:text-brand-beige text-brand-navy transition-all"
+                aria-label="Codepen"
+              >
+                <SiCodepen size={24} />
+              </a>
+              <a
+                href={profileData.leetcode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-navy/10 hover:bg-brand-navy hover:text-brand-beige text-brand-navy transition-all"
+                aria-label="LeetCode"
+              >
+                <SiLeetcode size={24} />
+              </a>
+            </div>
+          </div>
+
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-96 h-96 md:w-[480px] md:h-[480px] rounded-3xl overflow-hidden border-4 border-brand-amber/30">
+              <Image
+                src="/profile.jpg"
+                alt={profileData.name}
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 384px, 480px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

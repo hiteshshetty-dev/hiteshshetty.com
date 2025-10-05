@@ -1,0 +1,37 @@
+[
+  {
+    "uuid": "above-and-beyond-award-3x",
+    "title": "Above and Beyond Award (3x)",
+    "description": "Recognized for exceptional performance and contributions across Q1 2023, Q1 2025, and Q2 2025.",
+    "year": "2023-2025",
+    "type": "project"
+  },
+  {
+    "uuid": "winner-of-devfest-2023",
+    "title": "Winner of Devfest 2023",
+    "description": "Built a 3D immersive asset editor, improving the experience for 3D assets.",
+    "year": "2023",
+    "type": "hackathon"
+  },
+  {
+    "uuid": "winner-of-security-bug-bounty-2023",
+    "title": "Winner of Security Bug Bounty 2023",
+    "description": "Reported a high-severity vulnerability in the production system.",
+    "year": "2023",
+    "type": "security"
+  },
+  {
+    "uuid": "winner-of-vcet-national-level-project-showcase",
+    "title": "Winner of VCET National Level Project Showcase",
+    "description": "Blockchain-based certificate verification system preventing counterfeiting.",
+    "year": "2021",
+    "type": "project"
+  },
+  {
+    "uuid": "elixir-open-source-software-demonstration",
+    "title": "Elixir Open Source Software Demonstration",
+    "description": "Outstanding presentation on NGINX load balancing with 3 GCP instances (reverse proxy + 2 servers).",
+    "year": "2020",
+    "type": "project"
+  }
+]
