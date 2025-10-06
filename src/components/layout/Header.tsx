@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { SiLinkedin } from "react-icons/si";
@@ -9,6 +10,7 @@ import profileData from "@/data/profile.json";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -16,6 +18,13 @@ export default function Header() {
     { href: "/blogs", label: "Blogs" },
     { href: "/playground", label: "Playground" },
   ];
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-brand-navy/95 backdrop-blur-sm border-b border-brand-steel/20">
@@ -38,7 +47,11 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-brand-beige/80 hover:text-brand-amber transition-colors duration-200 font-medium"
+                  className={`font-medium transition-colors duration-200 ${
+                    isActive(link.href)
+                      ? "text-brand-amber border-b-2 border-brand-amber"
+                      : "text-brand-beige/80 hover:text-brand-amber"
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -76,15 +89,22 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-brand-beige/80 hover:text-brand-amber transition-colors duration-200 font-medium px-2 py-1"
+                  className={`font-medium transition-colors duration-200 px-2 py-1 ${
+                    isActive(link.href)
+                      ? "text-brand-amber border-l-2 border-brand-amber pl-3"
+                      : "text-brand-beige/80 hover:text-brand-amber"
+                  }`}
                 >
                   {link.label}
                 </Link>
               ))}
               <a
-                href="mailto:hitesh.shetty2011@gmail.com"
-                className="inline-flex justify-center px-6 py-2 bg-brand-amber text-brand-charcoal font-medium rounded-lg hover:bg-brand-amber/90 transition-colors mt-2"
+                href={profileData.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex justify-center items-center gap-2 px-6 py-2 bg-brand-amber text-brand-charcoal font-medium rounded-lg hover:bg-brand-amber/90 transition-colors mt-2"
               >
+                <SiLinkedin size={20} />
                 Let's Talk
               </a>
             </div>
