@@ -1,18 +1,20 @@
 [
   {
-    "uuid": "2fa-deep-dive",
-    "title": "How Two-Factor Authentication (2FA) Works: A Deep Dive into Enhanced Security",
-    "description": "In this blog post, we’ll delve into what 2FA is, why it’s essential, and how it functions, using practical examples to guide you through the process.",
-    "date": "2024-08-25",
-    "url": "https://medium.com/@hitesh.shetty2011/how-two-factor-authentication-2fa-works-a-deep-dive-into-enhanced-security-30dd5007ad73",
-    "tags": ["2fa Authentication", "Security", "Totp"]
-  },
-  {
     "uuid": "duplicate-ids-cpu-hungry-monster",
     "title": "The Transaction That Never Ended: How Duplicate IDs Turned My Backend Into a CPU-Hungry Monster",
     "description": "It was 3 PM, and my server was screaming. CPU usage at 99%, database connections maxed out, and my load testing had just turned into a load shedding nightmare. All because of a transaction that refused to give up…",
     "date": "2025-09-21",
     "url": "https://medium.com/@hitesh.shetty2011/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster-7ccc613832c9",
-    "tags": ["Mongodb", "Performance", "Load Testing", "Observability"]
+    "tags": ["Mongodb", "Performance", "Load Testing", "Observability"],
+    "image": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_C5VuhXJWTYx2aU9wxQcdQ.png"
+  },
+  {
+    "uuid": "2fa-deep-dive",
+    "title": "How Two-Factor Authentication (2FA) Works: A Deep Dive into Enhanced Security",
+    "description": "In this blog post, we’ll delve into what 2FA is, why it’s essential, and how it functions, using practical examples to guide you through the process.",
+    "date": "2024-08-25",
+    "url": "https://medium.com/@hitesh.shetty2011/how-two-factor-authentication-2fa-works-a-deep-dive-into-enhanced-security-30dd5007ad73",
+    "tags": ["2fa Authentication", "Security", "Totp"],
+    "image": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*muSvwh1QiFt85Y0rAC2gjg.png"
   }
 ]
