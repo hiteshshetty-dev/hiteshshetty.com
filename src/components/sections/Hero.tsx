@@ -9,19 +9,19 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-brand-navy font-sora">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-brand-navy font-sora animate-fade-in-up">
               {profileData.name}
             </h1>
 
-            <h2 className="text-2xl md:text-3xl text-brand-steel mb-4 font-medium">
+            <h2 className="text-2xl md:text-3xl text-brand-steel mb-4 font-medium animate-fade-in-up [animation-delay:0.2s]">
               {profileData.title}
             </h2>
 
-            <p className="text-lg md:text-xl text-brand-navy/70 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-lg md:text-xl text-brand-navy/70 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up [animation-delay:0.4s]">
               {profileData.bio}
             </p>
 
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8 animate-fade-in-up [animation-delay:0.6s]">
               <a
                 href={profileData.linkedin}
                 target="_blank"
@@ -42,7 +42,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="flex items-center justify-center lg:justify-start gap-4">
+            <div className="flex items-center justify-center lg:justify-start gap-4 animate-fade-in-up [animation-delay:0.8s]">
               <a
                 href={`mailto:${profileData.email}`}
                 className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-navy/10 hover:bg-brand-navy hover:text-brand-beige text-brand-navy transition-all"
@@ -71,7 +71,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center lg:justify-end animate-fade-in-up [animation-delay:1s]">
             <div className="relative w-96 h-96 md:w-[480px] md:h-[480px] rounded-3xl overflow-hidden border-4 border-brand-amber/30">
               <Image
                 src="/profile.jpg"
