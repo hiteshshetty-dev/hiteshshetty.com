@@ -1,6 +1,8 @@
-import Image from "next/image";
-import { HiExternalLink, HiEye } from "react-icons/hi";
-import { SiGithub } from "react-icons/si";
+import { HiEye } from "react-icons/hi";
+import ProjectLinks from "./ProjectLinks";
+import ProjectPreview from "./ProjectPreview";
+import ProjectTag from "./ProjectTag";
+import ProjectTechStack from "./ProjectTechStack";
 
 interface Project {
   uuid: string;
@@ -31,43 +33,17 @@ export default function ProjectCard({
   variant,
 }: ProjectCardProps) {
   const isPersonal = variant === "personal";
-  const tagColor = isPersonal
-    ? "bg-brand-amber/20 text-brand-navy"
-    : "bg-brand-rust/10 text-brand-rust";
   const buttonColor = isPersonal
     ? "bg-brand-amber/10 hover:bg-brand-amber/20 text-brand-navy"
     : "bg-brand-rust/10 hover:bg-brand-rust/20 text-brand-rust";
-  const tagText = isPersonal ? "Personal" : "Professional";
 
   return (
     <div className="relative bg-white rounded-2xl border border-brand-navy/10 hover:shadow-xl transition-all duration-300 overflow-hidden">
-      {project.previews && project.previews.length > 0 && (
-        <div className="relative h-48 bg-brand-navy/5">
-          <Image
-            src={project.previews[0]}
-            alt={`${project.title} preview`}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-        </div>
-      )}
+      <ProjectPreview previews={project.previews} title={project.title} />
 
       <div className="p-6">
         <div className="mb-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span
-              className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${tagColor}`}
-            >
-              {tagText}
-            </span>
-            {project.company && (
-              <span className="text-xs text-brand-navy/60">
-                @ {project.company}
-              </span>
-            )}
-          </div>
+          <ProjectTag type={project.type} company={project.company} />
           <button
             type="button"
             onClick={() => onViewDetails(project)}
@@ -94,59 +70,8 @@ export default function ProjectCard({
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.tech.map((tech) => (
-            <span
-              key={tech}
-              className="px-2 py-1 bg-brand-navy/5 text-brand-navy text-xs rounded-md font-medium"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        {(project.links?.github ||
-          project.links?.demo ||
-          project.links?.npm) && (
-          <div className="flex items-center gap-3 pt-3 border-t border-brand-navy/10">
-            {project.links.github && (
-              <a
-                href={project.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-brand-navy/70 hover:text-brand-navy text-sm transition-colors"
-                aria-label="GitHub"
-              >
-                <SiGithub size={16} />
-                <span>Code</span>
-              </a>
-            )}
-            {project.links.demo && (
-              <a
-                href={project.links.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-brand-navy/70 hover:text-brand-navy text-sm transition-colors"
-                aria-label="Demo"
-              >
-                <HiExternalLink size={16} />
-                <span>Demo</span>
-              </a>
-            )}
-            {project.links.npm && (
-              <a
-                href={project.links.npm}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-brand-navy/70 hover:text-brand-navy text-sm transition-colors"
-                aria-label="npm"
-              >
-                <HiExternalLink size={16} />
-                <span>npm</span>
-              </a>
-            )}
-          </div>
-        )}
+        <ProjectTechStack tech={project.tech} />
+        <ProjectLinks links={project.links} />
       </div>
     </div>
   );
