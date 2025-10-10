@@ -104,7 +104,7 @@ export default function ProjectModal({
 
           {project.previews && project.previews.length > 0 && (
             <div className="relative w-full max-w-2xl mx-auto mb-6">
-              <div className="relative rounded-xl overflow-hidden bg-brand-navy/5 border border-brand-navy/10 min-h-[350px]">
+              <div className="relative flex items-center justify-center rounded-xl overflow-hidden bg-brand-navy/5 border border-brand-navy/10 min-h-[350px]">
                 {isImageLoading && (
                   <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-gradient-to-r from-brand-navy/5 via-brand-navy/10 to-brand-navy/5 animate-pulse">
                     <div className="flex flex-col items-center gap-4">
