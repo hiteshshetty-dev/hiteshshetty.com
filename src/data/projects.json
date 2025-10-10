@@ -4,26 +4,31 @@
     "title": "Virtual IG",
     "subtitle": "Real-time Interview Platform",
     "description": "Developed a collaborative coding platform for remote technical interviews, featuring a real-time editor. Enabled live, multi-user code editing without screen sharing, improving interview experience for both interviewer and candidate.",
-    "tech": ["NestJS", "WebSockets", "Yjs", "Slate.js", "React"],
+    "tech": ["WebSockets", "Yjs", "Slate.js", "React", "Next.js"],
     "type": "personal",
     "featured": true,
     "links": {
       "demo": "https://virtual-ig.vercel.app/#/"
-    }
+    },
+    "previews": ["https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt9101ccebfecdc005/virtual-ig-1"]
   },
   {
     "uuid": "offline-detector",
     "title": "Offline Detector",
-    "subtitle": "Open Source npm Package",
+    "subtitle": "Open Source NPM Package",
     "description": "Built and published an open-source package to provide reliable offline/online detection in browsers, addressing inconsistencies across Chrome, Firefox, and Safari. Designed with a lightweight API and fallback strategies to ensure resilience in real-world network conditions.",
-    "tech": ["TypeScript", "npm"],
+    "tech": ["TypeScript", "Next.js", "npm"],
     "type": "personal",
     "featured": true,
     "links": {
       "demo": "https://hiteshshetty-dev.github.io/offline-detector/",
       "npm": "https://www.npmjs.com/package/offline-detector",
       "github": "https://github.com/hiteshshetty-dev/offline-detector"
-    }
+    },
+    "previews": [
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltaab19018d66ffed9/offline-ig-1",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blte3b5a057f60a817b/offline-detector.gif"
+    ]
   },
   {
     "uuid": "visual-editing-platform",
@@ -39,27 +44,29 @@
     ],
     "type": "professional",
     "featured": true,
-    "company": "Contentstack"
-  },
-  {
-    "uuid": "audience-insight-app",
-    "title": "Audience Insight App",
-    "subtitle": "CDP Integration & Data Visualization",
-    "description": "Developed an analytics application by integrating CDP data and delivering advanced visualizations using Highcharts and D3.js, providing actionable insights to customers.",
-    "tech": ["React", "Highcharts", "D3.js", "CDP"],
-    "type": "professional",
-    "featured": false,
-    "company": "Contentstack"
+    "company": "Contentstack",
+    "previews": [
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt9a432f18e3559370/visual-builder-1",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt4fae2eb6db0a06d6/visual-builder-2",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltfb2f15f99ef07121/visual-builder-3",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt9511f3e2a7d2b067/visual-builder.gif"
+    ]
   },
   {
     "uuid": "json-rich-text-editor",
     "title": "JSON Rich Text Editor",
     "subtitle": "Advanced Document Editor",
-    "description": "Designed and developed a JSON-based Rich Text Editor with advanced features such as drag-and-drop, table support, and seamless copy-paste from Google Docs and MS Word. Optimized rendering to handle large documents with minimal latency, improving performance by ~40%.",
+    "description": "Designed and developed a JSON-based Rich Text Editor with advanced features such as drag-and-drop, table support, and seamless copy-paste from Google Docs and MS Word.",
     "tech": ["React", "State.js", "React-DND", "Prism.js", "Storybook"],
     "type": "professional",
     "featured": true,
-    "company": "Contentstack"
+    "company": "Contentstack",
+    "previews": [
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltef37faa695e787f6/json-rte-1",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltb94921c951d079f4/json-rte-2",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt264e35b54825c716/json-rte-3",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt856bac9033613a12/json-rte"
+    ]
   },
   {
     "uuid": "ai-assistant",
@@ -69,16 +76,11 @@
     "tech": ["OpenAI API", "NestJS", "React", "TypeScript"],
     "type": "professional",
     "featured": false,
-    "company": "Contentstack"
-  },
-  {
-    "uuid": "preview-services",
-    "title": "Preview Services",
-    "subtitle": "REST & GraphQL APIs",
-    "description": "Modernized Preview Services by implementing dedicated REST and GraphQL APIs in NestJS, integrating schema introspection and optimized query handling for scalability, with gRPC for data fetching and RBAC with OPA policies.",
-    "tech": ["NestJS", "GraphQL", "gRPC", "OPA", "REST API"],
-    "type": "professional",
-    "featured": false,
-    "company": "Contentstack"
+    "company": "Contentstack",
+    "previews": [
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltc45949d85a023c74/ai-assistant-1",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt08395d1512cb07b5/ai-assistant-2",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt573d9d73aa957c0b/ai-assistant.gif"
+    ]
   }
 ]
