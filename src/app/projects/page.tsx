@@ -49,7 +49,7 @@ export default function ProjectsPage() {
   const handlePrevImage = () => {
     if (selectedProject?.previews) {
       setCurrentImageIndex((prev) =>
-        prev === 0 ? selectedProject.previews!.length - 1 : prev - 1,
+        prev === 0 ? (selectedProject.previews?.length ?? 1) - 1 : prev - 1,
       );
       setIsImageLoading(true);
     }
@@ -58,7 +58,7 @@ export default function ProjectsPage() {
   const handleNextImage = () => {
     if (selectedProject?.previews) {
       setCurrentImageIndex((prev) =>
-        prev === selectedProject.previews!.length - 1 ? 0 : prev + 1,
+        prev === (selectedProject.previews?.length ?? 1) - 1 ? 0 : prev + 1,
       );
       setIsImageLoading(true);
     }

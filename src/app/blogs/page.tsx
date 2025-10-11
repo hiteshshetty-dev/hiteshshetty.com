@@ -72,7 +72,7 @@ export default function BlogsPage() {
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {blog.tags.map((tag, tagIndex) => (
+                    {blog.tags.map((tag) => (
                       <span
                         key={tag}
                         className="px-3 py-1 bg-brand-navy/5 text-brand-navy text-sm rounded-md font-medium"

@@ -10,7 +10,9 @@
     "links": {
       "demo": "https://virtual-ig.vercel.app/#/"
     },
-    "previews": ["https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt9101ccebfecdc005/virtual-ig-1"]
+    "previews": [
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt9101ccebfecdc005/virtual-ig-1"
+    ]
   },
   {
     "uuid": "offline-detector",
