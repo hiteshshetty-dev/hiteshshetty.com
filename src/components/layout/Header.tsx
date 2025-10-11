@@ -38,6 +38,7 @@ export default function Header() {
                 height={40}
                 className="w-10 h-10"
                 priority
+                fetchPriority="high"
               />
             </Link>
 
