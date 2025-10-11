@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center space-y-6 md:flex-row md:justify-between md:items-start md:text-left md:space-y-0">
           <div className="flex flex-col items-center md:flex-row md:items-center space-y-3 md:space-y-0 md:space-x-4">
             <Image
-              src="/logo-inverted.svg"
+              src="/icons/logo-inverted.svg"
               alt="Hitesh Shetty Logo"
               width={40}
               height={40}

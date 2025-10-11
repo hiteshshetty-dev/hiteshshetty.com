@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center bg-brand-beige py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left">
+          <header className="text-center lg:text-left">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-brand-navy font-sora animate-fade-in-up">
               {profileData.name}
             </h1>
@@ -32,7 +32,7 @@ export default function Hero() {
                 Let's Talk
               </a>
               <a
-                href="/resume.pdf"
+                href="/documents/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors shadow-lg"
@@ -78,13 +78,13 @@ export default function Hero() {
                 <SiLeetcode size={24} />
               </a>
             </div>
-          </div>
+          </header>
 
           <div className="flex justify-center lg:justify-end animate-fade-in-up [animation-delay:1s]">
             <div className="relative w-96 h-96 md:w-[480px] md:h-[480px] rounded-3xl overflow-hidden border-4 border-brand-amber/30">
               <Image
-                src="/profile.jpg"
-                alt={profileData.name}
+                src="/images/profile.jpg"
+                alt={`Professional headshot of ${profileData.name}, ${profileData.title} based in ${profileData.location}`}
                 fill
                 className="object-cover"
                 priority
