@@ -33,7 +33,7 @@
   {
     "uuid": "visual-editing-platform",
     "title": "Visual Editing Platform",
-    "subtitle": "Module Federation & Real-time Editing",
+    "subtitle": "Seemless Content Editing Platform",
     "description": "Led development of the flagship Visual Editing Platform using Module Federation, enabling secure real-time inline editing with iframe sandboxing and post-message communication, optimized with React Query.",
     "tech": [
       "React",
