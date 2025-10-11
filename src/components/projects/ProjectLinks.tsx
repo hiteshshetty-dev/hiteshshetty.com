@@ -21,6 +21,8 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
           rel="noopener noreferrer"
           className="flex items-center gap-1 text-brand-navy/70 hover:text-brand-navy text-sm transition-colors"
           aria-label="GitHub"
+          data-umami-event="GitHub"
+          data-umami-event-project-title={links.github}
         >
           <SiGithub size={16} />
           <span>Code</span>
@@ -33,6 +35,8 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
           rel="noopener noreferrer"
           className="flex items-center gap-1 text-brand-navy/70 hover:text-brand-navy text-sm transition-colors"
           aria-label="Demo"
+          data-umami-event="Demo"
+          data-umami-event-project-title={links.demo}
         >
           <HiExternalLink size={16} />
           <span>Demo</span>

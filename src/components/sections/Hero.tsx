@@ -27,6 +27,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-brand-amber text-brand-charcoal font-medium rounded-lg hover:bg-brand-amber/90 transition-colors shadow-lg"
+                data-umami-event="Let's Talk"
               >
                 <SiLinkedin size={20} />
                 Let's Talk
@@ -36,6 +37,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors shadow-lg"
+                data-umami-event="Download Resume"
               >
                 <HiDocumentDownload size={20} />
                 Download Resume

@@ -50,6 +50,8 @@ export default function ProjectCard({
             className={`w-8 h-8 flex items-center justify-center rounded-full transition-colors group ${buttonColor}`}
             aria-label="View project details"
             title="View Details"
+            data-umami-event="View Project Details"
+            data-umami-event-project-title={project.title}
           >
             <HiEye
               size={18}

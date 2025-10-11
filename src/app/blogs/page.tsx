@@ -39,6 +39,8 @@ export default function BlogsPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="group block bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-brand-navy/10 hover:border-brand-amber/50"
+              data-umami-event="Blog Click"
+              data-umami-event-blog-title={blog.title}
             >
               <div className="flex flex-col md:flex-row">
                 <div className="relative w-full md:w-96 h-64 md:h-auto md:min-h-[280px] flex-shrink-0 bg-brand-navy/5 flex items-center justify-center">

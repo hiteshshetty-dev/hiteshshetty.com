@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Sora } from "next/font/google";
 import "./globals.css";
+import Analytics from "@/components/Analytics/Analytics";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 
@@ -100,6 +101,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

@@ -64,6 +64,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:inline-flex items-center gap-2 px-6 py-2 bg-brand-amber text-brand-charcoal font-medium rounded-lg hover:bg-brand-amber/90 transition-colors"
+              data-umami-event="Let's Talk"
             >
               <SiLinkedin size={20} />
               Let's Talk
@@ -102,6 +103,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex justify-center items-center gap-2 px-6 py-2 bg-brand-amber text-brand-charcoal font-medium rounded-lg hover:bg-brand-amber/90 transition-colors mt-2"
+                data-umami-event="Let's Talk"
               >
                 <SiLinkedin size={20} />
                 Let's Talk
