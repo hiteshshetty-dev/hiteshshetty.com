@@ -4,7 +4,7 @@ import { HiArrowLeft, HiCalendar, HiExternalLink } from "react-icons/hi";
 import blogsData from "@/data/blogs.json";
 
 export const metadata = {
-  title: "Blogs - Hitesh Shetty",
+  title: "Blogs",
   description:
     "Technical articles and insights on software development, React, TypeScript, and more",
 };
