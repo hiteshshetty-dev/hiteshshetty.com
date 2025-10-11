@@ -11,7 +11,7 @@
       "demo": "https://virtual-ig.vercel.app/#/"
     },
     "previews": [
-      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt9101ccebfecdc005/virtual-ig-1"
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt9101ccebfecdc005/virtual-ig-1?format=webp"
     ]
   },
   {
@@ -28,7 +28,7 @@
       "github": "https://github.com/hiteshshetty-dev/offline-detector"
     },
     "previews": [
-      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltaab19018d66ffed9/offline-ig-1",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltaab19018d66ffed9/offline-ig-1?format=webp",
       "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blte3b5a057f60a817b/offline-detector.gif"
     ]
   },
@@ -48,9 +48,9 @@
     "featured": true,
     "company": "Contentstack",
     "previews": [
-      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt9a432f18e3559370/visual-builder-1",
-      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt4fae2eb6db0a06d6/visual-builder-2",
-      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltfb2f15f99ef07121/visual-builder-3",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt9a432f18e3559370/visual-builder-1?format=webp",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt4fae2eb6db0a06d6/visual-builder-2?format=webp",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltfb2f15f99ef07121/visual-builder-3?format=webp",
       "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt9511f3e2a7d2b067/visual-builder.gif"
     ]
   },
@@ -64,9 +64,9 @@
     "featured": true,
     "company": "Contentstack",
     "previews": [
-      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltef37faa695e787f6/json-rte-1",
-      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltb94921c951d079f4/json-rte-2",
-      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt264e35b54825c716/json-rte-3",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltef37faa695e787f6/json-rte-1?format=webp",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltb94921c951d079f4/json-rte-2?format=webp",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt264e35b54825c716/json-rte-3?format=webp",
       "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt856bac9033613a12/json-rte"
     ]
   },
@@ -80,8 +80,8 @@
     "featured": false,
     "company": "Contentstack",
     "previews": [
-      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltc45949d85a023c74/ai-assistant-1",
-      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt08395d1512cb07b5/ai-assistant-2",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/bltc45949d85a023c74/ai-assistant-1?format=webp",
+      "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt08395d1512cb07b5/ai-assistant-2?format=webp",
       "https://images.contentstack.io/v3/assets/blt1e7f8356c41ea09e/blt573d9d73aa957c0b/ai-assistant.gif"
     ]
   }
