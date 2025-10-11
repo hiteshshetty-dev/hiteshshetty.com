@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { HiMail } from "react-icons/hi";
+import { HiDocumentDownload, HiMail } from "react-icons/hi";
 import { SiCodepen, SiGithub, SiLeetcode, SiLinkedin } from "react-icons/si";
 import profileData from "@/data/profile.json";
 
@@ -32,13 +32,13 @@ export default function Hero() {
                 Let's Talk
               </a>
               <a
-                href={profileData.github}
+                href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors shadow-lg"
               >
-                <SiGithub size={20} />
-                View GitHub
+                <HiDocumentDownload size={20} />
+                Download Resume
               </a>
             </div>
 
@@ -49,6 +49,15 @@ export default function Hero() {
                 aria-label="Email"
               >
                 <HiMail size={24} />
+              </a>
+              <a
+                href={profileData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-navy/10 hover:bg-brand-navy hover:text-brand-beige text-brand-navy transition-all"
+                aria-label="GitHub"
+              >
+                <SiGithub size={24} />
               </a>
               <a
                 href={profileData.codepen}
