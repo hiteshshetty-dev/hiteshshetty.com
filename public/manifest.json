@@ -34,11 +34,7 @@
       "purpose": "any"
     }
   ],
-  "categories": [
-    "portfolio",
-    "technology",
-    "developer"
-  ],
+  "categories": ["portfolio", "technology", "developer"],
   "lang": "en-US",
   "dir": "ltr",
   "screenshots": [

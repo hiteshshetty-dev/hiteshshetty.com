@@ -4,16 +4,25 @@ import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import Hero from "@/components/sections/Hero";
 import OpenSource from "@/components/sections/OpenSource";
 import Skills from "@/components/sections/Skills";
+import JsonLd from "@/components/ui/JsonLd";
+import {
+  generatePersonSchema,
+  generateWebsiteSchema,
+} from "@/lib/structured-data";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <Experience />
-      <FeaturedProjects />
-      <OpenSource />
-      <Skills />
-      <Achievements />
-    </main>
+    <>
+      <JsonLd data={generatePersonSchema()} />
+      <JsonLd data={generateWebsiteSchema()} />
+      <main>
+        <Hero />
+        <Experience />
+        <FeaturedProjects />
+        <OpenSource />
+        <Skills />
+        <Achievements />
+      </main>
+    </>
   );
 }
