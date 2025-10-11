@@ -9,12 +9,16 @@ const sora = Sora({
   variable: "--font-sora",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "sans-serif"],
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "sans-serif"],
 });
 
 export const metadata: Metadata = {

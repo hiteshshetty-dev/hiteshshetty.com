@@ -112,11 +112,6 @@ export default function ProjectModal({
                         <div className="w-10 h-10 border-3 border-brand-navy/20 rounded-full"></div>
                         <div className="absolute top-0 left-0 w-10 h-10 border-3 border-transparent border-t-brand-navy rounded-full animate-spin"></div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-brand-navy/40 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-                        <div className="w-2 h-2 bg-brand-navy/40 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-                        <div className="w-2 h-2 bg-brand-navy/40 rounded-full animate-bounce"></div>
-                      </div>
                       <p className="text-brand-navy/60 text-sm font-medium">
                         Loading preview...
                       </p>
