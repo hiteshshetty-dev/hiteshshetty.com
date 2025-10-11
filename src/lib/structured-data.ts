@@ -8,7 +8,7 @@ export function generatePersonSchema() {
     jobTitle: profileData.title,
     description: profileData.bio,
     url: "https://hiteshshetty.com",
-    image: "https://hiteshshetty.com/images/profile.jpg",
+    image: "https://hiteshshetty.com/images/profile.webp",
     sameAs: [
       profileData.linkedin,
       profileData.github,

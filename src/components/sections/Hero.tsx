@@ -85,11 +85,12 @@ export default function Hero() {
           <div className="flex justify-center lg:justify-end animate-fade-in-up [animation-delay:1s]">
             <div className="relative w-96 h-96 md:w-[480px] md:h-[480px] rounded-3xl overflow-hidden border-4 border-brand-amber/30">
               <Image
-                src="/images/profile.jpg"
+                src="/images/profile.webp"
                 alt={`Professional headshot of ${profileData.name}, ${profileData.title} based in ${profileData.location}`}
                 fill
                 className="object-cover"
                 priority
+                fetchPriority="high"
                 sizes="(max-width: 768px) 384px, 480px"
               />
             </div>

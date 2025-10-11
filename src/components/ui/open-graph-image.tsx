@@ -10,7 +10,7 @@ const OpenGraphImage = () => {
         <div className="flex-1 flex items-center justify-center p-12">
           <div className="relative w-80 h-80 rounded-3xl overflow-hidden border-4 border-brand-amber/30">
             <Image
-              src="/images/profile.jpg"
+              src="/images/profile.webp"
               alt="Hitesh Shetty"
               className="w-full h-full object-cover"
             />
