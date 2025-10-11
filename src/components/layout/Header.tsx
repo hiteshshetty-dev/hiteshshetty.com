@@ -32,7 +32,7 @@ export default function Header() {
           <div className="flex items-center space-x-8">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo-inverted.svg"
+                src="/icons/logo-inverted.svg"
                 alt="Hitesh Shetty Logo"
                 width={40}
                 height={40}
