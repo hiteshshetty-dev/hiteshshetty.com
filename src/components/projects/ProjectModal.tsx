@@ -133,7 +133,7 @@ export default function ProjectModal({
                 >
                   <Image
                     src={project.previews[currentImageIndex]}
-                    alt={`${project.title} preview ${currentImageIndex + 1}`}
+                    alt={`Screenshot ${currentImageIndex + 1} of ${project.title} project showing ${project.description.substring(0, 100)}...`}
                     width={600}
                     height={350}
                     className="w-full h-auto"

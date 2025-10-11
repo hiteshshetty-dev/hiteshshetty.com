@@ -17,7 +17,7 @@ export default function ProjectPreview({
     <div className={`relative h-48 bg-brand-navy/5 ${className}`}>
       <Image
         src={previews[0]}
-        alt={`${title} preview`}
+        alt={`Preview of ${title} project showing the application interface and functionality`}
         fill
         className="object-cover group-hover:scale-105 transition-transform duration-300"
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
