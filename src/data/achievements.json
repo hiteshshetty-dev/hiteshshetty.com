@@ -28,8 +28,8 @@
     "type": "project"
   },
   {
-    "uuid": "elixir-open-source-software-demonstration",
-    "title": "Elixir Open Source Software Demonstration",
+    "uuid": "winner-of-elixir-open-source-software-demonstration",
+    "title": "Winner of Elixir Open Source Software Demonstration",
     "description": "Outstanding presentation on NGINX load balancing with 3 GCP instances (reverse proxy + 2 servers).",
     "year": "2020",
     "type": "project"
