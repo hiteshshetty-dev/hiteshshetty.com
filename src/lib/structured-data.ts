@@ -55,9 +55,11 @@ export function generateWebsiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Hitesh Shetty Portfolio",
+    alternateName: "Hitesh Shetty",
     url: "https://hiteshshetty.com",
     description:
       "Senior Software Engineer specializing in full-stack product development",
+    inLanguage: "en-US",
     author: {
       "@type": "Person",
       name: profileData.name,
