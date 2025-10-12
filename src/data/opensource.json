@@ -4,7 +4,7 @@
     "name": "Slate.js",
     "description": "Contributed fixes to Slate.js, a leading React-based rich text editor",
     "stars": "30k+",
-    "url": "https://github.com/ianstormtaylor/slate/pulls?q=is%3Apr+is%3Aclosed+author%3Ahiteshshetty-dev",
+    "url": "https://github.com/ianstormtaylor/slate/pulls?q=is%3Apr+author%3Ahiteshshetty-dev",
     "contributions": "Bug fixes and enhancements"
   },
   {
