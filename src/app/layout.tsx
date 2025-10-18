@@ -64,8 +64,13 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/icons/logo-navy.svg",
-    shortcut: "/icons/logo-navy.svg",
+    icon: [
+      { url: "/icons/favicon.ico", sizes: "any" },
+      { url: "/icons/favicon-16x16.png", sizes: "16x16" },
+      { url: "/icons/favicon-32x32.png", sizes: "32x32" },
+      { url: "/icons/logo-navy.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icons/favicon.ico",
     apple: "/icons/apple-icon-180.png",
   },
   manifest: "/manifest.json",
@@ -74,7 +79,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://hiteshshetty.com",
-    siteName: "Hitesh Shetty Portfolio",
+    siteName: "Hitesh Shetty",
     title: "Hitesh Shetty - Senior Software Engineer & Full-Stack Developer",
     description:
       "Senior Software Engineer specializing in full-stack product development with expertise in React, TypeScript, Node.js, and distributed backend systems.",
