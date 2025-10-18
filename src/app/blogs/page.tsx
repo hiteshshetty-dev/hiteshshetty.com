@@ -7,6 +7,9 @@ export const metadata = {
   title: "Blogs",
   description:
     "Technical articles and insights on software development, React, TypeScript, and more",
+  alternates: {
+    canonical: "https://hiteshshetty.com/blogs",
+  },
 };
 
 export default function BlogsPage() {

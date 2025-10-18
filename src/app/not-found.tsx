@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { HiHome } from "react-icons/hi";
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  description:
+    "The page you're looking for doesn't exist. It might have been moved or deleted.",
+  alternates: {
+    canonical: "https://hiteshshetty.com/404",
+  },
+};
 
 export default function NotFound() {
   return (

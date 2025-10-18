@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Achievements from "@/components/sections/Achievements";
 import Experience from "@/components/sections/Experience";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
@@ -10,6 +11,11 @@ import {
   generateWebsiteSchema,
 } from "@/lib/structured-data";
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://hiteshshetty.com",
+  },
+};
 export default function Home() {
   return (
     <>
