@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   creator: "Hitesh Shetty",
   publisher: "Hitesh Shetty",
   other: {
-    "linkedin:profile": "https://linkedin.com/in/hitesh-shetty2011",
+    "linkedin:profile": "https://linkedin.com/in/hiteshshetty-dev",
     "github:profile": "https://github.com/hiteshshetty-dev",
   },
   robots: {

@@ -168,6 +168,6 @@ The site is configured for static export and can be deployed to any static hosti
 **Hitesh Shetty** - Senior Software Engineer
 
 - Email: [hitesh.shetty2011@gmail.com](mailto:hitesh.shetty2011@gmail.com)
-- LinkedIn: [hitesh-shetty2011](https://linkedin.com/in/hitesh-shetty2011)
+- LinkedIn: [hiteshshetty-dev](https://linkedin.com/in/hiteshshetty-dev)
 - GitHub: [hiteshshetty-dev](https://github.com/hiteshshetty-dev)
 - Website: [hiteshshetty.com](https://hiteshshetty.com)
