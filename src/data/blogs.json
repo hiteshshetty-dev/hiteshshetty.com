@@ -1,5 +1,14 @@
 [
   {
+    "uuid": "deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain",
+    "title": "Deploying a Next.js Static Site on GitHub Pages with a Custom Domain",
+    "description": "A step‑by‑step guide to hosting a Next.js site on GitHub Pages with a custom domain",
+    "date": "2025-10-19",
+    "url": "https://medium.com/@hitesh.shetty2011/deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain-671754d63eb4",
+    "tags": ["Next.js", "GitHub Pages", "Custom Domain", "Guide"],
+    "image": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*YFz6E2NneuTPexEXUuk2hg.png"
+  },
+  {
     "uuid": "duplicate-ids-cpu-hungry-monster",
     "title": "The Transaction That Never Ended: How Duplicate IDs Turned My Backend Into a CPU-Hungry Monster",
     "description": "It was 3 PM, and my server was screaming. CPU usage at 99%, database connections maxed out, and my load testing had just turned into a load shedding nightmare. All because of a transaction that refused to give up…",
