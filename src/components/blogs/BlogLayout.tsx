@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HiArrowLeft, HiCalendar, HiClock, HiTag } from "react-icons/hi";
+import {
+  HiArrowLeft,
+  HiArrowRight,
+  HiCalendar,
+  HiClock,
+  HiTag,
+} from "react-icons/hi";
 import blogsData from "@/data/blogs.json";
 
 interface BlogLayoutProps {
@@ -41,7 +47,7 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
           </div>
 
           <div className="space-y-6">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sora leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
               {title}
             </h1>
 
@@ -103,6 +109,47 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
           {children}
         </div>
       </article>
+
+      <section className="bg-brand-navy/5 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-brand-navy">
+              Latest Blogs
+            </h2>
+            <Link
+              href="/blogs"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-brand-amber text-brand-charcoal font-medium rounded-lg hover:bg-brand-amber/90 transition-colors"
+            >
+              View All Blogs
+              <HiArrowRight size={18} />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {blogsData
+              .filter((blog) => blog.slug !== slug)
+              .slice(0, 2)
+              .map((blog) => (
+                <Link
+                  key={blog.uuid}
+                  href={`/blogs/${blog.slug}`}
+                  className="group block p-6 bg-white rounded-lg border-2 border-brand-steel/10 hover:border-brand-amber/30 transition-all duration-200 hover:shadow-lg flex flex-col"
+                >
+                  <h3 className="text-lg md:text-xl font-semibold text-brand-navy mb-2 group-hover:text-brand-steel transition-colors flex-1">
+                    {blog.title}
+                  </h3>
+                  <p className="text-brand-navy/70 mb-3 line-clamp-2">
+                    {blog.description}
+                  </p>
+                  <div className="flex items-center gap-4 text-sm text-brand-navy/60 mt-auto">
+                    <span>{formatDate(blog.date)}</span>
+                    <span>•</span>
+                    <span>5 min read</span>
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
