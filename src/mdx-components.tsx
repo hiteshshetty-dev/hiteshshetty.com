@@ -1,6 +1,18 @@
 import type { MDXComponents } from "mdx/types";
 import Image, { type ImageProps } from "next/image";
 
+function DotSeparator(props: React.HTMLAttributes<HTMLHRElement>) {
+  return (
+    <div className="flex items-center justify-center py-4" {...props}>
+      <div className="flex items-center space-x-2">
+        <div className="w-1 h-1 sm:w-2 sm:h-2 rounded-full bg-brand-navy/90"></div>
+        <div className="w-1 h-1 sm:w-2 sm:h-2 rounded-full bg-brand-navy/90"></div>
+        <div className="w-1 h-1 sm:w-2 sm:h-2 rounded-full bg-brand-navy/90"></div>
+      </div>
+    </div>
+  );
+}
+
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     img: (props: ImageProps) => (
@@ -23,6 +35,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     pre: (props) => (
       <pre className="rounded-lg p-4 overflow-x-auto my-6" {...props} />
     ),
+    hr: (props) => <DotSeparator {...props} />,
     ...components,
   };
 }
