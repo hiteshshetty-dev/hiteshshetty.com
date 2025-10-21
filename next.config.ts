@@ -1,5 +1,6 @@
 import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
+import rehypePrettyCode from "rehype-pretty-code";
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -15,7 +16,15 @@ const nextConfig: NextConfig = {
 const withMDX = createMDX({
   options: {
     remarkPlugins: [],
-    rehypePlugins: [],
+    rehypePlugins: [
+      [
+        rehypePrettyCode,
+        {
+          theme: "dark-plus",
+          keepBackground: false,
+        },
+      ],
+    ],
   },
 });
 
