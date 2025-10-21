@@ -10,12 +10,13 @@
   },
   {
     "uuid": "duplicate-ids-cpu-hungry-monster",
+    "slug": "the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster",
     "title": "The Transaction That Never Ended: How Duplicate IDs Turned My Backend Into a CPU-Hungry Monster",
     "description": "It was 3 PM, and my server was screaming. CPU usage at 99%, database connections maxed out, and my load testing had just turned into a load shedding nightmare. All because of a transaction that refused to give up…",
     "date": "2025-09-21",
     "url": "https://medium.com/@hitesh.shetty2011/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster-7ccc613832c9",
     "tags": ["Mongodb", "Performance", "Load Testing", "Observability"],
-    "image": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_C5VuhXJWTYx2aU9wxQcdQ.png"
+    "image": "/images/blogs/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster/cover.webp"
   },
   {
     "uuid": "2fa-deep-dive",
