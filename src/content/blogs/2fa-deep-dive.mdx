@@ -1,0 +1,132 @@
+import Image from "next/image";
+
+# Introduction
+
+In today's digital age, securing our online accounts has become more crucial than ever. Two-factor authentication (2FA) is one of the most effective ways to enhance account security.
+
+Traditional username and password authentication has several vulnerabilities:
+
+- **Weak passwords**: Users often choose easy-to-guess passwords.
+- **Password reuse:** Many people use the same password across multiple accounts.
+- **Data breaches:** If a service is compromised, user passwords may be exposed.
+
+## How does 2FA solve these Problems?
+
+Two-factor authentication adds an extra layer of security by requiring two different forms of identification:
+
+- **Something you know:** Your password
+- **Something you have:** Your phone, a security key, or an authenticator app
+
+This additional step makes it significantly harder for attackers to gain unauthorized access, even if they have your password.
+
+## How 2FA Works
+
+Our objective is to generate a One-Time Password (OTP) for enhanced security. Using just the timestamp could lead to predictability issues. Thus, we implement the Time-based One-Time Password (TOTP) algorithm.
+
+Let’s see how the TOTP algorithm works, using GitHub as an example.
+
+When you enable 2FA on GitHub, it provides a QR code for registration. This QR code contains a secret key, which in combination with the system time, produces the OTP.
+<div className="flex flex-col sm:flex-row my-6 justify-center items-center">
+    <div className="flex-[0.25]">
+        <Image 
+            src="/images/blogs/2fa-deep-dive/2fa-setup-qr-code.webp" 
+            alt="GitHub 2FA Setup QR Code" 
+            width={400}
+            height={300}
+            className="rounded-lg w-full h-64 object-contain"
+        />
+    </div>
+    <div className="flex-[0.75]">
+        <Image 
+            src="/images/blogs/2fa-deep-dive/2fa-decoded-details.webp" 
+            alt="GitHub 2FA QR Decoded Details" 
+            width={600}
+            height={300}
+            className="rounded-lg w-full h-64 object-contain"
+        />
+    </div>
+</div>
+
+The following structure of URI is defined for encoding secret key:
+
+```bash
+otpauth://TYPE/LABEL?PARAMETERS
+```
+
+- **TYPE**: This defines which algorithm is used for counter (TOTP or HOTP)
+- **LABEL:** The label is used to identify which account a key is associated with.
+- **PARAMETERS:**
+    - **Secret:** is an arbitrary key value encoded in Base32. [**Required**]
+    - **Issuer:** indicating the provider or service this account is associated
+
+There are more optional parameters like Algorithm, Digits, Counter, and Periods.
+
+In our example:
+
+- **Decoded URI:** `otpauth://totp/Example:hiteshshetty-dev?secret=JBSWY3DPEHPK3PXP&issuer=Example`
+- **TYPE:** `TOTP`
+- **LABEL:** `Example:hiteshshetty-dev`
+- **Secret**: `JBSWY3DPEHPK3PXP`
+
+## Why is Base32 encoding used for the secret key?
+
+There are use cases where QR codes are not used for setting up 2FA. In such cases, it is essential to have a secret key that can be typed easily using the keyboard. Base32 encoded has just 26 uppercase A-Z letters and 6 numbers(2–7) = 32 chars. Unlike Base32, Base64 contains a few characters which confuse lowercase L "l" with uppercase I "I", and number "0" with Letter "O".
+
+## How time and secret are combined to generate OTP?
+
+For the counter, we rely on time. However, each country has a different time zone. To address this, we use UNIX time, which is a standardized way of measuring time across all time zones.
+
+UNIX time represents the number of seconds that have elapsed since January 1, 1970, UTC. This provides a universal reference point for time calculations.
+
+![UNIX Time Visualization](/images/blogs/2fa-deep-dive/unix-time.webp)
+
+If we used the UNIX time directly, the counter would change every second, which isn't suitable for generating OTPs. Instead, we divide the UNIX time by a period (usually 30 seconds) and use the remainder as our counter. This ensures the counter remains constant for that period. This period is configurable.
+
+![Time Period Division for OTP Counter](/images/blogs/2fa-deep-dive/unix-to-counter.webp)
+
+We then convert this counter from decimal to hexadecimal and pad it with zeros to make it 16 characters long.
+
+![Hexadecimal Counter Conversion](/images/blogs/2fa-deep-dive/counter-to-decimal.webp)
+
+Now that we have the timestamp counter in hexadecimal, let's decode our secret key and convert it into hexadecimal as well.
+
+![Secret Key Decoding Process](/images/blogs/2fa-deep-dive/decoding-secret.webp)
+
+Next, we hash the counter with the secret key using the HMAC-SHA1 algorithm, which generates a 40-character output.
+
+![HMAC-SHA1 Hash Generation](/images/blogs/2fa-deep-dive/merging-secret-and-counter.webp)
+
+There we have it, an OTP ready for the current time. But just picture having to enter a 40-character code for two-factor authentication (2FA).
+
+## How do we convert a 40-character hash to a 6-digit OTP?
+
+Here, we use dynamic truncation to generate a 6-digit OTP from the hash.
+
+### Step 1: Extract the last character
+Take the last character from the hash. In our case, it's "7".
+
+### Step 2: Calculate the offset
+Convert this character from hexadecimal to decimal and multiply it by 2, this becomes the offset.
+
+![Dynamic Truncation Offset Calculation](/images/blogs/2fa-deep-dive/offset-calculation.webp)
+
+### Step 3: Extract 8 characters
+Take the next 8 characters after this offset and convert them into an unsigned decimal number.
+
+![8-Character Conversion to Decimal](/images/blogs/2fa-deep-dive/hash-to-unsigned-decimal.webp)
+
+### Step 4: Generate the final OTP
+This gives us a 10-digit number. Convert this decimal number to a 6-digit OTP using modulo 10⁶.
+
+![Final 6-Digit OTP Generation](/images/blogs/2fa-deep-dive/getting-otp.webp)
+
+### Step 5: Verification
+Now we have our final OTP for verification.
+
+This process is carried out by both the authenticator to generate the OTP and the provider to verify it.
+
+## Conclusion
+
+In this article, we’ve explored how Time-based One-Time Passwords (TOTP) are generated using a combination of secret keys and timestamps. This secure and time-sensitive method demonstrates the power of Two-Factor Authentication (2FA) in protecting our online accounts. By understanding these mechanisms, we can better appreciate the robust security that 2FA provides.
+
+Happy reading, and stay secure!
