@@ -19,7 +19,7 @@
   },
   {
     "uuid": "2fa-deep-dive",
-    "slug": "2fa-deep-dive",
+    "slug": "how-two-factor-authentication-works-deep-dive",
     "title": "How Two-Factor Authentication (2FA) Works: A Deep Dive into Enhanced Security",
     "description": "In this blog post, we’ll delve into what 2FA is, why it’s essential, and how it functions, using practical examples to guide you through the process.",
     "date": "2024-08-25",
