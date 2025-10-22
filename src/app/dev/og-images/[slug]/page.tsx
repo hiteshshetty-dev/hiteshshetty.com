@@ -5,9 +5,9 @@ import BlogOGImage from "@/components/ui/blog-og-image";
 import blogs from "@/data/blogs.json";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -32,6 +32,10 @@ export function generateStaticParams(): { slug: string }[] {
 export const dynamicParams = false;
 
 export default async function BlogOGImagePage({ params }: Props) {
+  if (process.env.NODE_ENV === "production") {
+    notFound();
+  }
+
   const { slug } = await params;
   const blog = blogs.find((b) => b.slug === slug);
 
