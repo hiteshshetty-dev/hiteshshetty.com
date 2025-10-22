@@ -30,17 +30,15 @@ export default function BlogsPage() {
           </h1>
           <p className="text-lg text-brand-navy/70 max-w-2xl">
             Technical articles, tutorials, and insights on software development.
-            All posts are published on Medium.
+            Read the full articles here or find them on Medium.
           </p>
         </div>
 
         <div className="space-y-6 mb-12">
           {blogsData.map((blog) => (
-            <a
+            <Link
               key={blog.uuid}
-              href={blog.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`/blogs/${blog.slug}`}
               className="group block bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-brand-navy/10 hover:border-brand-amber/50"
               data-umami-event="Blog Click"
               data-umami-event-blog-title={blog.title}
@@ -88,7 +86,7 @@ export default function BlogsPage() {
                   </div>
 
                   <div className="flex items-center gap-2 text-brand-steel font-medium">
-                    <span>Read on Medium</span>
+                    <span>Read Article</span>
                     <HiExternalLink
                       className="group-hover:translate-x-1 transition-transform"
                       size={18}
@@ -96,7 +94,7 @@ export default function BlogsPage() {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
