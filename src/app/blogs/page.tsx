@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiArrowLeft, HiCalendar, HiExternalLink } from "react-icons/hi";
 import blogsData from "@/data/blogs.json";
+import profileData from "@/data/profile.json";
 
 export const metadata = {
   title: "Blogs",
@@ -100,7 +101,7 @@ export default function BlogsPage() {
 
         <div className="text-center">
           <a
-            href="https://medium.com/@hitesh-shetty"
+            href={profileData.medium}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors shadow-lg"
