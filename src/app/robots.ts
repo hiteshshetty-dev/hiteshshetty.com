@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: [],
+      disallow: ["/dev/"],
     },
     sitemap: "https://hiteshshetty.com/sitemap.xml",
   };
