@@ -1,4 +1,5 @@
 @import "tailwindcss";
+/* biome-ignore lint/suspicious/noUnknownAtRules: Tailwind theme */
 @plugin "@tailwindcss/typography";
 
 /* biome-ignore lint/suspicious/noUnknownAtRules: Tailwind theme */
@@ -64,19 +65,20 @@ h6 {
   opacity: 0;
 }
 
-/* Prose theme customization */
+/* biome-ignore-start lint/correctness/noUnknownFunction: Tailwind theme Prose theme customization */
 .prose {
-  --tw-prose-body: theme('colors.brand-navy / 0.8');
-  --tw-prose-headings: theme('colors.brand-navy');
-  --tw-prose-lead: theme('colors.brand-navy / 0.7');
-  --tw-prose-links: theme('colors.brand-steel');
-  --tw-prose-bold: theme('colors.brand-navy');
-  --tw-prose-counters: theme('colors.brand-steel');
-  --tw-prose-hr: theme('colors.brand-steel / 0.2');
-  --tw-prose-quotes: theme('colors.brand-navy / 0.8');
-  --tw-prose-quote-borders: theme('colors.brand-amber');
-  --tw-prose-captions: theme('colors.brand-steel');
-  --tw-prose-code: theme('colors.brand-navy / 0.8');
-  --tw-prose-pre-code: theme('colors.brand-beige');
-  --tw-prose-pre-bg: theme('colors.brand-navy');
+  --tw-prose-body: theme("colors.brand-navy / 0.8");
+  --tw-prose-headings: theme("colors.brand-navy");
+  --tw-prose-lead: theme("colors.brand-navy / 0.7");
+  --tw-prose-links: theme("colors.brand-steel");
+  --tw-prose-bold: theme("colors.brand-navy");
+  --tw-prose-counters: theme("colors.brand-steel");
+  --tw-prose-hr: theme("colors.brand-steel / 0.2");
+  --tw-prose-quotes: theme("colors.brand-navy / 0.8");
+  --tw-prose-quote-borders: theme("colors.brand-amber");
+  --tw-prose-captions: theme("colors.brand-steel");
+  --tw-prose-code: theme("colors.brand-navy / 0.8");
+  --tw-prose-pre-code: theme("colors.brand-beige");
+  --tw-prose-pre-bg: theme("colors.brand-navy");
 }
+/* biome-ignore-end lint/correctness/noUnknownFunction: Tailwind theme Prose theme customization */

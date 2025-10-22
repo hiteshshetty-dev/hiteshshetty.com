@@ -5,6 +5,7 @@
     "title": "Deploying a Next.js Static Site on GitHub Pages with a Custom Domain",
     "description": "A step‑by‑step guide to hosting a Next.js site on GitHub Pages with a custom domain",
     "date": "2025-10-19",
+    "readingTime": "4 min read",
     "url": "https://medium.com/@hitesh.shetty2011/deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain-671754d63eb4",
     "tags": ["Next.js", "GitHub Pages", "Custom Domain", "Guides & Tutorials"],
     "image": "/images/blogs/deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain/cover.webp"
@@ -15,6 +16,7 @@
     "title": "The Transaction That Never Ended: How Duplicate IDs Turned My Backend Into a CPU-Hungry Monster",
     "description": "It was 3 PM, and my server was screaming. CPU usage at 99%, database connections maxed out, and my load testing had just turned into a load shedding nightmare. All because of a transaction that refused to give up…",
     "date": "2025-09-21",
+    "readingTime": "5 min read",
     "url": "https://medium.com/@hitesh.shetty2011/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster-7ccc613832c9",
     "tags": ["Mongodb", "Performance", "Load Testing", "Observability"],
     "image": "/images/blogs/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster/cover.webp"
