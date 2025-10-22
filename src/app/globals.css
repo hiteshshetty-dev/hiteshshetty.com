@@ -73,7 +73,7 @@ h6 {
   --tw-prose-bold: theme('colors.brand-navy');
   --tw-prose-counters: theme('colors.brand-steel');
   --tw-prose-hr: theme('colors.brand-steel / 0.2');
-  --tw-prose-quotes: theme('colors.brand-navy');
+  --tw-prose-quotes: theme('colors.brand-navy / 0.8');
   --tw-prose-quote-borders: theme('colors.brand-amber');
   --tw-prose-captions: theme('colors.brand-steel');
   --tw-prose-code: theme('colors.brand-navy / 0.8');
