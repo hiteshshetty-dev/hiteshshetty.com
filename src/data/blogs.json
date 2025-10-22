@@ -8,7 +8,8 @@
     "readingTime": "4 min read",
     "url": "https://medium.com/@hitesh.shetty2011/deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain-671754d63eb4",
     "tags": ["Next.js", "GitHub Pages", "Custom Domain", "Guides & Tutorials"],
-    "image": "/images/blogs/deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain/cover.webp"
+    "image": "/images/blogs/deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain/cover.webp",
+    "ogImage": "/images/blogs/deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain/og-image.webp"
   },
   {
     "uuid": "duplicate-ids-cpu-hungry-monster",
@@ -19,7 +20,8 @@
     "readingTime": "5 min read",
     "url": "https://medium.com/@hitesh.shetty2011/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster-7ccc613832c9",
     "tags": ["Mongodb", "Performance", "Load Testing", "Observability"],
-    "image": "/images/blogs/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster/cover.webp"
+    "image": "/images/blogs/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster/cover.webp",
+    "ogImage": "/images/blogs/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster/og-image.webp"
   },
   {
     "uuid": "2fa-deep-dive",
@@ -30,6 +32,7 @@
     "readingTime": "5 min read",
     "url": "https://medium.com/@hitesh.shetty2011/how-two-factor-authentication-2fa-works-a-deep-dive-into-enhanced-security-30dd5007ad73",
     "tags": ["2fa Authentication", "Security", "TOTP"],
-    "image": "/images/blogs/2fa-deep-dive/cover.webp"
+    "image": "/images/blogs/2fa-deep-dive/cover.webp",
+    "ogImage": "/images/blogs/2fa-deep-dive/og-image.webp"
   }
 ]
