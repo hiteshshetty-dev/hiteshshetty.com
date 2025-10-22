@@ -21,7 +21,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${blogData.title} | Hitesh Shetty`;
+  const title = blogData.title;
   const description = blogData.description;
   const publishedTime = new Date(blogData.date).toISOString();
   const modifiedTime = new Date(blogData.date).toISOString();
