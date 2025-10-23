@@ -15,7 +15,23 @@ export function generatePersonSchema() {
       profileData.medium,
       profileData.codepen,
       profileData.leetcode,
+      profileData.x,
     ].filter(Boolean), // Remove any undefined values
+    socialMedia: [
+      {
+        "@type": "SocialMediaPosting",
+        author: {
+          "@type": "Person",
+          name: profileData.name,
+          url: profileData.linkedin,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "LinkedIn",
+          url: "https://linkedin.com",
+        },
+      },
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Mumbai",
@@ -54,8 +70,8 @@ export function generateWebsiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Hitesh Shetty Portfolio",
-    alternateName: "Hitesh Shetty",
+    name: "Hitesh Shetty",
+    alternateName: "Hitesh Shetty Portfolio",
     url: "https://hiteshshetty.com",
     description:
       "Senior Software Engineer specializing in full-stack product development",

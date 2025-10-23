@@ -1,5 +1,5 @@
 {
-  "name": "Hitesh Shetty Portfolio",
+  "name": "Hitesh Shetty",
   "short_name": "Hitesh Shetty",
   "description": "Senior Software Engineer specializing in full-stack product development with expertise in React, TypeScript, Node.js, and distributed backend systems.",
   "start_url": "/",
@@ -9,6 +9,30 @@
   "theme_color": "#1D3557",
   "orientation": "portrait-primary",
   "icons": [
+    {
+      "src": "/icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/apple-icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/icons/manifest-icon-192.maskable.png",
       "sizes": "192x192",
@@ -20,12 +44,6 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    },
-    {
-      "src": "/icons/apple-icon-180.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any"
     },
     {
       "src": "/icons/logo-navy.svg",

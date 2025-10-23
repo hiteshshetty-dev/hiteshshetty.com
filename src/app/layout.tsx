@@ -51,6 +51,13 @@ export const metadata: Metadata = {
   other: {
     "linkedin:profile": "https://linkedin.com/in/hiteshshetty-dev",
     "github:profile": "https://github.com/hiteshshetty-dev",
+    "application-name": "Hitesh Shetty",
+    "msapplication-TileColor": "#1D3557",
+    "msapplication-config": "/browserconfig.xml",
+    "theme-color": "#1D3557",
+    "profile:first_name": "Hitesh",
+    "profile:last_name": "Shetty",
+    "profile:username": "hiteshshetty-dev",
   },
   robots: {
     index: true,
@@ -68,6 +75,7 @@ export const metadata: Metadata = {
       { url: "/icons/favicon.ico", sizes: "any" },
       { url: "/icons/favicon-16x16.png", sizes: "16x16" },
       { url: "/icons/favicon-32x32.png", sizes: "32x32" },
+      { url: "/icons/favicon-96x96.png", sizes: "96x96" },
       { url: "/icons/logo-navy.svg", type: "image/svg+xml" },
     ],
     shortcut: "/icons/favicon.ico",
@@ -91,6 +99,15 @@ export const metadata: Metadata = {
         alt: "Hitesh Shetty - Senior Software Engineer Portfolio",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hitesh Shetty - Senior Software Engineer",
+    description:
+      "Senior Software Engineer specializing in full-stack product development with expertise in React, TypeScript, Node.js, and distributed backend systems.",
+    images: ["/images/og-image.jpg"],
+    creator: "@hiteshshettydev",
+    site: "@hiteshshettydev",
   },
   alternates: {
     canonical: "https://hiteshshetty.com",
