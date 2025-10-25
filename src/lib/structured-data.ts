@@ -86,6 +86,22 @@ export function generateOrganizationSchema() {
   };
 }
 
+export function generateBreadcrumbSchema(
+  breadcrumbs: Array<{ name: string; url?: string }>,
+  { includeContext = true }: { includeContext?: boolean } = {},
+) {
+  return {
+    ...(includeContext ? { "@context": "https://schema.org" } : {}),
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbs.map((breadcrumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: breadcrumb.name,
+      ...(breadcrumb.url ? { item: breadcrumb.url } : {}),
+    })),
+  };
+}
+
 export function generateHomePageSchema() {
   return {
     "@context": "https://schema.org",

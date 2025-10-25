@@ -5,7 +5,9 @@ import { useState } from "react";
 import { HiArrowLeft } from "react-icons/hi";
 import ProjectModal from "@/components/projects/ProjectModal";
 import ProjectSection from "@/components/projects/ProjectSection";
+import JsonLd from "@/components/ui/JsonLd";
 import projectsData from "@/data/projects.json";
+import { generateBreadcrumbSchema } from "@/lib/structured-data";
 
 interface Project {
   uuid: string;
@@ -73,8 +75,14 @@ export default function ProjectsClient() {
     setIsImageLoading(false);
   };
 
+  const breadcrumbs = [
+    { name: "Home", url: "https://hiteshshetty.com/" },
+    { name: "Projects" },
+  ];
+
   return (
     <>
+      <JsonLd data={generateBreadcrumbSchema(breadcrumbs)} />
       <main className="min-h-screen bg-brand-beige">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <Link
