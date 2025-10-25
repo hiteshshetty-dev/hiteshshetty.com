@@ -4,6 +4,7 @@ import "./globals.css";
 import Analytics from "@/components/Analytics/Analytics";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import profileData from "@/data/profile.json";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -26,8 +27,7 @@ export const metadata: Metadata = {
     default: "Hitesh Shetty - Senior Software Engineer & Full-Stack Developer",
     template: "%s - Hitesh Shetty",
   },
-  description:
-    "Senior Software Engineer specializing in full-stack product development with expertise in React, TypeScript, Node.js, and distributed backend systems.",
+  description: profileData.description,
   keywords: [
     "Hitesh Shetty",
     "Software Engineer",
@@ -78,8 +78,7 @@ export const metadata: Metadata = {
     url: "https://hiteshshetty.com",
     siteName: "Hitesh Shetty",
     title: "Hitesh Shetty - Senior Software Engineer & Full-Stack Developer",
-    description:
-      "Senior Software Engineer specializing in full-stack product development with expertise in React, TypeScript, Node.js, and distributed backend systems.",
+    description: profileData.description,
     images: [
       {
         url: "/images/og-image.jpg",
@@ -92,8 +91,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hitesh Shetty - Senior Software Engineer",
-    description:
-      "Senior Software Engineer specializing in full-stack product development with expertise in React, TypeScript, Node.js, and distributed backend systems.",
+    description: profileData.description,
     images: ["/images/og-image.jpg"],
     creator: "@hiteshshettydev",
     site: "@hiteshshettydev",

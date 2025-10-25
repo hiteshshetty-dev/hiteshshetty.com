@@ -59,8 +59,7 @@ export function generateWebsiteSchema() {
     name: "Hitesh Shetty",
     alternateName: ["Hitesh Shetty Developer", "Hitesh Shetty Portfolio"],
     url: "https://hiteshshetty.com/",
-    description:
-      "Senior Software Engineer specializing in full-stack product development",
+    description: profileData.description,
     inLanguage: "en-US",
     publisher: {
       "@id": "https://hiteshshetty.com/#organization",
