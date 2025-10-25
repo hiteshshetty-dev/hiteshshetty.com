@@ -22,7 +22,8 @@ const inter = Inter({
   fallback: ["system-ui", "sans-serif"],
 });
 
-const title = "Hitesh Shetty - Senior Full-Stack Engineer & Product Builder";
+const title =
+  "Hitesh Shetty - Senior Software Engineer | React, Node.js & Scalable Systems";
 export const metadata: Metadata = {
   title: {
     default: title,
