@@ -59,17 +59,6 @@ export const metadata: Metadata = {
     "profile:last_name": "Shetty",
     "profile:username": "hiteshshetty-dev",
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
   icons: {
     icon: [
       { url: "/icons/favicon.ico", sizes: "any" },
