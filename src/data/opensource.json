@@ -13,7 +13,7 @@
     "description": "Contributed enhancements and fixes to Meta's CSS-in-JS styling library",
     "stars": "8k+",
     "url": "https://github.com/facebook/stylex/pulls?q=is%3Apr+author%3Ahiteshshetty-dev",
-    "contributions": "Enhancements and fixes"
+    "contributions": "Bug fixes and enhancements"
   },
   {
     "uuid": "offline-detector",
