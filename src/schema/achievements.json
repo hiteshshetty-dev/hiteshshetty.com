@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Achievements Collection",
+  "description": "A collection of achievements and awards by Hitesh Shetty",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "properties": {
+      "uuid": {
+        "type": "string",
+        "description": "Unique identifier for the achievement",
+        "minLength": 1,
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "title": {
+        "type": "string",
+        "description": "Achievement title",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "description": {
+        "type": "string",
+        "description": "Detailed description of the achievement",
+        "minLength": 10,
+        "maxLength": 500
+      },
+      "year": {
+        "type": "string",
+        "description": "Year or year range of the achievement",
+        "minLength": 4,
+        "maxLength": 20,
+        "pattern": "^(\\d{4}|\\d{4}-\\d{4})$"
+      },
+      "type": {
+        "type": "string",
+        "description": "Type of achievement (icon will be displayed based on this)",
+        "enum": ["project", "hackathon", "security"]
+      }
+    },
+    "required": [
+      "uuid",
+      "title",
+      "description",
+      "year",
+      "type"
+    ],
+    "additionalProperties": false
+  }
+}
