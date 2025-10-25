@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Work Experience",
+  "description": "Professional work experience of Hitesh Shetty",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "properties": {
+      "uuid": {
+        "type": "string",
+        "description": "Unique identifier for the company",
+        "minLength": 1,
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "company": {
+        "type": "string",
+        "description": "Company name",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "location": {
+        "type": "string",
+        "description": "Work location",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "roles": {
+        "type": "array",
+        "description": "Array of roles held at the company",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "properties": {
+            "uuid": {
+              "type": "string",
+              "description": "Unique identifier for the role",
+              "minLength": 1,
+              "pattern": "^[a-z0-9-]+$"
+            },
+            "title": {
+              "type": "string",
+              "description": "Job title",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "period": {
+              "type": "string",
+              "description": "Duration of the role"
+            },
+            "achievements": {
+              "type": "array",
+              "description": "List of achievements in this role",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 1000
+              }
+            }
+          },
+          "required": [
+            "uuid",
+            "title",
+            "period",
+            "achievements"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "uuid",
+      "company",
+      "location",
+      "roles"
+    ],
+    "additionalProperties": false
+  }
+}
