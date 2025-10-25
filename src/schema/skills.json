@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Skills Collection",
+  "description": "Technical skills organized by categories",
+  "type": "object",
+  "properties": {
+    "categories": {
+      "type": "array",
+      "description": "Array of skill categories",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Category name",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "skills": {
+            "type": "array",
+            "description": "Skills in this category",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Skill name",
+                  "minLength": 1,
+                  "maxLength": 50
+                },
+                "icon": {
+                  "type": "string",
+                  "description": "Icon identifier for the skill",
+                  "minLength": 1,
+                  "maxLength": 50
+                }
+              },
+              "required": [
+                "name",
+                "icon"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "name",
+          "skills"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "categories"
+  ],
+  "additionalProperties": false
+}
