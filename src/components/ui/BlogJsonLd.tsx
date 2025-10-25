@@ -21,10 +21,15 @@ export default function BlogJsonLd({
 }: BlogJsonLdProps) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: title,
     description: description,
-    image: image,
+    image: {
+      "@type": "ImageObject",
+      url: image,
+      width: 1400,
+      height: 788,
+    },
     datePublished: new Date(date).toISOString(),
     dateModified: new Date(date).toISOString(),
     author: {
@@ -33,9 +38,15 @@ export default function BlogJsonLd({
       url: "https://hiteshshetty.com",
     },
     publisher: {
-      "@type": "Person",
+      "@type": "Organization",
       name: author,
       url: "https://hiteshshetty.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://hiteshshetty.com/icons/logo-navy.svg",
+        width: 1024,
+        height: 1024,
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
