@@ -29,7 +29,7 @@ When you enable 2FA on GitHub, it provides a QR code for registration. This QR c
 <div className="flex flex-col sm:flex-row my-6 justify-center items-center">
     <div className="flex-[0.25]">
         <Image 
-            src="/images/blogs/2fa-deep-dive/2fa-setup-qr-code.webp" 
+            src="/images/blogs/how-two-factor-authentication-works-deep-dive/2fa-setup-qr-code.webp" 
             alt="GitHub 2FA Setup QR Code" 
             width={400}
             height={300}
@@ -38,7 +38,7 @@ When you enable 2FA on GitHub, it provides a QR code for registration. This QR c
     </div>
     <div className="flex-[0.75]">
         <Image 
-            src="/images/blogs/2fa-deep-dive/2fa-decoded-details.webp" 
+            src="/images/blogs/how-two-factor-authentication-works-deep-dive/2fa-decoded-details.webp" 
             alt="GitHub 2FA QR Decoded Details" 
             width={600}
             height={300}
@@ -78,23 +78,23 @@ For the counter, we rely on time. However, each country has a different time zon
 
 UNIX time represents the number of seconds that have elapsed since January 1, 1970, UTC. This provides a universal reference point for time calculations.
 
-![UNIX Time Visualization](/images/blogs/2fa-deep-dive/unix-time.webp)
+![UNIX Time Visualization](/images/blogs/how-two-factor-authentication-works-deep-dive/unix-time.webp)
 
 If we used the UNIX time directly, the counter would change every second, which isn't suitable for generating OTPs. Instead, we divide the UNIX time by a period (usually 30 seconds) and use the remainder as our counter. This ensures the counter remains constant for that period. This period is configurable.
 
-![Time Period Division for OTP Counter](/images/blogs/2fa-deep-dive/unix-to-counter.webp)
+![Time Period Division for OTP Counter](/images/blogs/how-two-factor-authentication-works-deep-dive/unix-to-counter.webp)
 
 We then convert this counter from decimal to hexadecimal and pad it with zeros to make it 16 characters long.
 
-![Hexadecimal Counter Conversion](/images/blogs/2fa-deep-dive/counter-to-decimal.webp)
+![Hexadecimal Counter Conversion](/images/blogs/how-two-factor-authentication-works-deep-dive/counter-to-decimal.webp)
 
 Now that we have the timestamp counter in hexadecimal, let's decode our secret key and convert it into hexadecimal as well.
 
-![Secret Key Decoding Process](/images/blogs/2fa-deep-dive/decoding-secret.webp)
+![Secret Key Decoding Process](/images/blogs/how-two-factor-authentication-works-deep-dive/decoding-secret.webp)
 
 Next, we hash the counter with the secret key using the HMAC-SHA1 algorithm, which generates a 40-character output.
 
-![HMAC-SHA1 Hash Generation](/images/blogs/2fa-deep-dive/merging-secret-and-counter.webp)
+![HMAC-SHA1 Hash Generation](/images/blogs/how-two-factor-authentication-works-deep-dive/merging-secret-and-counter.webp)
 
 There we have it, an OTP ready for the current time. But just picture having to enter a 40-character code for two-factor authentication (2FA).
 
@@ -108,17 +108,17 @@ Take the last character from the hash. In our case, it's "7".
 ### Step 2: Calculate the offset
 Convert this character from hexadecimal to decimal and multiply it by 2, this becomes the offset.
 
-![Dynamic Truncation Offset Calculation](/images/blogs/2fa-deep-dive/offset-calculation.webp)
+![Dynamic Truncation Offset Calculation](/images/blogs/how-two-factor-authentication-works-deep-dive/offset-calculation.webp)
 
 ### Step 3: Extract 8 characters
 Take the next 8 characters after this offset and convert them into an unsigned decimal number.
 
-![8-Character Conversion to Decimal](/images/blogs/2fa-deep-dive/hash-to-unsigned-decimal.webp)
+![8-Character Conversion to Decimal](/images/blogs/how-two-factor-authentication-works-deep-dive/hash-to-unsigned-decimal.webp)
 
 ### Step 4: Generate the final OTP
 This gives us a 10-digit number. Convert this decimal number to a 6-digit OTP using modulo 10⁶.
 
-![Final 6-Digit OTP Generation](/images/blogs/2fa-deep-dive/getting-otp.webp)
+![Final 6-Digit OTP Generation](/images/blogs/how-two-factor-authentication-works-deep-dive/getting-otp.webp)
 
 ### Step 5: Verification
 Now we have our final OTP for verification.
