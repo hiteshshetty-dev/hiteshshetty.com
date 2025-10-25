@@ -6,10 +6,7 @@ import Hero from "@/components/sections/Hero";
 import OpenSource from "@/components/sections/OpenSource";
 import Skills from "@/components/sections/Skills";
 import JsonLd from "@/components/ui/JsonLd";
-import {
-  generatePersonSchema,
-  generateWebsiteSchema,
-} from "@/lib/structured-data";
+import { generateHomePageSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   alternates: {
@@ -19,8 +16,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <JsonLd data={generatePersonSchema()} />
-      <JsonLd data={generateWebsiteSchema()} />
+      <JsonLd data={generateHomePageSchema()} />
       <main>
         <Hero />
         <Experience />
