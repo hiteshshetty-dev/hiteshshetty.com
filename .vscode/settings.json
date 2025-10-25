@@ -4,8 +4,36 @@
   },
   "json.schemas": [
     {
+      "fileMatch": ["/src/schema/achievements.json", "/src/data/achievements.json"],
+      "url": "/src/schema/achievements.json"
+    },
+    {
       "fileMatch": ["/src/schema/blogs.json", "/src/data/blogs.json"],
       "url": "/src/schema/blogs.json"
+    },
+    {
+      "fileMatch": ["/src/schema/education.json", "/src/data/education.json"],
+      "url": "/src/schema/education.json"
+    },
+    {
+      "fileMatch": ["/src/schema/experience.json", "/src/data/experience.json"],
+      "url": "/src/schema/experience.json"
+    },
+    {
+      "fileMatch": ["/src/schema/opensource.json", "/src/data/opensource.json"],
+      "url": "/src/schema/opensource.json"
+    },
+    {
+      "fileMatch": ["/src/schema/profile.json", "/src/data/profile.json"],
+      "url": "/src/schema/profile.json"
+    },
+    {
+      "fileMatch": ["/src/schema/projects.json", "/src/data/projects.json"],
+      "url": "/src/schema/projects.json"
+    },
+    {
+      "fileMatch": ["/src/schema/skills.json", "/src/data/skills.json"],
+      "url": "/src/schema/skills.json"
     }
   ]
 }
