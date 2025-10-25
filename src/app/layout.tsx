@@ -22,9 +22,10 @@ const inter = Inter({
   fallback: ["system-ui", "sans-serif"],
 });
 
+const title = "Hitesh Shetty - Senior Full-Stack Engineer & Product Builder";
 export const metadata: Metadata = {
   title: {
-    default: "Hitesh Shetty - Senior Software Engineer & Full-Stack Developer",
+    default: title,
     template: "%s - Hitesh Shetty",
   },
   description: profileData.description,
@@ -77,7 +78,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://hiteshshetty.com",
     siteName: "Hitesh Shetty",
-    title: "Hitesh Shetty - Senior Software Engineer & Full-Stack Developer",
+    title: title,
     description: profileData.description,
     images: [
       {
@@ -90,7 +91,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hitesh Shetty - Senior Software Engineer",
+    title: title,
     description: profileData.description,
     images: ["/images/og-image.jpg"],
     creator: "@hiteshshettydev",
