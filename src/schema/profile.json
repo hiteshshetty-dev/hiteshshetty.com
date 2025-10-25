@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Profile Information",
+  "description": "Personal profile data for Hitesh Shetty",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "title": {
+      "type": "string",
+      "description": "Professional title",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "tagline": {
+      "type": "string",
+      "description": "Personal tagline or motto",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "location": {
+      "type": "string",
+      "description": "Current location",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "bio": {
+      "type": "string",
+      "description": "Professional biography",
+      "minLength": 10,
+      "maxLength": 1000
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email address"
+    },
+    "linkedin": {
+      "type": "string",
+      "format": "uri",
+      "description": "LinkedIn profile URL"
+    },
+    "github": {
+      "type": "string",
+      "format": "uri",
+      "description": "GitHub profile URL"
+    },
+    "medium": {
+      "type": "string",
+      "format": "uri",
+      "description": "Medium profile URL"
+    },
+    "codepen": {
+      "type": "string",
+      "format": "uri",
+      "description": "CodePen profile URL"
+    },
+    "leetcode": {
+      "type": "string",
+      "format": "uri",
+      "description": "LeetCode profile URL"
+    },
+    "x": {
+      "type": "string",
+      "format": "uri",
+      "description": "X (Twitter) profile URL"
+    }
+  },
+  "required": [
+    "name",
+    "title",
+    "tagline",
+    "location",
+    "bio",
+    "email",
+    "linkedin",
+    "github"
+  ],
+  "additionalProperties": false
+}
