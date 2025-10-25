@@ -1,15 +1,14 @@
 import Image from "next/image";
 import profileData from "@/data/profile.json";
+import { getBlogCoverImage } from "@/lib/blog-utils";
 
 interface Blog {
-  uuid: string;
   slug: string;
   title: string;
   description: string;
   date: string;
   url: string;
   tags: string[];
-  image: string;
   readingTime?: string;
 }
 
@@ -101,15 +100,13 @@ const BlogOGImage = ({ blog }: BlogOGImageProps) => {
 
           <div className="w-80 flex flex-col justify-evenly items-center px-8">
             <div className="w-64 rounded-3xl overflow-hidden border-4 border-brand-amber/30 mb-6 flex items-center justify-center aspect-video">
-              {blog.image && (
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  width={300}
-                  height={256}
-                  className="w-full h-full object-cover"
-                />
-              )}
+              <Image
+                src={getBlogCoverImage(blog.slug)}
+                alt={blog.title}
+                width={300}
+                height={256}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <p className="text-2xl text-brand-navy/70 font-medium text-center">

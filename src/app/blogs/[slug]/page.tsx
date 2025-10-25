@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import BlogLayout from "@/components/blogs/BlogLayout";
 import blogsData from "@/data/blogs.json";
+import { getBlogOgImage } from "@/lib/blog-utils";
 
 const validSlugs = blogsData
   .map((blog) => blog.slug)
@@ -26,7 +27,7 @@ export async function generateMetadata({
   const publishedTime = new Date(blogData.date).toISOString();
   const modifiedTime = new Date(blogData.date).toISOString();
   const url = `https://hiteshshetty.com/blogs/${slug}`;
-  const ogImageUrl = `https://hiteshshetty.com${blogData.ogImage}`;
+  const ogImageUrl = `https://hiteshshetty.com${getBlogOgImage(blogData.slug)}`;
 
   return {
     title,

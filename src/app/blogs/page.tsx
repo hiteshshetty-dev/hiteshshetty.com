@@ -3,6 +3,7 @@ import Link from "next/link";
 import { HiArrowLeft, HiCalendar, HiExternalLink } from "react-icons/hi";
 import blogsData from "@/data/blogs.json";
 import profileData from "@/data/profile.json";
+import { getBlogCoverImage } from "@/lib/blog-utils";
 
 export const metadata = {
   title: "Blogs",
@@ -38,7 +39,7 @@ export default function BlogsPage() {
         <div className="space-y-6 mb-12">
           {blogsData.map((blog) => (
             <Link
-              key={blog.uuid}
+              key={blog.slug}
               href={`/blogs/${blog.slug}`}
               className="group block bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-brand-navy/10 hover:border-brand-amber/50"
               data-umami-event="Blog Click"
@@ -47,7 +48,7 @@ export default function BlogsPage() {
               <div className="flex flex-col md:flex-row">
                 <div className="relative w-full md:w-96 h-64 md:h-auto md:min-h-[280px] flex-shrink-0 bg-brand-navy/5 flex items-center justify-center">
                   <Image
-                    src={blog.image}
+                    src={getBlogCoverImage(blog.slug)}
                     alt={blog.title}
                     fill
                     className="object-contain p-4"

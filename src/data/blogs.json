@@ -1,38 +1,29 @@
 [
   {
-    "uuid": "deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain",
     "slug": "deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain",
     "title": "Deploying a Next.js Static Site on GitHub Pages with a Custom Domain",
     "description": "A step‑by‑step guide to hosting a Next.js site on GitHub Pages with a custom domain",
     "date": "2025-10-19",
     "readingTime": "4 min read",
     "url": "https://medium.com/@hitesh.shetty2011/deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain-671754d63eb4",
-    "tags": ["Next.js", "GitHub Pages", "Custom Domain", "Guides & Tutorials"],
-    "image": "/images/blogs/deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain/cover.webp",
-    "ogImage": "/images/blogs/deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain/og-image.webp"
+    "tags": ["Next.js", "GitHub Pages", "Custom Domain", "Guides & Tutorials"]
   },
   {
-    "uuid": "duplicate-ids-cpu-hungry-monster",
     "slug": "the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster",
     "title": "The Transaction That Never Ended: How Duplicate IDs Turned My Backend Into a CPU-Hungry Monster",
     "description": "It was 3 PM, and my server was screaming. CPU usage at 99%, database connections maxed out, and my load testing had just turned into a load shedding nightmare. All because of a transaction that refused to give up…",
     "date": "2025-09-21",
     "readingTime": "5 min read",
     "url": "https://medium.com/@hitesh.shetty2011/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster-7ccc613832c9",
-    "tags": ["Mongodb", "Performance", "Load Testing", "Observability"],
-    "image": "/images/blogs/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster/cover.webp",
-    "ogImage": "/images/blogs/the-transaction-that-never-ended-how-duplicate-ids-turned-my-backend-into-a-cpu-hungry-monster/og-image.webp"
+    "tags": ["Mongodb", "Performance", "Load Testing", "Observability"]
   },
   {
-    "uuid": "2fa-deep-dive",
     "slug": "how-two-factor-authentication-works-deep-dive",
     "title": "How Two-Factor Authentication (2FA) Works: A Deep Dive into Enhanced Security",
-    "description": "In this blog post, we’ll delve into what 2FA is, why it’s essential, and how it functions, using practical examples to guide you through the process.",
+    "description": "In this blog post, we'll delve into what 2FA is, why it's essential, and how it functions, using practical examples to guide you through the process.",
     "date": "2024-08-25",
     "readingTime": "5 min read",
     "url": "https://medium.com/@hitesh.shetty2011/how-two-factor-authentication-2fa-works-a-deep-dive-into-enhanced-security-30dd5007ad73",
-    "tags": ["2fa Authentication", "Security", "TOTP"],
-    "image": "/images/blogs/2fa-deep-dive/cover.webp",
-    "ogImage": "/images/blogs/2fa-deep-dive/og-image.webp"
+    "tags": ["2fa Authentication", "Security", "TOTP"]
   }
 ]

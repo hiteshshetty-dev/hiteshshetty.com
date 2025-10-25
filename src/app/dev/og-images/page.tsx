@@ -30,7 +30,7 @@ export default function OGImagesPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {blogs.map((blog) => (
             <div
-              key={blog.uuid}
+              key={blog.slug}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
             >
               <div className="p-6">

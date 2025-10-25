@@ -10,6 +10,7 @@ import {
 } from "react-icons/hi";
 import BlogJsonLd from "@/components/ui/BlogJsonLd";
 import blogsData from "@/data/blogs.json";
+import { getBlogCoverImage } from "@/lib/blog-utils";
 
 interface BlogLayoutProps {
   children: React.ReactNode;
@@ -24,7 +25,7 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
   const summary = blogData?.description;
   const tags = blogData?.tags || [];
   const readingTime = blogData?.readingTime || "5 min read";
-  const image = blogData?.image;
+  const image = blogData ? getBlogCoverImage(blogData.slug) : undefined;
   const mediumUrl = blogData?.url;
 
   const formatDate = (dateString: string) => {
@@ -170,7 +171,7 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
                 .slice(0, 2)
                 .map((blog) => (
                   <Link
-                    key={blog.uuid}
+                    key={blog.slug}
                     href={`/blogs/${blog.slug}`}
                     className="group block p-6 bg-white rounded-lg border-2 border-brand-steel/10 hover:border-brand-amber/30 transition-all duration-200 hover:shadow-lg flex flex-col"
                   >
