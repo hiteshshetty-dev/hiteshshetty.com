@@ -1,5 +1,11 @@
 {
   "editor.codeActionsOnSave": {
     "source.organizeImports.biome": "explicit"
-  }
+  },
+  "json.schemas": [
+    {
+      "fileMatch": ["/src/schema/blogs.json", "/src/data/blogs.json"],
+      "url": "/src/schema/blogs.json"
+    }
+  ]
 }
