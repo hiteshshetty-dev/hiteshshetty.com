@@ -1,4 +1,8 @@
-import { generateBreadcrumbSchema } from "../../lib/structured-data";
+import {
+  generateBreadcrumbSchema,
+  generateOrganizationSchema,
+  generatePersonSchema,
+} from "../../lib/structured-data";
 import JsonLd from "./JsonLd";
 
 interface BlogJsonLdProps {
@@ -35,12 +39,8 @@ export default function BlogJsonLd({
         },
         datePublished: new Date(date).toISOString(),
         dateModified: new Date(date).toISOString(),
-        author: {
-          "@id": "https://hiteshshetty.com/#person",
-        },
-        publisher: {
-          "@id": "https://hiteshshetty.com/#organization",
-        },
+        author: generatePersonSchema(),
+        publisher: generateOrganizationSchema(),
         mainEntityOfPage: {
           "@type": "WebPage",
           "@id": url,
