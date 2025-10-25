@@ -45,7 +45,6 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
           date={publishedAt || ""}
           url={`https://hiteshshetty.com/blogs/${slug}`}
           image={`https://hiteshshetty.com${image}`}
-          author="Hitesh Shetty"
           tags={tags}
           readingTime={readingTime}
         />
