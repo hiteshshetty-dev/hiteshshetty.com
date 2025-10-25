@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Projects Collection",
+  "description": "A collection of projects by Hitesh Shetty",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "properties": {
+      "uuid": {
+        "type": "string",
+        "description": "Unique identifier for the project",
+        "minLength": 1,
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "title": {
+        "type": "string",
+        "description": "Project title",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "subtitle": {
+        "type": "string",
+        "description": "Project subtitle or tagline",
+        "minLength": 1,
+        "maxLength": 150
+      },
+      "description": {
+        "type": "string",
+        "description": "Detailed project description",
+        "minLength": 10,
+        "maxLength": 1000
+      },
+      "tech": {
+        "type": "array",
+        "description": "Technologies used in the project",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50
+        },
+        "minItems": 1,
+        "maxItems": 20,
+        "uniqueItems": true
+      },
+      "type": {
+        "type": "string",
+        "description": "Type of project",
+        "enum": ["personal", "professional", "open-source", "freelance"]
+      },
+      "featured": {
+        "type": "boolean",
+        "description": "Whether the project is featured"
+      },
+      "links": {
+        "type": "object",
+        "description": "Project links",
+        "properties": {
+          "demo": {
+            "type": "string",
+            "format": "uri",
+            "description": "Demo URL"
+          },
+          "github": {
+            "type": "string",
+            "format": "uri",
+            "description": "GitHub repository URL"
+          },
+          "npm": {
+            "type": "string",
+            "format": "uri",
+            "description": "NPM package URL"
+          }
+        },
+        "additionalProperties": true
+      },
+      "company": {
+        "type": "string",
+        "description": "Company name for professional projects",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "previews": {
+        "type": "array",
+        "description": "Project preview images or videos",
+        "items": {
+          "type": "string",
+          "format": "uri"
+        },
+        "minItems": 1,
+        "maxItems": 10
+      }
+    },
+    "required": [
+      "uuid",
+      "title",
+      "subtitle",
+      "description",
+      "tech",
+      "type",
+      "featured",
+      "previews"
+    ],
+    "additionalProperties": true
+  }
+}
