@@ -33,20 +33,10 @@ export default function BlogJsonLd({
     datePublished: new Date(date).toISOString(),
     dateModified: new Date(date).toISOString(),
     author: {
-      "@type": "Person",
-      name: author,
-      url: "https://hiteshshetty.com",
+      "@id": "https://hiteshshetty.com/#person",
     },
     publisher: {
-      "@type": "Organization",
-      name: author,
-      url: "https://hiteshshetty.com",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://hiteshshetty.com/icons/logo-navy.svg",
-        width: 1024,
-        height: 1024,
-      },
+      "@id": "https://hiteshshetty.com/#organization",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
