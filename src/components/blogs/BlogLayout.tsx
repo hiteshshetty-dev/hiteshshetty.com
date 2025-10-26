@@ -126,7 +126,7 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
           </div>
 
           {mediumUrl && (
-            <div className="mt-12 p-6 bg-brand-navy/5 rounded-lg border border-brand-navy/10">
+            <div className="mt-12 p-4 sm:p-6 bg-brand-navy/5 rounded-lg border border-brand-navy/10">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-brand-navy mb-2">
@@ -141,9 +141,9 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
                   href={mediumUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors sm:text-base text-sm"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors sm:text-base text-xs"
                 >
-                  Read on Medium
+                  Medium
                   <HiExternalLink size={16} />
                 </a>
               </div>
