@@ -143,7 +143,8 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors sm:text-base text-xs"
                 >
-                  Medium
+                  <span className="hidden sm:block">Read on Medium</span>
+                  <span className="block sm:hidden">Medium</span>
                   <HiExternalLink size={16} />
                 </a>
               </div>
