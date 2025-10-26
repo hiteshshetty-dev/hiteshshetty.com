@@ -82,3 +82,18 @@ h6 {
   --tw-prose-pre-bg: theme("colors.brand-navy");
 }
 /* biome-ignore-end lint/correctness/noUnknownFunction: Tailwind theme Prose theme customization */
+
+/* biome-ignore lint/suspicious/noUnknownAtRules: Tailwind utility */
+@utility prose {
+  blockquote {
+      /* Disable adding quote marks to block-quotes: https://github.com/tailwindlabs/tailwindcss-typography/issues/66 */
+      p {
+          &:first-of-type::before,
+          &:last-of-type::after {
+              content: none;
+          }
+
+          font-weight: normal;
+      }
+  }
+}
