@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     description: profileData.description,
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Hitesh Shetty - Senior Software Engineer Portfolio",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: title,
     description: profileData.description,
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-image.webp"],
     creator: "@hiteshshettydev",
     site: "@hiteshshettydev",
   },
