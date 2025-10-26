@@ -1,0 +1,392 @@
+import Image from "next/image";
+
+I finally did it. After weeks of grinding, my new portfolio website was live. It was fast, it was sleek, it was built with Next.js, and I was _so_ proud. I ran it through Google’s Lighthouse checker, expecting all the scores to be green.
+
+Performance? 100. Accessibility? 92. Best Practices? 100.
+
+SEO? **82.**
+
+<Image className="mx-auto" src="/images/blogs/how-i-improved-seo-score-from-82-to-100/tom-n-jerry-pain.gif" alt="Tom And Jerry GIF by Boomerang Official" width={480} height={350} />
+
+That orange circle bugged me. As a developer, a _&lt;90_ score just wasn't going to cut it.
+
+I knew I’d already followed the obvious best practices, all my links had descriptive text, every `image` had an `alt` tag, and I'd optimized my images to WebP. So, what was I missing?
+
+My new grind began: the deep dive into the “invisible” parts of SEO that separate a “good” site from a “great” one. I discovered that getting from 82 to 100 is all about a few key configurations that tell search engines and social media platforms _exactly_ what your site is.
+
+So, grab a coffee. Let’s walk through the exact steps I took to get that 100 score.
+
+> A Quick Note: My site is built with Next.js (using the App Router), so some of my snippets will look like that. But don’t worry! This is all just a fancy way of generating plain HTML, and I’ll provide the final HTML conversion for every example.
+
+## Part 1: The Meta Tags
+
+Think of meta tags as the digital name tag for each page on your site. They tell crawlers (like the Googlebot) the absolute basics: “Who are you?” and “What are you about?”
+
+In Next.js, this is incredibly simple. You can export a `metadata` object from any `page.tsx` (or `layout.tsx`) file. I set up the common ones in my root `layout.tsx` to apply to every page, and then I override them in specific pages (like for each blog post).
+
+Here are the non-negotiables:
+
+### 1 . Title
+
+*   **What it is:** The title of your page. This is what you see in the browser tab.
+*   **Why it matters:** It’s the single most important piece of info. Make it clear and compelling.
+
+**Next.js (layout.tsx or page.tsx):**
+
+```tsx
+export const metadata = {
+  title: 'Page Title | My Website',
+};
+```
+
+**HTML Conversion:**
+
+```html
+<title>Page Title | My Website</title>
+```
+
+### 2. Description
+
+*   **What it is:** The little preview (about 155–160 characters) that appears under the title in search results.
+*   **Why it matters:** This is your sales pitch. It’s what convinces someone to click _your_ link instead of the one above it.
+
+**Next.js:**
+
+```tsx
+export const metadata = {
+  description: 'Learn the essential first steps for SEO that took my site from a 82 to a 100 Lighthouse score.',
+};
+```
+
+**HTML Conversion:**
+
+```html
+<meta name="description" content="Learn the essential first steps for SEO that took my site from a 82 to a 100 Lighthouse score." />
+```
+
+### 3. Author, Keywords, and Icons
+
+*   `author`: Simple enough. Who wrote this?
+*   `keywords`: A bit old-school, and Google _says_ it doesn't really use <a href='https://developers.google.com/search/blog/2009/09/google-does-not-use-keywords-meta-tag#why-doesnt-google-use-the-keywords-meta-tag' target='_blank' rel='noopener noreferrer'>this</a> for ranking anymore. But it costs nothing to add, and other, smaller search engines might. I just pop in 5-7 relevant terms.
+*   `icons`: This is your "favicon" (the little icon in the browser tab).
+
+**Next.js:**
+
+```tsx
+export const metadata = {
+  author: 'Your Name',
+  keywords: 'seo, nextjs, web development, lighthouse score, javascript',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+};
+```
+
+**HTML Conversion:**
+
+```html
+<meta name="author" content="Your Name" />
+<meta name="keywords" content="seo, nextjs, web development, lighthouse score, javascript" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+```
+
+### 4. Canonical URL
+
+*   **What it is:** The “one true” or “official” URL for a piece of content.
+*   **Why it matters:** Sometimes, your site might be reachable in multiple ways (e.g., `http://`, `https://`, `www.`, `non-www.`). A canonical tag tells Google, "Hey, all these versions are the same page. Please index _this specific one_." It prevents duplicate content penalties.
+
+**Next.js:**
+
+```tsx
+// In layout.tsx
+export const metadata = {
+  metadataBase: new URL("https://hiteshshetty.com"),
+  // ...
+};
+```
+
+```tsx
+// In page.tsx, you can add the specific path
+export const metadata = {
+  alternates: {
+    canonical: '/blog/how-i-improved-seo-score-from-82-to-100',
+  },
+  // ...
+};
+```
+
+**HTML Conversion:**
+
+```html
+<link rel="canonical" href="https://hiteshshetty.com/blog/how-i-improved-seo-score-from-82-to-100" />
+```
+
+## Part 2: The "Pretty Previews" (Open Graph & Twitter)
+
+Okay, so Google is happy. But what happens when I share my new blog post on Twitter, Slack, or LinkedIn? It looks… terrible. Just a plain text link.
+
+<Image className="mx-auto" src="/images/blogs/how-i-improved-seo-score-from-82-to-100/no-preview-linkedin.webp" alt="No preview when shared on LinkedIn" width={800} height={630} />
+
+This is where Open Graph (OG) tags come in. These are meta tags created by Facebook (but used by _everyone_) that control how your link looks when it’s shared. They create the “card” with a title, description, and, most importantly, a preview image.
+
+In Next.js, this is just more properties in our `metadata` object.
+
+```tsx
+export const metadata = {
+  title: "My Site's SEO Score Was 82. Here's How I Got it to 100.",
+  description: 'My journey from 82 to 100 in SEO.',
+  
+  // Open Graph Tags
+  openGraph: {
+    title: "My Site's SEO Score Was 82. Here's How I Got it to 100.",
+    description: 'My journey from 82 to 100 in SEO.',
+    url: 'https://hiteshshetty.com/blog/how-i-improved-seo-score-from-82-to-100',
+    siteName: 'My Website',
+    images: [      {
+        url: 'https://hiteshshetty.com/images/blogs/how-i-improved-seo-score-from-82-to-100/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'A preview image for my blog post',
+      },
+    ],
+    locale: 'en_US',
+    type: 'article',
+  },
+
+  // Twitter Tags
+  twitter: {
+    card: 'summary_large_image',
+    title: "My Site's SEO Score Was 82. Here's How I Got it to 100.",
+    description: 'My journey from 82 to 100 in SEO.',
+    creator: '@YourTwitterHandle',
+    images: ['https://hiteshshetty.com/images/blogs/how-i-improved-seo-score-from-82-to-100/og-image.webp'],
+  },
+};
+```
+
+**HTML Conversion:**
+
+```html
+{/* Open Graph Tags */}
+<meta property="og:title" content="My Site's SEO Score Was 82. Here's How I Got it to 100.">
+<meta property="og:description" content="My journey from 82 to 100 in SEO.">
+<meta property="og:url" content="https://hiteshshetty.com/blog/how-i-improved-seo-score-from-82-to-100">
+<meta property="og:site_name" content="My Website">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hiteshshetty.com/images/blogs/how-i-improved-seo-score-from-82-to-100/og-image.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A preview image for my blog post">
+<meta property="og:type" content="article">
+
+{/* Twitter Tags */}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@YourTwitterHandle">
+<meta name="twitter:title" content="My Site's SEO Score Was 82. Here's How I Got it to 100.">
+<meta name="twitter:description" content="My journey from 82 to 100 in SEO.">
+<meta name="twitter:image" content="https://hiteshshetty.com/images/blogs/how-i-improved-seo-score-from-82-to-100/og-image.webp">
+```
+
+After applying the Open Graph tags, the preview looks like this:
+
+<Image className="mx-auto" src="/images/blogs/how-i-improved-seo-score-from-82-to-100/open-graph-preview-linkedin.webp" alt="Preview of the Website when shared on LinkedIn" width={800} height={630} />
+
+### My Trick for OG Images
+
+You can create these images in Figma or Canva. But I’m a developer! I wanted my `og:image` to match my site's design and be easy to update.
+
+Since my site is currently static, I did a “low-tech” version of a “high-tech” solution:
+
+1.  I created a React component (`<OpenGraphImage />`) that was styled to look exactly like a social card (1200x630px), with the name, title, tags and profile-image.
+2.  I put this component on a “secret” dev-only route (e.g., `/og-image-generator`).
+3.  I ran my app, visited that page, and just… took a screenshot of the component.
+4.  I compressed that screenshot into a `.webp` file (for great quality and small file size) and put it in my `/public` folder.
+
+This way, if I ever change my site’s theme, I just update the component, take a new screenshot and replace the image are updated.
+
+<Image className="mx-auto" src="/images/og-image.webp" alt="Preview of Open graph image for Homepage" width={800} height={630} />
+
+> **The “Pro” Way:** If my site was Server-Side Rendered (SSR), I would have a created a route (like `/api/og`) that uses `NextImageResponse` and gives an image response.
+
+## Part 3: Giving Crawlers a Map and Rules
+
+Okay, our pages are tagged. Now we need to give Google a “front door” and a “map.”
+
+### 1. `robots.txt` (The "Keep Out" Sign)
+
+*   **Why:** This file tells _all_ bots (good and bad) which parts of your site they are allowed or _not_ allowed to look at. You might want to block them from `/admin` pages or API routes.
+*   **How:** In Next.js (App Router), you just create a `robots.ts` (or `.js`) file in your `app` directory.
+
+**Next.js (`app/robots.ts`):**
+
+```tsx
+import type { MetadataRoute } from "next";
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: "*",       // Applies to all bots
+      allow: "/",           // Allow all route by default
+      disallow: ["/dev/"],  // Disallow restricted paths.
+    },
+    sitemap: "https://hiteshshetty.com/sitemap.xml",
+  };
+}
+```
+
+This will automatically generate the `robots.txt` file at your site's root while creating a build.
+
+```text
+User-Agent: *
+Allow: /
+Disallow: /dev/
+Sitemap: https://hiteshshetty.com/sitemap.xml
+```
+
+### 2. `sitemap.xml` (The "Treasure Map")
+
+*   **Why:** A sitemap is an XML file that lists _every single important page_ on your website. It’s like handing Google a treasure map and saying, “Here are all the pages I want you to index. Please don’t miss any.”
+*   **How:** Just like with robots, you create a `sitemap.ts` (or `.js`) file in your `app` directory.
+
+**Next.js (`app/sitemap.ts`):**
+
+```tsx
+import type { MetadataRoute } from "next";
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://hiteshshetty.com";
+  return [    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/projects`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blogs`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    }
+  ];
+}
+```
+
+This will automatically generate the `sitemap.xml` file at your site's root while creating a build.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://hiteshshetty.com</loc>
+    <lastmod>2025-10-25T17:52:01.597Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://hiteshshetty.com/projects</loc>
+    <lastmod>2025-10-25T17:52:01.597Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hiteshshetty.com/blogs</loc>
+    <lastmod>2025-10-25T17:52:01.597Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
+```
+
+## Part 4: Submitting Your Sitemap
+
+You've built the tags, the rules, and the map. There's one last step: giving the map to the explorers.
+
+Go to **Google Search Console** and **Bing Webmaster Tools**. Both are free. You'll have to verify you own your site (usually by adding a simple TXT record to your DNS).
+
+Once you're in, find the "Sitemaps" section and submit your sitemap URL: `https://your-website.com/sitemap.xml`
+
+That's it! You've officially told the search engines, "I'm open for business, and here's how to find everything."
+
+## Part 5: The "Rich Snippet" Secret (Structured Data)
+
+**Why does this matter?** It’s the code that unlocks “rich snippets” in Google search results. You know… the author’s photo next to an article, the recipe cook times, or the clean breadcrumb links. This is your single best way to stand out on the results page.
+
+### A Glimpse at the Code
+
+You add this by placing a `<script type="application/ld+json">` tag in your page's `<head>` or `<body>`. For this very blog post, I'd use the `BlogPosting` schema. It looks something like this:
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "My Site's SEO Score Was 82. Here's How I Got it to 100.",
+  "image": "https://www.your-portfolio.com/og-image-for-this-post.webp",
+  "author": {
+    "@type": "Person",
+    "name": "Your Name",
+    "url": "https://www.your-portfolio.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Your Site Name",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.your-portfolio.com/images/logo.png"
+    }
+  },
+  "datePublished": "2025-10-26"
+}
+</script>
+```
+
+This snippet explicitly tells Google, "This page is a blog post, here's the headline, here's the author, and here's the publisher." It removes all guesswork.
+
+### Your Homework
+
+This topic is huge, but it’s the final boss of on-page SEO. I implemented five types on my site to get everything covered.
+
+Your homework is to explore these. Go to <a href='https://schema.org/' target='_blank' rel='noopener noreferrer'>**Schema.org**</a> (the official source) and look them up. Ask yourself how you could apply them to your own site:
+
+*   **Person**: For your "About Me" page.
+*   **Organization**: For your overall site brand.
+*   **WebSite**: To enable the Sitelinks Search Box.
+*   **BreadcrumbList**: To show that `Home > Blog > Post` path in search results.
+*   **BlogPosting**: (Or `Article`) For every post you write.
+
+This was the final key to not just _getting_ the 100, but knowing my site was truly 100% understood by Google.
+
+## Conclusion
+
+After all that work, I held my breath and ran Lighthouse one last time.
+
+**SEO: 100**
+
+<Image className="mx-auto" src="/images/blogs/how-i-improved-seo-score-from-82-to-100/final-seo-report.webp" alt="Lighthouse score 100" width={800} height={630} />
+
+That beautiful, fully green circle. 🟢
+
+> **A quick note on patience:** That Lighthouse score is an _instant_ win, but the _real-world_ results on Google Search are not. It can take days or even weeks for Google to recrawl your site and for all these new changes to appear in search results. I’m still waiting to see all my new rich snippets show up in the wild!
+
+It turns out that getting from 82 to 100 wasn’t about some secret, dark art. It was just about being thorough. The perfect score is nice, but the real win is knowing my site is now set up correctly for search engines and social sharing, which was the whole point.
+
+### TL;DR: The 82 to 100 Checklist
+
+Here’s a quick summary of everything I did to get the perfect score:
+
+*   **Core Meta Tags:** Added `title`, `description`, `author`, and `keywords` to every page.
+*   **Canonical URLs:** Told Google the “one true” URL for each page to avoid duplicate content.
+*   **Open Graph & Twitter Tags:** Created the pretty preview cards for when my links are shared on social media.
+*   **Robots.txt:** Created a `robots.txt` file to give search bots the rules of my site.
+*   **Sitemap.xml:** Generated a `sitemap.xml` to hand Google a map of all my content.
+*   **Structured Data (JSON-LD):** Added schemas like `BlogPosting` and `Person` to give Google my site's "resume" for rich snippets.
+
+## What's Next?
+
+This whole SEO project was part of a bigger goal: adding a blog directly to my portfolio. My next post will be all about that adventure: *"How I built the blog support in Next.js and migrated all my existing articles from Medium."*

@@ -133,14 +133,15 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
                     Also available on Medium
                   </h3>
                   <p className="text-brand-navy/70 text-sm">
-                    This article is also published on Medium for wider reach.
+                    This article is also published on Medium for interaction and
+                    feedback.
                   </p>
                 </div>
                 <a
                   href={mediumUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors sm:text-base text-sm"
                 >
                   Read on Medium
                   <HiExternalLink size={16} />

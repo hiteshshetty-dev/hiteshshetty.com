@@ -1,5 +1,14 @@
 [
   {
+    "slug": "how-i-improved-seo-score-from-82-to-100",
+    "title": "My Site's SEO Score Was 82. Here's How I Got it to 100",
+    "description": "My portfolio's Lighthouse SEO score was stuck at 82. See the exact steps I took with meta tags, sitemaps, open graph, and structured data to get a perfect 100 score.",
+    "date": "2025-10-26",
+    "readingTime": "10 min read",
+    "url": "https://medium.com/@hitesh.shetty2011/my-sites-seo-score-was-82-here-s-how-i-got-it-to-100-9289ba5d5294",
+    "tags": ["SEO", "Lighthouse", "Performance", "Web Development", "Guides & Tutorials"]
+  },
+  {
     "slug": "deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain",
     "title": "Deploying a Next.js Static Site on GitHub Pages with a Custom Domain",
     "description": "A step‑by‑step guide to hosting a Next.js site on GitHub Pages with a custom domain",
