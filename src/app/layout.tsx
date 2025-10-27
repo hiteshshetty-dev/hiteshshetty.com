@@ -62,13 +62,24 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/icons/favicon.ico", sizes: "any" },
-      { url: "/icons/favicon-16x16.png", sizes: "16x16" },
-      { url: "/icons/favicon-32x32.png", sizes: "32x32" },
-      { url: "/icons/favicon-96x96.png", sizes: "96x96" },
+      {
+        url: "/icons/manifest-icon-512.maskable.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+      {
+        url: "/icons/manifest-icon-192.maskable.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      { url: "/icons/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icons/favicon.ico" },
+
       { url: "/icons/logo-navy.svg", type: "image/svg+xml" },
     ],
-    shortcut: "/icons/favicon.ico",
+    shortcut: [{ url: "/icons/favicon.ico" }],
     apple: "/icons/apple-icon-180.png",
   },
   manifest: "/manifest.json",
