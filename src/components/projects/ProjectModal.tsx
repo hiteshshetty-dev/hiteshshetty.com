@@ -135,6 +135,8 @@ export default function ProjectModal({
                     sizes="(max-width: 768px) 100vw, 600px"
                     onLoad={onImageLoad}
                     priority={currentImageIndex === 0}
+                    data-project-title={project.title}
+                    data-image-index={currentImageIndex}
                   />
                 </div>
 

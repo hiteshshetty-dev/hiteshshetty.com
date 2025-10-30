@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 import Analytics from "@/components/Analytics/Analytics";
+import ImageErrorTracker from "@/components/Analytics/ImageErrorTracker";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import profileData from "@/data/profile.json";
@@ -127,6 +128,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Analytics />
+        <ImageErrorTracker />
       </body>
     </html>
   );
