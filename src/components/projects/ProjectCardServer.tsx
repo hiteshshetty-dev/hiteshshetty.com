@@ -27,10 +27,10 @@ interface ProjectCardServerProps {
 
 export default function ProjectCardServer({ project }: ProjectCardServerProps) {
   return (
-    <div className="relative bg-white rounded-2xl border border-brand-navy/10 hover:shadow-xl transition-all duration-300 overflow-hidden group">
+    <div className="relative bg-white rounded-2xl border border-brand-navy/10 hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col h-full">
       <ProjectPreview previews={project.previews} title={project.title} />
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <ProjectTag type={project.type} company={project.company} />
 
         <h3 className="text-xl font-bold text-brand-navy font-sora mb-2 group-hover:text-brand-steel transition-colors">
@@ -41,7 +41,7 @@ export default function ProjectCardServer({ project }: ProjectCardServerProps) {
           {project.subtitle}
         </p>
 
-        <p className="text-brand-navy/70 text-sm leading-relaxed mb-4">
+        <p className="text-brand-navy/70 text-sm leading-relaxed mb-4 flex-1">
           {project.description}
         </p>
 
