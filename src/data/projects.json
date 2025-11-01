@@ -4,7 +4,7 @@
     "title": "Virtual IG",
     "subtitle": "Real-time Interview Platform",
     "description": "Developed a collaborative coding platform for remote technical interviews, featuring a real-time editor. Enabled live, multi-user code editing without screen sharing, improving interview experience for both interviewer and candidate.",
-    "tech": ["WebSockets", "Yjs", "Slate.js", "React", "Next.js"],
+    "tech": ["WebSockets", "Yjs", "Slate.js", "React", "Nest.js", "MongoDB"],
     "type": "personal",
     "featured": true,
     "links": {
@@ -20,7 +20,7 @@
     "title": "Offline Detector",
     "subtitle": "Open Source NPM Package",
     "description": "Built and published an open-source package to provide reliable offline/online detection in browsers, addressing inconsistencies across Chrome, Firefox, and Safari. Designed with a lightweight API and fallback strategies to ensure resilience in real-world network conditions.",
-    "tech": ["TypeScript", "Next.js", "npm"],
+    "tech": ["TypeScript", "Next.js", "Lerna", "Rollup", "npm"],
     "type": "personal",
     "featured": true,
     "links": {
