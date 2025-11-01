@@ -1,5 +1,6 @@
-import { HiExternalLink } from "react-icons/hi";
+import { CgNpm } from "react-icons/cg";
 import { SiGithub } from "react-icons/si";
+import { SlControlPlay } from "react-icons/sl";
 
 interface ProjectLinksProps {
   links?: {
@@ -19,12 +20,12 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
           href={links.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1 text-brand-navy/70 hover:text-brand-navy text-sm transition-colors"
+          className="inline-flex items-center gap-1 px-2 py-1 rounded-md border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/10 text-brand-navy/80 hover:text-brand-navy text-xs font-medium transition-all duration-200 [will-change:background-color,border-color]"
           aria-label="GitHub"
           data-umami-event="GitHub"
           data-umami-event-project-title={links.github}
         >
-          <SiGithub size={16} />
+          <SiGithub size={12} />
           <span>Code</span>
         </a>
       )}
@@ -33,12 +34,12 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
           href={links.demo}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1 text-brand-navy/70 hover:text-brand-navy text-sm transition-colors"
+          className="inline-flex items-center gap-1 px-2 py-1 rounded-md border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/10 text-brand-navy/80 hover:text-brand-navy text-xs font-medium transition-all duration-200 [will-change:background-color,border-color]"
           aria-label="Demo"
           data-umami-event="Demo"
           data-umami-event-project-title={links.demo}
         >
-          <HiExternalLink size={16} />
+          <SlControlPlay size={12} />
           <span>Demo</span>
         </a>
       )}
@@ -47,10 +48,10 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
           href={links.npm}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1 text-brand-navy/70 hover:text-brand-navy text-sm transition-colors"
+          className="inline-flex items-center gap-1 px-2 py-1 rounded-md border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/10 text-brand-navy/80 hover:text-brand-navy text-xs font-medium transition-all duration-200 [will-change:background-color,border-color]"
           aria-label="npm"
         >
-          <HiExternalLink size={16} />
+          <CgNpm size={14} />
           <span>npm</span>
         </a>
       )}
