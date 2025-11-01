@@ -85,7 +85,7 @@ export default function Skills() {
                   return (
                     <div
                       key={skill.name}
-                      className="flex flex-col items-center justify-center p-4 rounded-xl bg-brand-beige/50 hover:bg-brand-amber/10 hover:shadow-md transition-all duration-300 group"
+                      className="flex flex-col items-center justify-center p-4 rounded-xl bg-brand-beige/50 hover:bg-brand-amber/10 hover:shadow-md transition-all duration-300 group [will-change:background-color,box-shadow]"
                     >
                       {Icon && (
                         <Icon

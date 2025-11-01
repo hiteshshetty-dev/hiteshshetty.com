@@ -55,7 +55,7 @@ export default function FeaturedProjects() {
           >
             View All Projects
             <HiArrowRight
-              className="group-hover:translate-x-1 transition-transform"
+              className="group-hover:translate-x-1 transition-transform [will-change:transform]"
               size={20}
             />
           </Link>

@@ -63,6 +63,7 @@ h6 {
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
   opacity: 0;
+  will-change: transform, opacity;
 }
 
 /* biome-ignore-start lint/correctness/noUnknownFunction: Tailwind theme Prose theme customization */

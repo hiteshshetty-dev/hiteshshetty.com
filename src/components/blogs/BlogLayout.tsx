@@ -174,7 +174,7 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
                   <Link
                     key={blog.slug}
                     href={`/blogs/${blog.slug}`}
-                    className="group block p-6 bg-white rounded-lg border-2 border-brand-steel/10 hover:border-brand-amber/30 transition-all duration-200 hover:shadow-lg flex flex-col"
+                    className="group block p-6 bg-white rounded-lg border-2 border-brand-steel/10 hover:border-brand-amber/30 transition-all duration-200 hover:shadow-lg flex flex-col [will-change:transform,box-shadow]"
                   >
                     <h3 className="text-lg md:text-xl font-semibold text-brand-navy mb-2 group-hover:text-brand-steel transition-colors flex-1">
                       {blog.title}

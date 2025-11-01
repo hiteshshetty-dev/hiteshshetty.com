@@ -23,7 +23,7 @@ export default function OpenSource() {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-brand-beige/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border border-brand-navy/10 hover:border-brand-amber/50"
+              className="group block bg-brand-beige/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border border-brand-navy/10 hover:border-brand-amber/50 [will-change:transform,box-shadow]"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="w-12 h-12 rounded-xl bg-brand-navy flex items-center justify-center group-hover:bg-brand-steel transition-colors">

@@ -48,7 +48,7 @@ export default function Achievements() {
             return (
               <div
                 key={achievement.uuid}
-                className="bg-brand-beige/50 rounded-2xl p-6 border border-brand-navy/10 hover:shadow-lg transition-all duration-300"
+                className="bg-brand-beige/50 rounded-2xl p-6 border border-brand-navy/10 hover:shadow-lg transition-all duration-300 [will-change:box-shadow]"
               >
                 <div
                   className={`w-14 h-14 rounded-xl ${colors.bg} border-2 ${colors.border} flex items-center justify-center mb-4`}

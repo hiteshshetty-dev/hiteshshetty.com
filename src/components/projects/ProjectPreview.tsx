@@ -19,7 +19,7 @@ export default function ProjectPreview({
         src={previews[0]}
         alt={`Preview of ${title} project showing the application interface and functionality`}
         fill
-        className="object-cover group-hover:scale-105 transition-transform duration-300"
+        className="object-cover group-hover:scale-105 transition-transform duration-300 [will-change:transform]"
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         data-project-title={title}
       />

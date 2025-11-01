@@ -38,7 +38,7 @@ export default function ProjectCard({
     : "bg-brand-rust/10 hover:bg-brand-rust/20 text-brand-rust";
 
   return (
-    <div className="relative bg-white rounded-2xl border border-brand-navy/10 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col h-full">
+    <div className="relative bg-white rounded-2xl border border-brand-navy/10 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col h-full [will-change:transform,box-shadow]">
       <ProjectPreview previews={project.previews} title={project.title} />
 
       <div className="p-6 flex flex-col flex-1">
@@ -55,7 +55,7 @@ export default function ProjectCard({
           >
             <HiEye
               size={18}
-              className="group-hover:scale-110 transition-transform"
+              className="group-hover:scale-110 transition-transform [will-change:transform]"
             />
           </button>
         </div>

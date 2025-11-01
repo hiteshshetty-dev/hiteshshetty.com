@@ -31,7 +31,7 @@ export default function Experience() {
                   >
                     <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full bg-brand-amber border-4 border-white" />
 
-                    <div className="bg-brand-beige/50 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                    <div className="bg-brand-beige/50 rounded-2xl p-6 hover:shadow-lg transition-shadow [will-change:box-shadow]">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                         <h4 className="text-xl font-semibold text-brand-navy mb-2 md:mb-0">
                           {role.title}

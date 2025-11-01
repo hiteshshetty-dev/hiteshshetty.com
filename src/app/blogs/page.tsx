@@ -50,7 +50,7 @@ export default function BlogsPage() {
               <Link
                 key={blog.slug}
                 href={`/blogs/${blog.slug}`}
-                className="group block bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-brand-navy/10 hover:border-brand-amber/50"
+                className="group block bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-brand-navy/10 hover:border-brand-amber/50 [will-change:transform,box-shadow]"
                 data-umami-event="Blog Click"
                 data-umami-event-blog-title={blog.title}
               >
@@ -99,7 +99,7 @@ export default function BlogsPage() {
                     <div className="flex items-center gap-2 text-brand-steel font-medium">
                       <span>Read Article</span>
                       <HiExternalLink
-                        className="group-hover:translate-x-1 transition-transform"
+                        className="group-hover:translate-x-1 transition-transform [will-change:transform]"
                         size={18}
                       />
                     </div>

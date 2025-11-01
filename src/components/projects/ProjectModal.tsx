@@ -106,11 +106,11 @@ export default function ProjectModal({
             <div className="relative w-full max-w-2xl mx-auto mb-6">
               <div className="relative flex items-center justify-center rounded-xl overflow-hidden bg-brand-navy/5 border border-brand-navy/10 min-h-[350px]">
                 {isImageLoading && (
-                  <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-gradient-to-r from-brand-navy/5 via-brand-navy/10 to-brand-navy/5 animate-pulse">
+                  <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-gradient-to-r from-brand-navy/5 via-brand-navy/10 to-brand-navy/5 animate-pulse [will-change:opacity]">
                     <div className="flex flex-col items-center gap-4">
                       <div className="relative">
                         <div className="w-10 h-10 border-3 border-brand-navy/20 rounded-full"></div>
-                        <div className="absolute top-0 left-0 w-10 h-10 border-3 border-transparent border-t-brand-navy rounded-full animate-spin"></div>
+                        <div className="absolute top-0 left-0 w-10 h-10 border-3 border-transparent border-t-brand-navy rounded-full animate-spin [will-change:transform]"></div>
                       </div>
                       <p className="text-brand-navy/60 text-sm font-medium">
                         Loading preview...
@@ -120,7 +120,7 @@ export default function ProjectModal({
                 )}
 
                 <div
-                  className={`transition-all duration-500 ease-out ${
+                  className={`transition-all duration-500 ease-out [will-change:transform,opacity] ${
                     isImageLoading
                       ? "opacity-0 scale-95"
                       : "opacity-100 scale-100"

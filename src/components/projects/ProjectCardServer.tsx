@@ -27,7 +27,7 @@ interface ProjectCardServerProps {
 
 export default function ProjectCardServer({ project }: ProjectCardServerProps) {
   return (
-    <div className="relative bg-white rounded-2xl border border-brand-navy/10 hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col h-full">
+    <div className="relative bg-white rounded-2xl border border-brand-navy/10 hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col h-full [will-change:transform,box-shadow]">
       <ProjectPreview previews={project.previews} title={project.title} />
 
       <div className="p-6 flex flex-col flex-1">

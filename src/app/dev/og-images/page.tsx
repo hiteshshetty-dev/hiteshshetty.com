@@ -31,7 +31,7 @@ export default function OGImagesPage() {
           {blogs.map((blog) => (
             <div
               key={blog.slug}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow [will-change:box-shadow]"
             >
               <div className="p-6">
                 <h2 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
