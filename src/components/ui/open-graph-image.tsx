@@ -39,6 +39,9 @@ const OpenGraphImage = () => {
               Nest.js
             </span>
             <span className="px-4 py-2 bg-brand-amber text-brand-charcoal font-medium rounded-lg text-lg">
+              MongoDB
+            </span>
+            <span className="px-4 py-2 bg-brand-amber text-brand-charcoal font-medium rounded-lg text-lg">
               Full-Stack
             </span>
             <span className="px-4 py-2 bg-brand-amber text-brand-charcoal font-medium rounded-lg text-lg">

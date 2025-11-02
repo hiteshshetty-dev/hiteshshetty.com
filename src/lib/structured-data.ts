@@ -27,7 +27,10 @@ export function generatePersonSchema() {
     knowsAbout: [
       "React",
       "TypeScript",
+      "Next.js",
       "Node.js",
+      "NestJS",
+      "MongoDB",
       "JavaScript",
       "Full Stack Development",
       "Frontend Development",
@@ -38,6 +41,11 @@ export function generatePersonSchema() {
       "Stylex",
       "Visual Editing",
       "AI Integration",
+      "Microservices",
+      "Cloud Technologies",
+      "AWS",
+      "Docker",
+      "Kubernetes",
       "Distributed Systems",
     ],
     alumniOf: {
