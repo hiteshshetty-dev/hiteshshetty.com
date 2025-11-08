@@ -76,7 +76,7 @@ export default function Marquee() {
   ));
 
   return (
-    <section className="marquee-section bg-brand-steel/10 border-t border-brand-steel/20 py-4 overflow-hidden">
+    <section className="marquee-section bg-brand-steel/10 border-t border-brand-steel/20 py-2 lg:py-3 overflow-hidden">
       <div className="marquee-container">
         <div className="marquee-content">
           <MarqueeContentSpan separator={<Separator />}>
