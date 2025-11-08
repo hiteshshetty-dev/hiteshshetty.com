@@ -33,12 +33,6 @@ h6 {
   font-family: var(--font-sora), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-
 ::selection {
   background-color: var(--color-brand-amber);
   color: var(--color-brand-charcoal);
