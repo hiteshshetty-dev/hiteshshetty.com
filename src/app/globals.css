@@ -66,6 +66,42 @@ h6 {
   will-change: transform, opacity;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 40px,
+    black calc(100% - 40px),
+    transparent
+  );
+}
+
+.marquee-content {
+  display: inline-flex;
+  flex-shrink: 0;
+  animation: marquee 30s linear infinite;
+  margin-left: 0;
+  transition: margin-left 1s ease-out;
+  will-change: transform, margin-left;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+  margin-left: -30px; /* Smoothly move left when paused */
+}
+
 /* biome-ignore-start lint/correctness/noUnknownFunction: Tailwind theme Prose theme customization */
 .prose {
   --tw-prose-body: theme("colors.brand-navy / 0.8");

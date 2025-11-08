@@ -5,6 +5,7 @@ import Analytics from "@/components/Analytics/Analytics";
 import ImageErrorTracker from "@/components/Analytics/ImageErrorTracker";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import Marquee from "@/components/layout/Marquee";
 import profileData from "@/data/profile.json";
 
 const sora = Sora({
@@ -134,6 +135,7 @@ export default function RootLayout({
       <body className={`${sora.variable} ${inter.variable}`}>
         <Header />
         {children}
+        <Marquee />
         <Footer />
         <Analytics />
         <ImageErrorTracker />
