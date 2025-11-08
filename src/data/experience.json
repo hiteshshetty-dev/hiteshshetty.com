@@ -12,7 +12,7 @@
           "Led architecture and end-to-end development of the flagship Visual Editing Platform with a team of 5 engineers, driving system design, cross-team collaboration, and delivery timelines.",
           "Implemented a modular micro-frontend architecture using Module Federation and a lossless partial-data patching system, enabling secure real-time inline editing via iframe sandboxing and postMessage communication. Reduced redundant calls by 20% using React Query.",
           "Established a comprehensive testing framework using React Testing Library and Playwright, integrating Slack alerts, reducing regression issues by 15% and increasing release throughput by 20%.",
-          "Automated Starter App deployment pipeline using AWS API Gateway, SQS (with DLQ handling), and Lambda integrations, enabling isolated feature testing for stakeholders and cutting setup time by 60%.",
+          "Architected an automated Starter App deployment pipeline using AWS API Gateway, SQS with DLQ handling, Lambda, and ECR. The system forks repositories, deploys website using Contentstack Launch for stakeholder testing with email notifications.",
           "Co-led integration of Lytics CDP within Contentstack, delivering advanced visual dashboards using Highcharts and D3.js to provide actionable audience insights, enhancing the DXP customer experience and enabling data-driven decisions."
         ]
       },
