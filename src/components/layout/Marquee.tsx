@@ -76,14 +76,16 @@ export default function Marquee() {
   ));
 
   return (
-    <section className="bg-brand-steel/10 border-t border-brand-steel/20 py-4 overflow-hidden marquee-container">
-      <div className="marquee-content">
-        <MarqueeContentSpan separator={<Separator />}>
-          {marqueeContent}
-        </MarqueeContentSpan>
-        <MarqueeContentSpan separator={<Separator />} ariaHidden>
-          {marqueeContent}
-        </MarqueeContentSpan>
+    <section className="marquee-section bg-brand-steel/10 border-t border-brand-steel/20 py-4 overflow-hidden">
+      <div className="marquee-container">
+        <div className="marquee-content">
+          <MarqueeContentSpan separator={<Separator />}>
+            {marqueeContent}
+          </MarqueeContentSpan>
+          <MarqueeContentSpan separator={<Separator />} ariaHidden>
+            {marqueeContent}
+          </MarqueeContentSpan>
+        </div>
       </div>
     </section>
   );

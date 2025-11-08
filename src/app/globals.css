@@ -91,9 +91,9 @@ h6 {
   will-change: transform, margin-left;
 }
 
-.marquee-container:hover .marquee-content {
+.marquee-section:hover .marquee-content {
   animation-play-state: paused;
-  margin-left: -30px; /* Smoothly move left when paused */
+  margin-left: -30px;
 }
 
 /* biome-ignore-start lint/correctness/noUnknownFunction: Tailwind theme Prose theme customization */
