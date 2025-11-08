@@ -41,13 +41,7 @@
         "maxLength": 200
       }
     },
-    "required": [
-      "uuid",
-      "name",
-      "description",
-      "url",
-      "contributions"
-    ],
+    "required": ["uuid", "name", "description", "url", "contributions"],
     "additionalProperties": false
   }
 }

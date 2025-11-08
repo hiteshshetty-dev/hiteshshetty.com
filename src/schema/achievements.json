@@ -38,13 +38,7 @@
         "enum": ["project", "hackathon", "security"]
       }
     },
-    "required": [
-      "uuid",
-      "title",
-      "description",
-      "year",
-      "type"
-    ],
+    "required": ["uuid", "title", "description", "year", "type"],
     "additionalProperties": false
   }
 }

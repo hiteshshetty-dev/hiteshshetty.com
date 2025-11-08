@@ -4,7 +4,10 @@
   },
   "json.schemas": [
     {
-      "fileMatch": ["/src/schema/achievements.json", "/src/data/achievements.json"],
+      "fileMatch": [
+        "/src/schema/achievements.json",
+        "/src/data/achievements.json"
+      ],
       "url": "/src/schema/achievements.json"
     },
     {

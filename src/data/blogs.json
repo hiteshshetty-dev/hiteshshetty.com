@@ -6,7 +6,13 @@
     "date": "2025-10-26",
     "readingTime": "10 min read",
     "url": "https://medium.com/@hitesh.shetty2011/my-sites-seo-score-was-82-here-s-how-i-got-it-to-100-9289ba5d5294",
-    "tags": ["SEO", "Lighthouse", "Guides & Tutorials", "Open Graph & Twitter Cards", "Next.js"]
+    "tags": [
+      "SEO",
+      "Lighthouse",
+      "Guides & Tutorials",
+      "Open Graph & Twitter Cards",
+      "Next.js"
+    ]
   },
   {
     "slug": "deploying-a-next-js-static-site-on-github-pages-with-a-custom-domain",

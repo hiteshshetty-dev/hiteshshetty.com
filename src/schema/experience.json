@@ -59,22 +59,12 @@
               }
             }
           },
-          "required": [
-            "uuid",
-            "title",
-            "period",
-            "achievements"
-          ],
+          "required": ["uuid", "title", "period", "achievements"],
           "additionalProperties": false
         }
       }
     },
-    "required": [
-      "uuid",
-      "company",
-      "location",
-      "roles"
-    ],
+    "required": ["uuid", "company", "location", "roles"],
     "additionalProperties": false
   }
 }

@@ -37,24 +37,16 @@
                   "maxLength": 50
                 }
               },
-              "required": [
-                "name",
-                "icon"
-              ],
+              "required": ["name", "icon"],
               "additionalProperties": false
             }
           }
         },
-        "required": [
-          "name",
-          "skills"
-        ],
+        "required": ["name", "skills"],
         "additionalProperties": false
       }
     }
   },
-  "required": [
-    "categories"
-  ],
+  "required": ["categories"],
   "additionalProperties": false
 }
