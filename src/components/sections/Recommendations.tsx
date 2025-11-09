@@ -1,3 +1,4 @@
+import Image from "next/image";
 import recommendationsData from "@/data/recommendations.json";
 
 interface Recommendation {
@@ -5,7 +6,8 @@ interface Recommendation {
   recommenderName: string;
   recommenderTitle: string;
   recommenderCompany: string;
-  recommenderLinkedIn?: string;
+  recommenderLinkedIn: string;
+  recommenderProfilePhoto: string;
   relationship: string;
   recommendationText: string;
   date: string;
@@ -41,14 +43,14 @@ export default function Recommendations() {
 
                 <div className="border-t border-brand-navy/10 pt-6 mt-auto">
                   <div className="flex items-start gap-3 mb-3">
-                    <div className="w-12 h-12 rounded-full bg-brand-steel/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-brand-steel font-bold text-lg">
-                        {recommendation.recommenderName
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")
-                          .toUpperCase()}
-                      </span>
+                    <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 relative">
+                      <Image
+                        src={recommendation.recommenderProfilePhoto}
+                        alt={recommendation.recommenderName}
+                        width={48}
+                        height={48}
+                        className="object-cover"
+                      />
                     </div>
                     <div className="flex-1 min-w-0">
                       <a

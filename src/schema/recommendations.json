@@ -36,6 +36,12 @@
         "format": "uri",
         "description": "LinkedIn profile URL of the recommender"
       },
+      "recommenderProfilePhoto": {
+        "type": "string",
+        "description": "Path to the profile photo of the recommender (relative to public folder)",
+        "minLength": 1,
+        "maxLength": 200
+      },
       "relationship": {
         "type": "string",
         "description": "Professional relationship (e.g., 'worked together', 'reported to', 'managed')",
@@ -61,6 +67,8 @@
       "recommenderCompany",
       "relationship",
       "recommendationText",
+      "recommenderLinkedIn",
+      "recommenderProfilePhoto",
       "date"
     ],
     "additionalProperties": false

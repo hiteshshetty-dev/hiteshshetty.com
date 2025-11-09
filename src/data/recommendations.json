@@ -5,6 +5,7 @@
     "recommenderTitle": "SWE III",
     "recommenderCompany": "Google",
     "recommenderLinkedIn": "https://www.linkedin.com/in/ravi-lamkoti",
+    "recommenderProfilePhoto": "/images/recommenderProfile/ravi-lamkoti.jpeg",
     "relationship": "Worked together on the same team",
     "recommendationText": "I've been working with Hitesh right from college days working in same team of hackathons and projects. He has a keen interest in Technology. He brings his unique set of skills in the projects he works on. He is a person whom I would like to have in my team. He actively participates in the project and manages things which makes him a great asset to the team.",
     "date": "2022-07-30"
@@ -12,9 +13,10 @@
   {
     "uuid": "rec-002",
     "recommenderName": "Deepak Kharah",
-    "recommenderTitle": "Senior Engineer",
+    "recommenderTitle": "Senior Engineer II",
     "recommenderCompany": "Contentstack",
     "recommenderLinkedIn": "https://www.linkedin.com/in/deepakkharah",
+    "recommenderProfilePhoto": "/images/recommenderProfile/deepak-kharah.jpeg",
     "relationship": "Worked together on the same team",
     "recommendationText": "Hitesh and I started our career together in 2020. We worked together on different products that brought good fortune to the company. I would describe Hitesh as a dependable professional who can stay calm and lead the team whenever we would be in a critical situation.\n\nAs a developer, Hitesh is a great problem solver and an adaptive learner who would quickly grasp the tools and techniques and contribute to the team in no time.",
     "date": "2022-07-30"
@@ -25,6 +27,7 @@
     "recommenderTitle": "Software Engineer I",
     "recommenderCompany": "Contentstack",
     "recommenderLinkedIn": "https://www.linkedin.com/in/faraazb",
+    "recommenderProfilePhoto": "/images/recommenderProfile/faraaz-biyabani.jpeg",
     "relationship": "Worked together on the same team",
     "recommendationText": "I had the privilege of working with Hitesh for two years at Contentstack, where he was both a mentor to me and a leader for our team. During this time, he helped us grow from focusing on individual tasks to working together on bigger product goals.\n\nHitesh is a natural leader with a strong sense of ownership. What makes him stand out is how he balances shipping new features with taking care of tech debt and engineering backlog—he knows both are equally important for long-term success.\n\nThroughout our work on multiple visual building products for the Contentstack CMS, Hitesh didn't just lead from the sidelines. He wrote code, pushed for good engineering practices, and ensured alignment across different teams. His hands-on approach combined with strategic thinking made him essential to our product's success.\n\nAny team would be lucky to have Hitesh's leadership, technical skills, and dedication to both people and product.",
     "date": "2024-03-10"
