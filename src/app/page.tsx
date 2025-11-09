@@ -4,6 +4,7 @@ import Experience from "@/components/sections/Experience";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import Hero from "@/components/sections/Hero";
 import OpenSource from "@/components/sections/OpenSource";
+import Recommendations from "@/components/sections/Recommendations";
 import Skills from "@/components/sections/Skills";
 import JsonLd from "@/components/ui/JsonLd";
 import { generateHomePageSchema } from "@/lib/structured-data";
@@ -23,6 +24,7 @@ export default function Home() {
         <FeaturedProjects />
         <OpenSource />
         <Skills />
+        <Recommendations />
         <Achievements />
       </main>
     </>

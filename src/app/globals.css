@@ -114,6 +114,23 @@ h6 {
 }
 /* biome-ignore-end lint/correctness/noUnknownFunction: Tailwind theme Prose theme customization */
 
+.recommendation-blockquote {
+  position: relative;
+}
+
+.recommendation-blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.2em;
+  left: -0.1em;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--color-brand-steel);
+  opacity: 0.10;
+  font-family: var(--font-sora), system-ui, sans-serif;
+  font-weight: 700;
+}
+
 /* biome-ignore lint/suspicious/noUnknownAtRules: Tailwind utility */
 @utility prose {
   blockquote {
