@@ -37,6 +37,10 @@
     {
       "fileMatch": ["/src/schema/skills.json", "/src/data/skills.json"],
       "url": "/src/schema/skills.json"
+    },
+    {
+      "fileMatch": ["/src/schema/recommendations.json", "/src/data/recommendations.json"],
+      "url": "/src/schema/recommendations.json"
     }
   ]
 }
