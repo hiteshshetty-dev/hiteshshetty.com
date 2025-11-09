@@ -20,6 +20,8 @@ const marqueeMessages: (string | { text: string; bold?: boolean }[])[] = [
       text: "See a bug? I'd appreciate a heads-up!",
     },
   ],
+  [{ text: "Have an idea? Let's bring it to life." }],
+  [{ text: "Obsessed with clean code, fast load times, and a seamless UX." }],
 ];
 
 const renderMessage = (
