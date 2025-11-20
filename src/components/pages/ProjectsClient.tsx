@@ -3,9 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import { HiArrowLeft } from "react-icons/hi";
+import { SiGithub } from "react-icons/si";
+import OpenSourceCard from "@/components/opensource/OpenSourceCard";
 import ProjectModal from "@/components/projects/ProjectModal";
 import ProjectSection from "@/components/projects/ProjectSection";
 import JsonLd from "@/components/ui/JsonLd";
+import openSourceData from "@/data/opensource.json";
 import projectsData from "@/data/projects.json";
 import { generateBreadcrumbSchema } from "@/lib/structured-data";
 
@@ -117,6 +120,41 @@ export default function ProjectsClient() {
             variant="professional"
             onViewDetails={handleProjectSelect}
           />
+
+          <div className="mt-20">
+            <div className="mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy font-sora mb-4">
+                Open Source Contributions
+              </h2>
+              <p className="text-lg text-brand-navy/70">
+                Contributing to the developer community and maintaining
+                open-source projects
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {openSourceData.map((project) => (
+                <OpenSourceCard key={project.uuid} project={project} />
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-brand-navy/5 rounded-xl">
+                <SiGithub size={20} className="text-brand-navy" />
+                <span className="text-brand-navy font-medium">
+                  Find more on my{" "}
+                  <a
+                    href="https://github.com/hiteshshetty-dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-steel hover:text-brand-navy underline"
+                  >
+                    GitHub profile
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
 
