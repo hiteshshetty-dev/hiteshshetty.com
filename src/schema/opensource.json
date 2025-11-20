@@ -29,6 +29,10 @@
         "type": "string",
         "description": "Number of stars or popularity indicator"
       },
+      "weeklyDownloads": {
+        "type": "string",
+        "description": "Number of weekly downloads for npm packages"
+      },
       "url": {
         "type": "string",
         "format": "uri",
@@ -39,6 +43,11 @@
         "description": "Type of contributions made",
         "minLength": 1,
         "maxLength": 200
+      },
+      "professional": {
+        "type": "boolean",
+        "description": "Whether this is a professional open source package",
+        "default": false
       }
     },
     "required": ["uuid", "name", "description", "url", "contributions"],

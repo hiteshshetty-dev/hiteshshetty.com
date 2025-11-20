@@ -22,5 +22,25 @@
     "stars": "",
     "url": "https://github.com/hiteshshetty-dev/offline-detector",
     "contributions": "Author & Maintainer"
+  },
+  {
+    "uuid": "contentstack-live-preview-utils",
+    "name": "@contentstack/live-preview-utils",
+    "description": "Open-source package for real-time content preview and visual editing, connecting Contentstack with websites for live updates",
+    "stars": "",
+    "weeklyDownloads": "27k+",
+    "url": "https://github.com/contentstack/live-preview-sdk",
+    "contributions": "Maintainer",
+    "professional": true
+  },
+  {
+    "uuid": "contentstack-json-rte-serializer",
+    "name": "@contentstack/json-rte-serializer",
+    "description": "Open-source npm package for converting JSON Rich Text Editor content between JSON and HTML formats, enabling seamless data transformation",
+    "stars": "",
+    "weeklyDownloads": "23k+",
+    "url": "https://github.com/contentstack/json-rte-serializer",
+    "contributions": "Author",
+    "professional": true
   }
 ]
