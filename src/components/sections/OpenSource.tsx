@@ -3,6 +3,10 @@ import OpenSourceCard from "@/components/opensource/OpenSourceCard";
 import openSourceData from "@/data/opensource.json";
 
 export default function OpenSource() {
+  const personalOpenSource = openSourceData.filter(
+    (project) => !project.professional,
+  );
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +21,7 @@ export default function OpenSource() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {openSourceData.map((project) => (
+          {personalOpenSource.map((project) => (
             <OpenSourceCard key={project.uuid} project={project} />
           ))}
         </div>
