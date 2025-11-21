@@ -135,7 +135,11 @@ export default function ProjectsClient() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {openSourceData.map((project) => (
-                <OpenSourceCard key={project.uuid} project={project} />
+                <OpenSourceCard
+                  key={project.uuid}
+                  project={project}
+                  variant="projects"
+                />
               ))}
             </div>
 

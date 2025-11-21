@@ -14,15 +14,21 @@ interface OpenSourceProject {
 
 interface OpenSourceCardProps {
   project: OpenSourceProject;
+  variant?: "homepage" | "projects";
 }
 
-export default function OpenSourceCard({ project }: OpenSourceCardProps) {
+export default function OpenSourceCard({
+  project,
+  variant = "homepage",
+}: OpenSourceCardProps) {
+  const bgColor = variant === "projects" ? "bg-white" : "bg-brand-beige/50";
+
   return (
     <a
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block bg-brand-beige/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border border-brand-navy/10 hover:border-brand-amber/50 [will-change:transform,box-shadow] flex flex-col h-full"
+      className={`group block ${bgColor} rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border border-brand-navy/10 hover:border-brand-amber/50 [will-change:transform,box-shadow] flex flex-col h-full`}
     >
       <div className="flex items-start justify-between mb-4">
         <div className="w-12 h-12 rounded-xl bg-brand-navy flex items-center justify-center group-hover:bg-brand-steel transition-colors">
