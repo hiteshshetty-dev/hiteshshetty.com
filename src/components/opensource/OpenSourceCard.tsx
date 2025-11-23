@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { HiDownload, HiExternalLink, HiStar } from "react-icons/hi";
 import { SiGithub } from "react-icons/si";
 
@@ -10,6 +11,7 @@ interface OpenSourceProject {
   url: string;
   contributions: string;
   professional?: boolean;
+  icon?: string;
 }
 
 interface OpenSourceCardProps {
@@ -31,9 +33,21 @@ export default function OpenSourceCard({
       className={`group block ${bgColor} rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border border-brand-navy/10 hover:border-brand-amber/50 [will-change:transform,box-shadow] flex flex-col h-full`}
     >
       <div className="flex items-start justify-between mb-4">
-        <div className="w-12 h-12 rounded-xl bg-brand-navy flex items-center justify-center group-hover:bg-brand-steel transition-colors">
-          <SiGithub size={24} className="text-brand-beige" />
-        </div>
+        {project.icon ? (
+          <div className="w-12 h-12 rounded-xl flex items-center justify-center p-2 border border-brand-navy/10 bg-white">
+            <Image
+              src={project.icon}
+              alt={`${project.name} icon`}
+              width={48}
+              height={48}
+              className="object-contain w-full h-full"
+            />
+          </div>
+        ) : (
+          <div className="w-12 h-12 rounded-xl bg-brand-navy flex items-center justify-center group-hover:bg-brand-steel transition-colors">
+            <SiGithub size={24} className="text-brand-beige" />
+          </div>
+        )}
         <div className="flex items-center gap-2">
           {project.stars && (
             <div className="flex items-center gap-1 px-3 py-1 bg-brand-amber/20 rounded-full">

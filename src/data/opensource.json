@@ -9,7 +9,8 @@
   },
   {
     "uuid": "stylex",
-    "name": "Stylex (Meta)",
+    "name": "Stylex",
+    "icon": "/icons/meta-logomark.svg",
     "description": "Contributed enhancements and fixes to Meta's CSS-in-JS styling library",
     "stars": "8k+",
     "url": "https://github.com/facebook/stylex/pulls?q=is%3Apr+author%3Ahiteshshetty-dev",
@@ -25,8 +26,9 @@
   },
   {
     "uuid": "contentstack-live-preview-utils",
-    "name": "@contentstack/live-preview-utils",
+    "name": "Live Preview SDK",
     "description": "Open-source package for real-time content preview and visual editing, connecting Contentstack with websites for live updates",
+    "icon": "/icons/contentstack-logomark.svg",
     "stars": "",
     "weeklyDownloads": "27k+",
     "url": "https://github.com/contentstack/live-preview-sdk",
@@ -35,8 +37,9 @@
   },
   {
     "uuid": "contentstack-json-rte-serializer",
-    "name": "@contentstack/json-rte-serializer",
+    "name": "JSON RTE Serializer",
     "description": "Open-source npm package for converting JSON Rich Text Editor content between JSON and HTML formats, enabling seamless data transformation",
+    "icon": "/icons/contentstack-logomark.svg",
     "stars": "",
     "weeklyDownloads": "23k+",
     "url": "https://github.com/contentstack/json-rte-serializer",

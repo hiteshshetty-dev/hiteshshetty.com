@@ -48,6 +48,10 @@
         "type": "boolean",
         "description": "Whether this is a professional open source package",
         "default": false
+      },
+      "icon": {
+        "type": "string",
+        "description": "Complete URI or path string to the organization/project icon image"
       }
     },
     "required": ["uuid", "name", "description", "url", "contributions"],
