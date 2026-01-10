@@ -53,7 +53,7 @@ function RoleCard({ role, isLast = false }: { role: Role; isLast?: boolean }) {
 
 export default function Experience() {
   return (
-    <section className="py-20 bg-white">
+    <section data-testid="professional-experience-section" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-navy mb-4">
@@ -89,6 +89,7 @@ export default function Experience() {
                       <summary
                         className="cursor-pointer list-none flex justify-center"
                         aria-label={`Show ${additionalRoles.length} additional role${additionalRoles.length > 1 ? "s" : ""} at ${company.company}`}
+                        data-testid="experience-expand-button"
                       >
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/5 text-brand-navy hover:text-brand-navy font-medium transition-all duration-200">
                           <span>
