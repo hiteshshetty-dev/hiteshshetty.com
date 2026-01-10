@@ -5,7 +5,7 @@ import profileData from "@/data/profile.json";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-brand-beige py-20">
+    <section data-testid="hero-section" className="min-h-screen flex items-center justify-center bg-brand-beige py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <header className="text-center lg:text-left">
@@ -28,6 +28,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-brand-amber text-brand-charcoal font-medium rounded-lg hover:bg-brand-amber/90 transition-colors shadow-lg"
                 data-umami-event="Let's Talk"
+                data-testid="hero-lets-talk-link"
               >
                 <SiLinkedin size={20} />
                 Let's Talk
@@ -38,6 +39,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors shadow-lg"
                 data-umami-event="Download Resume"
+                data-testid="hero-resume-link"
               >
                 <HiEye size={20} />
                 View Resume
@@ -49,6 +51,7 @@ export default function Hero() {
                 href={`mailto:${profileData.email}`}
                 className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-navy/10 hover:bg-brand-navy hover:text-brand-beige text-brand-navy transition-all"
                 aria-label="Email"
+                data-testid="hero-email-link"
               >
                 <HiMail size={24} />
               </a>
@@ -58,6 +61,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-navy/10 hover:bg-brand-navy hover:text-brand-beige text-brand-navy transition-all"
                 aria-label="GitHub"
+                data-testid="hero-github-link"
               >
                 <SiGithub size={24} />
               </a>
@@ -67,6 +71,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-navy/10 hover:bg-brand-navy hover:text-brand-beige text-brand-navy transition-all"
                 aria-label="Codepen"
+                data-testid="hero-codepen-link"
               >
                 <SiCodepen size={24} />
               </a>
@@ -76,6 +81,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-navy/10 hover:bg-brand-navy hover:text-brand-beige text-brand-navy transition-all"
                 aria-label="LeetCode"
+                data-testid="hero-leetcode-link"
               >
                 <SiLeetcode size={24} />
               </a>
@@ -83,7 +89,7 @@ export default function Hero() {
           </header>
 
           <div className="flex justify-center lg:justify-end animate-fade-in-up [animation-delay:1s]">
-            <div className="relative w-96 h-96 md:w-[480px] md:h-[480px] rounded-3xl overflow-hidden border-4 border-brand-amber/30">
+            <div data-testid="hero-profile-image" className="relative w-96 h-96 md:w-[480px] md:h-[480px] rounded-3xl overflow-hidden border-4 border-brand-amber/30">
               <Image
                 src="/images/profile.webp"
                 alt={`Professional headshot of ${profileData.name}, ${profileData.title} based in ${profileData.location}`}
