@@ -24,20 +24,21 @@ test.describe("Homepage - Featured Projects Section", () => {
     const virtualIGCard = page.getByTestId("project-card-virtual-ig");
     await expect(virtualIGCard).toBeVisible();
     
-    const projectHeading = page.getByRole("heading", { name: "Virtual IG", level: 3 });
+    const projectHeading = virtualIGCard.getByRole("heading", { name: "Virtual IG", level: 3 });
     await expect(projectHeading).toBeVisible();
     
-    const projectType = page.getByTestId("project-type-tag-virtual-ig");
+    const projectType = virtualIGCard.getByTestId("project-type-tag-virtual-ig");
     await expect(projectType).toBeVisible();
     await expect(projectType).toContainText("Personal");
     
-    const subtitle = page.getByTestId("project-subtitle-virtual-ig");
+    const subtitle = virtualIGCard.getByTestId("project-subtitle-virtual-ig");
     await expect(subtitle).toBeVisible();
     await expect(subtitle).toContainText("Real-time Interview Platform");
   });
 
   test("should have Demo link for Virtual IG project", async ({ page }) => {
-    const demoLink = page.getByTestId("project-demo-link-virtual-ig");
+    const virtualIGCard = page.getByTestId("project-card-virtual-ig");
+    const demoLink = virtualIGCard.getByTestId("project-demo-link-virtual-ig");
     await expect(demoLink).toBeVisible();
     await expect(demoLink).toHaveAttribute("href", /virtual-ig-ui\.vercel\.app/);
   });
@@ -46,24 +47,26 @@ test.describe("Homepage - Featured Projects Section", () => {
     const offlineDetectorCard = page.getByTestId("project-card-offline-detector");
     await expect(offlineDetectorCard).toBeVisible();
     
-    const projectHeading = page.getByRole("heading", { name: "Offline Detector", level: 3 });
+    const projectHeading = offlineDetectorCard.getByRole("heading", { name: "Offline Detector", level: 3 });
     await expect(projectHeading).toBeVisible();
     
-    const subtitle = page.getByTestId("project-subtitle-offline-detector");
+    const subtitle = offlineDetectorCard.getByTestId("project-subtitle-offline-detector");
     await expect(subtitle).toBeVisible();
     await expect(subtitle).toContainText("Open Source NPM Package");
   });
 
   test("should have GitHub, Demo, and npm links for Offline Detector", async ({ page }) => {
-    const githubLink = page.getByTestId("project-github-link-offline-detector");
+    const offlineDetectorCard = page.getByTestId("project-card-offline-detector");
+    
+    const githubLink = offlineDetectorCard.getByTestId("project-github-link-offline-detector");
     await expect(githubLink).toBeVisible();
     await expect(githubLink).toHaveAttribute("href", "https://github.com/hiteshshetty-dev/offline-detector");
 
-    const demoLink = page.getByTestId("project-demo-link-offline-detector");
+    const demoLink = offlineDetectorCard.getByTestId("project-demo-link-offline-detector");
     await expect(demoLink).toBeVisible();
     await expect(demoLink).toHaveAttribute("href", "https://hiteshshetty-dev.github.io/offline-detector/");
 
-    const npmLink = page.getByTestId("project-npm-link-offline-detector");
+    const npmLink = offlineDetectorCard.getByTestId("project-npm-link-offline-detector");
     await expect(npmLink).toBeVisible();
     await expect(npmLink).toHaveAttribute("href", "https://www.npmjs.com/package/offline-detector");
   });
@@ -72,14 +75,14 @@ test.describe("Homepage - Featured Projects Section", () => {
     const visualEditingCard = page.getByTestId("project-card-visual-editing-platform");
     await expect(visualEditingCard).toBeVisible();
     
-    const projectHeading = page.getByRole("heading", { name: "Visual Editing Platform", level: 3 });
+    const projectHeading = visualEditingCard.getByRole("heading", { name: "Visual Editing Platform", level: 3 });
     await expect(projectHeading).toBeVisible();
     
-    const projectType = page.getByTestId("project-type-tag-visual-editing-platform");
+    const projectType = visualEditingCard.getByTestId("project-type-tag-visual-editing-platform");
     await expect(projectType).toBeVisible();
     await expect(projectType).toContainText("Professional");
     
-    const companyTag = page.getByTestId("project-company-tag-visual-editing-platform");
+    const companyTag = visualEditingCard.getByTestId("project-company-tag-visual-editing-platform");
     await expect(companyTag).toBeVisible();
     await expect(companyTag).toContainText("@ Contentstack");
   });
@@ -88,7 +91,7 @@ test.describe("Homepage - Featured Projects Section", () => {
     const jsonRTECard = page.getByTestId("project-card-json-rich-text-editor");
     await expect(jsonRTECard).toBeVisible();
     
-    const projectHeading = page.getByRole("heading", { name: "JSON Rich Text Editor", level: 3 });
+    const projectHeading = jsonRTECard.getByRole("heading", { name: "JSON Rich Text Editor", level: 3 });
     await expect(projectHeading).toBeVisible();
   });
 
