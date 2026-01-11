@@ -29,13 +29,13 @@ const colorMap: Record<string, { bg: string; icon: string; border: string }> = {
 
 export default function Achievements() {
   return (
-    <section className="py-20 bg-white">
+    <section data-testid="achievements-section" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-navy font-sora mb-4">
             Achievements & Awards
           </h2>
-          <p className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
+          <p data-testid="achievements-description" className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
             Recognition for innovation, security, and technical excellence
           </p>
         </div>
@@ -48,6 +48,7 @@ export default function Achievements() {
             return (
               <div
                 key={achievement.uuid}
+                data-testid={`achievement-card-${achievement.uuid}`}
                 className="bg-brand-beige/50 rounded-2xl p-6 border border-brand-navy/10 hover:shadow-lg transition-all duration-300 [will-change:box-shadow]"
               >
                 <div
@@ -56,7 +57,7 @@ export default function Achievements() {
                   {Icon && <Icon className={colors.icon} size={28} />}
                 </div>
 
-                <span className="inline-block px-3 py-1 rounded-full bg-brand-navy/10 text-brand-navy text-xs font-medium mb-3">
+                <span data-testid={`achievement-year-${achievement.uuid}`} className="inline-block px-3 py-1 rounded-full bg-brand-navy/10 text-brand-navy text-xs font-medium mb-3">
                   {achievement.year}
                 </span>
 
@@ -64,7 +65,7 @@ export default function Achievements() {
                   {achievement.title}
                 </h3>
 
-                <p className="text-brand-navy/70 text-sm leading-relaxed">
+                <p data-testid={`achievement-description-${achievement.uuid}`} className="text-brand-navy/70 text-sm leading-relaxed">
                   {achievement.description}
                 </p>
               </div>
