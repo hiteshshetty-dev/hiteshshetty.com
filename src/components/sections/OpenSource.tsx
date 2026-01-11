@@ -8,13 +8,13 @@ export default function OpenSource() {
   );
 
   return (
-    <section className="py-20 bg-white">
+    <section data-testid="open-source-section" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-navy font-sora mb-4">
             Open Source Contributions
           </h2>
-          <p className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
+          <p data-testid="open-source-description" className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
             Contributing to the developer community and maintaining open-source
             projects
           </p>
@@ -36,6 +36,7 @@ export default function OpenSource() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-steel hover:text-brand-navy underline"
+                data-testid="open-source-github-profile-link"
               >
                 GitHub profile
               </a>
