@@ -24,16 +24,17 @@ test.describe("Homepage - Open Source Contributions Section", () => {
     const slateCard = page.getByTestId("open-source-card-slate-js");
     await expect(slateCard).toBeVisible();
     
-    const contribution = page.getByRole("heading", { name: "Slate.js", level: 3 });
+    const contribution = slateCard.getByRole("heading", { name: "Slate.js", level: 3 });
     await expect(contribution).toBeVisible();
     
-    const description = page.getByTestId("open-source-description-slate-js");
+    const description = slateCard.getByTestId("open-source-description-slate-js");
     await expect(description).toBeVisible();
     await expect(description).toContainText("Contributed fixes to Slate.js");
   });
 
   test("should display stars count for Slate.js", async ({ page }) => {
-    const stars = page.getByTestId("open-source-stars-slate-js");
+    const slateCard = page.getByTestId("open-source-card-slate-js");
+    const stars = slateCard.getByTestId("open-source-stars-slate-js");
     await expect(stars).toBeVisible();
     await expect(stars).toContainText("30k+");
   });
@@ -47,12 +48,13 @@ test.describe("Homepage - Open Source Contributions Section", () => {
     const stylexCard = page.getByTestId("open-source-card-stylex");
     await expect(stylexCard).toBeVisible();
     
-    const contribution = page.getByRole("heading", { name: "Stylex", level: 3 });
+    const contribution = stylexCard.getByRole("heading", { name: "Stylex", level: 3 });
     await expect(contribution).toBeVisible();
   });
 
   test("should display stars count for Stylex", async ({ page }) => {
-    const stars = page.getByTestId("open-source-stars-stylex");
+    const stylexCard = page.getByTestId("open-source-card-stylex");
+    const stars = stylexCard.getByTestId("open-source-stars-stylex");
     await expect(stars).toBeVisible();
     await expect(stars).toContainText("8k+");
   });
@@ -66,16 +68,17 @@ test.describe("Homepage - Open Source Contributions Section", () => {
     const offlineDetectorCard = page.getByTestId("open-source-card-offline-detector");
     await expect(offlineDetectorCard).toBeVisible();
     
-    const project = page.getByRole("heading", { name: "Offline Detector", level: 3 });
+    const project = offlineDetectorCard.getByRole("heading", { name: "Offline Detector", level: 3 });
     await expect(project).toBeVisible();
     
-    const description = page.getByTestId("open-source-description-offline-detector");
+    const description = offlineDetectorCard.getByTestId("open-source-description-offline-detector");
     await expect(description).toBeVisible();
     await expect(description).toContainText("Open-source package for reliable offline");
   });
 
   test("should display contributions for Offline Detector", async ({ page }) => {
-    const contributions = page.getByTestId("open-source-contributions-offline-detector");
+    const offlineDetectorCard = page.getByTestId("open-source-card-offline-detector");
+    const contributions = offlineDetectorCard.getByTestId("open-source-contributions-offline-detector");
     await expect(contributions).toBeVisible();
     await expect(contributions).toContainText("Author & Maintainer");
   });
