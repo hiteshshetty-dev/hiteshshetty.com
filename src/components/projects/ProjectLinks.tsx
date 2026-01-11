@@ -8,9 +8,10 @@ interface ProjectLinksProps {
     demo?: string;
     npm?: string;
   };
+  projectUuid?: string;
 }
 
-export default function ProjectLinks({ links }: ProjectLinksProps) {
+export default function ProjectLinks({ links, projectUuid }: ProjectLinksProps) {
   if (!links?.github && !links?.demo && !links?.npm) return null;
 
   return (
@@ -24,6 +25,7 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
           aria-label="GitHub"
           data-umami-event="GitHub"
           data-umami-event-project-title={links.github}
+          data-testid={`project-github-link-${projectUuid}`}
         >
           <SiGithub size={12} />
           <span>Code</span>
@@ -38,6 +40,7 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
           aria-label="Demo"
           data-umami-event="Demo"
           data-umami-event-project-title={links.demo}
+          data-testid={`project-demo-link-${projectUuid}`}
         >
           <SlControlPlay size={12} />
           <span>Demo</span>
@@ -50,6 +53,7 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 px-2 py-1 rounded-md border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/10 text-brand-navy/80 hover:text-brand-navy text-xs font-medium transition-all duration-200 [will-change:background-color,border-color]"
           aria-label="npm"
+          data-testid={`project-npm-link-${projectUuid}`}
         >
           <CgNpm size={14} />
           <span>npm</span>

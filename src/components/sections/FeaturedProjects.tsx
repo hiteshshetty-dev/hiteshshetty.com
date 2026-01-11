@@ -26,13 +26,13 @@ export default function FeaturedProjects() {
   );
 
   return (
-    <section className="py-20 bg-brand-beige">
+    <section data-testid="featured-projects-section" className="py-20 bg-brand-beige">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-navy font-sora mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
+          <p data-testid="featured-projects-description" className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
             Showcase of my work in building scalable platforms and innovative
             solutions
           </p>
@@ -52,6 +52,7 @@ export default function FeaturedProjects() {
           <Link
             href="/projects"
             className="inline-flex items-center gap-2 px-8 py-3 bg-brand-navy text-brand-beige font-medium rounded-lg hover:bg-brand-navy/90 transition-colors shadow-lg group"
+            data-testid="featured-projects-view-all-link"
           >
             View All Projects
             <HiArrowRight

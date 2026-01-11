@@ -27,17 +27,20 @@ interface ProjectCardServerProps {
 
 export default function ProjectCardServer({ project }: ProjectCardServerProps) {
   return (
-    <div className="relative bg-white rounded-2xl border border-brand-navy/10 hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col h-full [will-change:transform,box-shadow]">
+    <div 
+      data-testid={`project-card-${project.uuid}`}
+      className="relative bg-white rounded-2xl border border-brand-navy/10 hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col h-full [will-change:transform,box-shadow]"
+    >
       <ProjectPreview previews={project.previews} title={project.title} />
 
       <div className="p-6 flex flex-col flex-1">
-        <ProjectTag type={project.type} company={project.company} />
+        <ProjectTag type={project.type} company={project.company} projectUuid={project.uuid} />
 
         <h3 className="text-xl font-bold text-brand-navy font-sora mb-2 group-hover:text-brand-steel transition-colors">
           {project.title}
         </h3>
 
-        <p className="text-sm text-brand-steel font-medium mb-3">
+        <p data-testid={`project-subtitle-${project.uuid}`} className="text-sm text-brand-steel font-medium mb-3">
           {project.subtitle}
         </p>
 
@@ -46,7 +49,7 @@ export default function ProjectCardServer({ project }: ProjectCardServerProps) {
         </p>
 
         <ProjectTechStack tech={project.tech} />
-        <ProjectLinks links={project.links} />
+        <ProjectLinks links={project.links} projectUuid={project.uuid} />
       </div>
     </div>
   );
