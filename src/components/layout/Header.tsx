@@ -26,11 +26,14 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-brand-navy/95 backdrop-blur-sm border-b border-brand-steel/20">
+    <header
+      data-testid="header"
+      className="sticky top-0 z-50 bg-brand-navy/95 backdrop-blur-sm border-b border-brand-steel/20"
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-8">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center" data-testid="header-logo-link">
               <Image
                 src="/icons/logo-inverted.svg"
                 alt="Hitesh Shetty Logo"
@@ -47,6 +50,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  data-testid={`header-nav-link-${link.label.toLowerCase()}`}
                   className={`font-medium transition-colors duration-200 ${
                     isActive(link.href)
                       ? "text-brand-amber border-b-2 border-brand-amber"
@@ -65,6 +69,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:inline-flex items-center gap-2 px-6 py-2 bg-brand-amber text-brand-charcoal font-medium rounded-lg hover:bg-brand-amber/90 transition-colors"
+              data-testid="header-lets-talk-link"
               data-umami-event="Let's Talk"
             >
               <SiLinkedin size={20} />
@@ -90,6 +95,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
+                  data-testid={`header-mobile-nav-link-${link.label.toLowerCase()}`}
                   className={`font-medium transition-colors duration-200 px-2 py-1 ${
                     isActive(link.href)
                       ? "text-brand-amber border-l-2 border-brand-amber pl-3"
@@ -104,6 +110,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex justify-center items-center gap-2 px-6 py-2 bg-brand-amber text-brand-charcoal font-medium rounded-lg hover:bg-brand-amber/90 transition-colors mt-2"
+                data-testid="header-mobile-lets-talk-link"
                 data-umami-event="Let's Talk"
               >
                 <SiLinkedin size={20} />
