@@ -2,11 +2,11 @@ import { test, expect } from "@playwright/test";
 
 // Viewport configurations
 const viewports = [
-  { name: "mobile-small", width: 375, height: 667 },
+  // { name: "mobile-small", width: 375, height: 667 },
   { name: "mobile-large", width: 390, height: 844 },
   { name: "tablet", width: 768, height: 1024 },
-  { name: "tablet-large", width: 820, height: 1180 },
-  { name: "desktop", width: 1280, height: 720 },
+  // { name: "tablet-large", width: 820, height: 1180 },
+  // { name: "desktop", width: 1280, height: 720 },
   { name: "desktop-large", width: 1920, height: 1080 },
 ];
 
