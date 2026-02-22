@@ -39,7 +39,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build with Next.js
-        run: npx --no-install next build
+        run: npm run build
+      - name: Install E2E dependencies
+        run: cd e2e && npm ci && npx playwright install chromium
+      - name: Start site for E2E
+        run: npx serve out -p 3000 &
+      - name: Wait for site
+        run: for i in $(seq 1 30); do curl -sf http://localhost:3000 > /dev/null && break; sleep 1; done
+      - name: Run E2E tests (Quick)
+        run: cd e2e && npm run test:quick
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

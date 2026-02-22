@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "playwright test",
+    "test": "playwright test --project=chromium",
+    "test:quick": "playwright test --project=chromium",
+    "test:deep": "playwright test",
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug"
   },

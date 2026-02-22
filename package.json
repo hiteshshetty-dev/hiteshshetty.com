@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
-    "validate": "node scripts/validate-schemas.js"
+    "validate": "node scripts/validate-schemas.js",
+    "e2e:pre": "npm run build && npx serve out -p 3000"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
@@ -32,6 +33,7 @@
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "lint-staged": "^16.2.3",
+    "serve": "^14.2.5",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.14",
     "typescript": "^5"
