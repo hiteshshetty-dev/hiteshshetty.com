@@ -11,6 +11,7 @@ import {
 import BlogJsonLd from "@/components/ui/BlogJsonLd";
 import blogsData from "@/data/blogs.json";
 import { getBlogCoverImage } from "@/lib/blog-utils";
+import ReadingProgressBar from "@/components/blogs/ReadingProgressBar";
 
 interface BlogLayoutProps {
   children: React.ReactNode;
@@ -38,6 +39,7 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
 
   return (
     <>
+      <ReadingProgressBar />
       {blogData && (
         <BlogJsonLd
           title={title}
@@ -120,7 +122,10 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
           </div>
         )}
 
-        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <article
+          className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8"
+          data-reading-content
+        >
           <div className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl prose-code:before:content-none prose-code:after:content-none max-w-none overflow-x-hidden">
             {children}
           </div>
