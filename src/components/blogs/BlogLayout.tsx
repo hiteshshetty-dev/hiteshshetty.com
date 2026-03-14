@@ -12,6 +12,7 @@ import BlogJsonLd from "@/components/ui/BlogJsonLd";
 import blogsData from "@/data/blogs.json";
 import { getBlogCoverImage } from "@/lib/blog-utils";
 import ReadingProgressBar from "@/components/blogs/ReadingProgressBar";
+import GiscusComments from "@/components/blogs/GiscusComments";
 
 interface BlogLayoutProps {
   children: React.ReactNode;
@@ -156,6 +157,8 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
             </div>
           )}
         </article>
+
+        <GiscusComments />
 
         <section className="bg-brand-navy/5 py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -143,6 +143,21 @@ The site is configured for static export and can be deployed to any static hosti
 
 ## Configuration
 
+### Blog comments (Giscus)
+
+Blog comments and reactions use [Giscus](https://giscus.app) (GitHub Discussions). To enable:
+
+1. Use **this repository** (the site repo). Enable **Discussions** in repo Settings → General → Features, and create a category (e.g. "Blog comments").
+2. Install the [Giscus GitHub app](https://github.com/apps/giscus) on this repo.
+3. Visit [giscus.app](https://giscus.app), select this repo and the category, set mapping to **pathname**, then copy the Repository ID and Category ID.
+4. Copy `.env.example` to `.env.local` and set:
+   - `NEXT_PUBLIC_GISCUS_REPO` – this repo, e.g. `hiteshshetty-dev/hiteshshetty.com`
+   - `NEXT_PUBLIC_GISCUS_REPO_ID` – from giscus.app
+   - `NEXT_PUBLIC_GISCUS_CATEGORY` – category name
+   - `NEXT_PUBLIC_GISCUS_CATEGORY_ID` – from giscus.app
+
+For production, set the same variables in your hosting provider’s environment.
+
 ### Next.js Configuration
 
 - Static export enabled for GitHub Pages compatibility
