@@ -81,7 +81,7 @@ const BlogOGImage = ({ blog }: BlogOGImageProps) => {
                 </div>
               </div>
               <div className="text-right">
-                <p className="text-xl text-brand-navy/70 font-medium">
+                <p className="text-xl text-brand-navy font-medium">
                   {new Date(blog.date).toLocaleDateString("en-US", {
                     month: "long",
                     day: "numeric",
@@ -106,7 +106,7 @@ const BlogOGImage = ({ blog }: BlogOGImageProps) => {
               />
             </div>
 
-            <p className="text-2xl text-brand-navy/70 font-medium text-center">
+            <p className="text-2xl text-brand-navy font-medium text-center">
               hiteshshetty.com
             </p>
           </div>

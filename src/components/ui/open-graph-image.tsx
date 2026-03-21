@@ -54,7 +54,7 @@ const OpenGraphImage = () => {
             </span>
           </div>
 
-          <p className="text-2xl text-brand-navy/70 font-medium">
+          <p className="text-2xl text-brand-navy font-medium">
             hiteshshetty.com
           </p>
         </div>

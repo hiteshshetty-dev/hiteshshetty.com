@@ -17,13 +17,19 @@ export default function Recommendations() {
   const recommendations = recommendationsData as Recommendation[];
 
   return (
-    <section data-testid="recommendations-section" className="py-20 bg-brand-beige/50">
+    <section
+      data-testid="recommendations-section"
+      className="py-20 bg-brand-beige/50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-navy mb-4">
             LinkedIn Recommendations
           </h2>
-          <p data-testid="recommendations-description" className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
+          <p
+            data-testid="recommendations-description"
+            className="text-lg text-brand-navy max-w-2xl mx-auto"
+          >
             What colleagues and peers say about working with me
           </p>
         </div>
@@ -37,7 +43,10 @@ export default function Recommendations() {
             >
               <div className="p-6 md:p-8 flex flex-col flex-1">
                 <blockquote className="flex-1 mb-6 min-h-0 recommendation-blockquote">
-                  <p data-testid={`recommendation-text-${recommendation.uuid}`} className="text-sm md:text-base text-brand-navy/90 leading-relaxed italic whitespace-pre-line max-h-[350px] overflow-y-auto pr-2">
+                  <p
+                    data-testid={`recommendation-text-${recommendation.uuid}`}
+                    className="text-sm md:text-base text-brand-navy/90 leading-relaxed italic whitespace-pre-line max-h-[350px] overflow-y-auto pr-2"
+                  >
                     {recommendation.recommendationText}
                   </p>
                 </blockquote>
@@ -67,14 +76,20 @@ export default function Recommendations() {
                           {recommendation.recommenderName}
                         </h3>
                       </a>
-                      <p data-testid={`recommendation-title-${recommendation.uuid}`} className="text-sm text-brand-steel mb-1">
+                      <p
+                        data-testid={`recommendation-title-${recommendation.uuid}`}
+                        className="text-sm text-brand-steel mb-1"
+                      >
                         {recommendation.recommenderTitle} @{" "}
                         {recommendation.recommenderCompany}
                       </p>
                     </div>
                   </div>
 
-                  <p data-testid={`recommendation-relationship-${recommendation.uuid}`} className="text-xs text-brand-navy/50 mt-3">
+                  <p
+                    data-testid={`recommendation-relationship-${recommendation.uuid}`}
+                    className="text-xs text-brand-navy mt-3"
+                  >
                     {recommendation.relationship} •{" "}
                     {new Date(recommendation.date).toLocaleDateString("en-US", {
                       month: "long",
