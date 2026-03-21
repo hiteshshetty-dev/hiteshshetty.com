@@ -19,6 +19,16 @@ interface BlogLayoutProps {
   slug: string;
 }
 
+const dateFormatOptions: Intl.DateTimeFormatOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+function formatDate(dateString: string): string {
+  return new Date(dateString).toLocaleDateString("en-US", dateFormatOptions);
+}
+
 export default function BlogLayout({ children, slug }: BlogLayoutProps) {
   const blogData = blogsData.find((blog) => blog.slug === slug);
 
@@ -29,14 +39,6 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
   const readingTime = blogData?.readingTime || "5 min read";
   const image = blogData ? getBlogCoverImage(blogData.slug) : undefined;
   const mediumUrl = blogData?.url;
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  };
 
   return (
     <>
@@ -118,6 +120,7 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
                 fill
                 className="object-cover"
                 priority
+                sizes="(max-width: 896px) 100vw, 896px"
               />
             </div>
           </div>

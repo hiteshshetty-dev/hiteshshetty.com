@@ -16,20 +16,17 @@ interface BlogOGImageProps {
   blog: Blog;
 }
 
+function truncateTitle(title: string, maxLength = 120): string {
+  if (title.length <= maxLength) return title;
+  return `${title.substring(0, maxLength).trim()}...`;
+}
+
+function truncateDescription(description: string, maxLength = 180): string {
+  if (description.length <= maxLength) return description;
+  return `${description.substring(0, maxLength).trim()}...`;
+}
+
 const BlogOGImage = ({ blog }: BlogOGImageProps) => {
-  const truncateTitle = (title: string, maxLength: number = 120) => {
-    if (title.length <= maxLength) return title;
-    return `${title.substring(0, maxLength).trim()}...`;
-  };
-
-  const truncateDescription = (
-    description: string,
-    maxLength: number = 180,
-  ) => {
-    if (description.length <= maxLength) return description;
-    return `${description.substring(0, maxLength).trim()}...`;
-  };
-
   const displayTags = blog.tags.slice(0, 4);
 
   return (

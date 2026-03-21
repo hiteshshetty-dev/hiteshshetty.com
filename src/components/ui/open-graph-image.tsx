@@ -12,7 +12,9 @@ const OpenGraphImage = () => {
             <Image
               src="/images/profile.webp"
               alt="Hitesh Shetty"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="320px"
             />
           </div>
         </div>
