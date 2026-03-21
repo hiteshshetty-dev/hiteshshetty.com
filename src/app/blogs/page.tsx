@@ -29,7 +29,7 @@ export default function BlogsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-brand-steel hover:text-brand-navy mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-brand-navy hover:text-brand-steel mb-8 transition-colors"
           >
             <HiArrowLeft size={20} />
             <span>Back to Home</span>

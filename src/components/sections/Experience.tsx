@@ -91,7 +91,6 @@ export default function Experience() {
                     <details className="group">
                       <summary
                         className="cursor-pointer list-none flex justify-center"
-                        aria-label={`Show ${additionalRoles.length} additional role${additionalRoles.length > 1 ? "s" : ""} at ${company.company}`}
                         data-testid="experience-expand-button"
                       >
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/5 text-brand-navy hover:text-brand-navy font-medium transition-all duration-200">
