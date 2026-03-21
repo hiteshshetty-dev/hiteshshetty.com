@@ -32,7 +32,11 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-8">
-            <Link href="/" className="flex items-center" data-testid="header-logo-link">
+            <Link
+              href="/"
+              className="flex items-center"
+              data-testid="header-logo-link"
+            >
               <Image
                 src="/icons/logo-inverted.svg"
                 alt="Hitesh Shetty Logo"
@@ -53,7 +57,7 @@ export default function Header() {
                   className={`font-medium transition-colors duration-200 ${
                     isActive(link.href)
                       ? "text-brand-amber border-b-2 border-brand-amber"
-                      : "text-brand-beige/80 hover:text-brand-amber"
+                      : "text-brand-beige hover:text-brand-amber"
                   }`}
                 >
                   {link.label}
@@ -71,7 +75,7 @@ export default function Header() {
               data-testid="header-lets-talk-link"
               data-umami-event="Let's Talk"
             >
-              <SiLinkedin size={20} />
+              <SiLinkedin size={20} aria-hidden className="shrink-0" />
               Let's Talk
             </a>
 
@@ -98,7 +102,7 @@ export default function Header() {
                   className={`font-medium transition-colors duration-200 px-2 py-1 ${
                     isActive(link.href)
                       ? "text-brand-amber border-l-2 border-brand-amber pl-3"
-                      : "text-brand-beige/80 hover:text-brand-amber"
+                      : "text-brand-beige hover:text-brand-amber"
                   }`}
                 >
                   {link.label}
@@ -112,7 +116,7 @@ export default function Header() {
                 data-testid="header-mobile-lets-talk-link"
                 data-umami-event="Let's Talk"
               >
-                <SiLinkedin size={20} />
+                <SiLinkedin size={20} aria-hidden className="shrink-0" />
                 Let's Talk
               </a>
             </div>
