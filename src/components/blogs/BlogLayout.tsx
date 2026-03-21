@@ -8,11 +8,11 @@ import {
   HiExternalLink,
   HiTag,
 } from "react-icons/hi";
+import GiscusComments from "@/components/blogs/GiscusComments";
+import ReadingProgressBar from "@/components/blogs/ReadingProgressBar";
 import BlogJsonLd from "@/components/ui/BlogJsonLd";
 import blogsData from "@/data/blogs.json";
 import { getBlogCoverImage } from "@/lib/blog-utils";
-import ReadingProgressBar from "@/components/blogs/ReadingProgressBar";
-import GiscusComments from "@/components/blogs/GiscusComments";
 
 interface BlogLayoutProps {
   children: React.ReactNode;
@@ -54,13 +54,13 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
           readingTime={readingTime}
         />
       )}
-      <div className="min-h-screen bg-brand-beige">
+      <main className="min-h-screen bg-brand-beige">
         <header className="bg-brand-navy text-brand-beige py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-4 mb-6">
               <Link
                 href="/blogs"
-                className="inline-flex items-center gap-2 text-brand-beige/80 hover:text-brand-amber transition-colors"
+                className="inline-flex items-center gap-2 text-brand-beige hover:text-brand-amber transition-colors"
               >
                 <HiArrowLeft size={20} />
                 Back to Blogs
@@ -78,7 +78,7 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
                 </p>
               )}
 
-              <div className="flex flex-wrap items-center gap-6 text-brand-beige/80">
+              <div className="flex flex-wrap items-center gap-6 text-brand-beige">
                 {publishedAt && (
                   <div className="flex items-center gap-2">
                     <HiCalendar size={18} />
@@ -141,7 +141,7 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
                   <h3 className="text-lg font-semibold text-brand-navy mb-2">
                     Also available on Medium
                   </h3>
-                  <p className="text-brand-navy/70 text-sm">
+                  <p className="text-brand-navy text-sm">
                     This article is also published on Medium for interaction and
                     feedback.
                   </p>
@@ -190,10 +190,10 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
                     <h3 className="text-lg md:text-xl font-semibold text-brand-navy mb-2 group-hover:text-brand-steel transition-colors flex-1">
                       {blog.title}
                     </h3>
-                    <p className="text-brand-navy/70 mb-3 line-clamp-2">
+                    <p className="text-brand-navy mb-3 line-clamp-2">
                       {blog.description}
                     </p>
-                    <div className="flex items-center gap-4 text-sm text-brand-navy/60 mt-auto">
+                    <div className="flex items-center gap-4 text-sm text-brand-steel mt-auto">
                       <span>{formatDate(blog.date)}</span>
                       <span>•</span>
                       <span>5 min read</span>
@@ -203,7 +203,7 @@ export default function BlogLayout({ children, slug }: BlogLayoutProps) {
             </div>
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 }
