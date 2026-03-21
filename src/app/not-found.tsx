@@ -6,8 +6,20 @@ export const metadata: Metadata = {
   title: "Page Not Found",
   description:
     "The page you're looking for doesn't exist. It might have been moved or deleted.",
-  alternates: {
-    canonical: "https://hiteshshetty.com/404",
+  robots: {
+    index: false,
+    follow: true,
+  },
+  openGraph: {
+    title: "Page Not Found - Hitesh Shetty",
+    description:
+      "The page you're looking for doesn't exist. It might have been moved or deleted.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Page Not Found - Hitesh Shetty",
+    description:
+      "The page you're looking for doesn't exist. It might have been moved or deleted.",
   },
 };
 
