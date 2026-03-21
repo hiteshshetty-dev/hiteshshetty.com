@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowLeft, HiCalendar, HiExternalLink } from "react-icons/hi";
@@ -7,12 +8,40 @@ import profileData from "@/data/profile.json";
 import { getBlogCoverImage } from "@/lib/blog-utils";
 import { generateBreadcrumbSchema } from "@/lib/structured-data";
 
-export const metadata = {
-  title: "Blogs",
-  description:
-    "Technical articles and insights on software development, React, TypeScript, and more",
+const url = "https://hiteshshetty.com/blogs";
+const title = "Blog Posts - Hitesh Shetty";
+const description =
+  "Technical articles and insights on software development, React, TypeScript, and more.";
+
+export const metadata: Metadata = {
+  title: "Blog Posts",
+  description,
   alternates: {
-    canonical: "https://hiteshshetty.com/blogs",
+    canonical: url,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url,
+    siteName: "Hitesh Shetty",
+    title,
+    description,
+    images: [
+      {
+        url: "/images/og-image.webp",
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/images/og-image.webp"],
+    creator: "@hiteshshettydev",
+    site: "@hiteshshettydev",
   },
 };
 
