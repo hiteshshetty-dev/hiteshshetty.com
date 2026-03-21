@@ -5,9 +5,12 @@ import profileData from "@/data/profile.json";
 
 export default function Hero() {
   return (
-    <section data-testid="hero-section" className="min-h-screen flex items-center justify-center bg-brand-beige py-20">
+    <section
+      data-testid="hero-section"
+      className="min-h-screen flex items-center justify-center bg-brand-beige py-20"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col-reverse gap-12 items-center lg:grid lg:grid-cols-2">
           <header className="text-center lg:text-left">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-brand-navy font-sora animate-fade-in-up">
               {profileData.name}
@@ -89,7 +92,10 @@ export default function Hero() {
           </header>
 
           <div className="flex justify-center lg:justify-end animate-fade-in-up [animation-delay:1s]">
-            <div data-testid="hero-profile-image" className="relative w-96 h-96 md:w-[480px] md:h-[480px] rounded-3xl overflow-hidden border-4 border-brand-amber/30">
+            <div
+              data-testid="hero-profile-image"
+              className="relative w-96 h-96 md:w-[480px] md:h-[480px] rounded-3xl overflow-hidden border-4 border-brand-amber/30"
+            >
               <Image
                 src="/images/profile.webp"
                 alt={`Professional headshot of ${profileData.name}, ${profileData.title} based in ${profileData.location}`}
