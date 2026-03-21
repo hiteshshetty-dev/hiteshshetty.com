@@ -75,7 +75,7 @@ export default function BlogsPage() {
           </div>
 
           <div className="space-y-6 mb-12">
-            {blogsData.map((blog) => (
+            {blogsData.map((blog, index) => (
               <Link
                 key={blog.slug}
                 href={`/blogs/${blog.slug}`}
@@ -91,6 +91,8 @@ export default function BlogsPage() {
                       fill
                       className="object-contain p-4"
                       sizes="(max-width: 768px) 100vw, 384px"
+                      priority={index === 0}
+                      fetchPriority={index === 0 ? "high" : "low"}
                     />
                   </div>
 
