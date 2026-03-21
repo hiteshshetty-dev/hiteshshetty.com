@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   outputFileTracingRoot: path.join(__dirname),
+  experimental: {
+    optimizePackageImports: ["react-icons"],
+  },
 };
 
 const withMDX = createMDX({
