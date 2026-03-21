@@ -29,7 +29,7 @@ export default function BlogsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-brand-navy/70 hover:text-brand-navy mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-brand-steel hover:text-brand-navy mb-8 transition-colors"
           >
             <HiArrowLeft size={20} />
             <span>Back to Home</span>
@@ -39,7 +39,7 @@ export default function BlogsPage() {
             <h1 className="text-4xl md:text-6xl font-bold text-brand-navy font-sora mb-4">
               Blog Posts
             </h1>
-            <p className="text-lg text-brand-navy/70 max-w-2xl">
+            <p className="text-lg text-brand-navy max-w-2xl">
               Technical articles, tutorials, and insights on software
               development. Read the full articles here or find them on Medium.
             </p>
@@ -66,7 +66,7 @@ export default function BlogsPage() {
                   </div>
 
                   <div className="flex-1 p-6 flex flex-col justify-center">
-                    <div className="flex items-center gap-2 text-brand-navy/60 text-sm mb-3">
+                    <div className="flex items-center gap-2 text-brand-steel text-sm mb-3">
                       <HiCalendar size={16} />
                       <time dateTime={blog.date}>
                         {new Date(blog.date).toLocaleDateString("en-US", {
@@ -81,7 +81,7 @@ export default function BlogsPage() {
                       {blog.title}
                     </h2>
 
-                    <p className="text-brand-navy/70 leading-relaxed mb-4">
+                    <p className="text-brand-navy leading-relaxed mb-4">
                       {blog.description}
                     </p>
 

@@ -23,7 +23,7 @@ export default function Error({
           Something went wrong
         </h2>
 
-        <p className="text-lg text-brand-navy/70 mb-8 max-w-md mx-auto">
+        <p className="text-lg text-brand-navy mb-8 max-w-md mx-auto">
           An unexpected error occurred. Please try again or return to the
           homepage.
         </p>
