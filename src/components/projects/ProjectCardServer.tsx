@@ -44,7 +44,7 @@ export default function ProjectCardServer({ project }: ProjectCardServerProps) {
           {project.subtitle}
         </p>
 
-        <p className="text-brand-navy/70 text-sm leading-relaxed mb-4 flex-1">
+        <p className="text-brand-navy text-sm leading-relaxed mb-4 flex-1">
           {project.description}
         </p>
 

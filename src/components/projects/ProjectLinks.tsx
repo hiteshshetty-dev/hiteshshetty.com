@@ -11,7 +11,10 @@ interface ProjectLinksProps {
   projectUuid?: string;
 }
 
-export default function ProjectLinks({ links, projectUuid }: ProjectLinksProps) {
+export default function ProjectLinks({
+  links,
+  projectUuid,
+}: ProjectLinksProps) {
   if (!links?.github && !links?.demo && !links?.npm) return null;
 
   return (
@@ -21,13 +24,12 @@ export default function ProjectLinks({ links, projectUuid }: ProjectLinksProps) 
           href={links.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 px-2 py-1 rounded-md border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/10 text-brand-navy/80 hover:text-brand-navy text-xs font-medium transition-all duration-200 [will-change:background-color,border-color]"
-          aria-label="GitHub"
+          className="inline-flex items-center gap-1 px-2 py-1 rounded-md border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/10 text-brand-navy text-xs font-medium transition-all duration-200 [will-change:background-color,border-color]"
           data-umami-event="GitHub"
           data-umami-event-project-title={links.github}
           data-testid={`project-github-link-${projectUuid}`}
         >
-          <SiGithub size={12} />
+          <SiGithub size={12} aria-hidden className="shrink-0" />
           <span>Code</span>
         </a>
       )}
@@ -36,13 +38,12 @@ export default function ProjectLinks({ links, projectUuid }: ProjectLinksProps) 
           href={links.demo}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 px-2 py-1 rounded-md border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/10 text-brand-navy/80 hover:text-brand-navy text-xs font-medium transition-all duration-200 [will-change:background-color,border-color]"
-          aria-label="Demo"
+          className="inline-flex items-center gap-1 px-2 py-1 rounded-md border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/10 text-brand-navy text-xs font-medium transition-all duration-200 [will-change:background-color,border-color]"
           data-umami-event="Demo"
           data-umami-event-project-title={links.demo}
           data-testid={`project-demo-link-${projectUuid}`}
         >
-          <SlControlPlay size={12} />
+          <SlControlPlay size={12} aria-hidden className="shrink-0" />
           <span>Demo</span>
         </a>
       )}
@@ -51,11 +52,10 @@ export default function ProjectLinks({ links, projectUuid }: ProjectLinksProps) 
           href={links.npm}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 px-2 py-1 rounded-md border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/10 text-brand-navy/80 hover:text-brand-navy text-xs font-medium transition-all duration-200 [will-change:background-color,border-color]"
-          aria-label="npm"
+          className="inline-flex items-center gap-1 px-2 py-1 rounded-md border border-brand-navy/20 hover:border-brand-amber/50 bg-white hover:bg-brand-amber/10 text-brand-navy text-xs font-medium transition-all duration-200 [will-change:background-color,border-color]"
           data-testid={`project-npm-link-${projectUuid}`}
         >
-          <CgNpm size={14} />
+          <CgNpm size={14} aria-hidden className="shrink-0" />
           <span>npm</span>
         </a>
       )}

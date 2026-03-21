@@ -35,7 +35,7 @@ export default function ProjectCard({
   const isPersonal = variant === "personal";
   const buttonColor = isPersonal
     ? "bg-brand-amber/10 hover:bg-brand-amber/20 text-brand-navy"
-    : "bg-brand-rust/10 hover:bg-brand-rust/20 text-brand-rust";
+    : "bg-brand-rust/10 hover:bg-brand-rust/20 text-brand-navy";
 
   return (
     <div
@@ -71,7 +71,7 @@ export default function ProjectCard({
           {project.subtitle}
         </p>
 
-        <p className="text-brand-navy/70 text-sm leading-relaxed mb-4 flex-1">
+        <p className="text-brand-navy text-sm leading-relaxed mb-4 flex-1">
           {project.description}
         </p>
 

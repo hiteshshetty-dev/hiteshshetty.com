@@ -89,7 +89,7 @@ export default function ProjectModal({
               {project.type === "professional" ? "Professional" : "Personal"}
             </span>
             {project.company && (
-              <span className="ml-2 text-xs text-brand-navy/60">
+              <span className="ml-2 text-xs text-brand-steel">
                 @ {project.company}
               </span>
             )}
@@ -112,7 +112,7 @@ export default function ProjectModal({
                         <div className="w-10 h-10 border-3 border-brand-navy/20 rounded-full"></div>
                         <div className="absolute top-0 left-0 w-10 h-10 border-3 border-transparent border-t-brand-navy rounded-full animate-spin [will-change:transform]"></div>
                       </div>
-                      <p className="text-brand-navy/60 text-sm font-medium">
+                      <p className="text-brand-steel text-sm font-medium">
                         Loading preview...
                       </p>
                     </div>

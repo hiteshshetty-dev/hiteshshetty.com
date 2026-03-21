@@ -46,12 +46,15 @@ export default function OpenSourceCard({
           </div>
         ) : (
           <div className="w-12 h-12 rounded-xl bg-brand-navy flex items-center justify-center group-hover:bg-brand-steel transition-colors">
-            <SiGithub size={24} className="text-brand-beige" />
+            <SiGithub size={24} className="text-brand-beige" aria-hidden />
           </div>
         )}
         <div className="flex items-center gap-2">
           {project.stars && (
-            <div data-testid={`open-source-stars-${project.uuid}`} className="flex items-center gap-1 px-3 py-1 bg-brand-amber/20 rounded-full">
+            <div
+              data-testid={`open-source-stars-${project.uuid}`}
+              className="flex items-center gap-1 px-3 py-1 bg-brand-amber/20 rounded-full"
+            >
               <HiStar className="text-brand-amber" size={16} />
               <span className="text-brand-navy text-sm font-medium">
                 {project.stars}
@@ -59,12 +62,15 @@ export default function OpenSourceCard({
             </div>
           )}
           {project.weeklyDownloads && (
-            <div data-testid={`open-source-downloads-${project.uuid}`} className="flex items-center gap-1 px-3 py-1 bg-brand-steel/10 rounded-full">
+            <div
+              data-testid={`open-source-downloads-${project.uuid}`}
+              className="flex items-center gap-1 px-3 py-1 bg-brand-steel/10 rounded-full"
+            >
               <HiDownload className="text-brand-steel" size={16} />
               <span className="text-brand-navy text-sm font-medium">
                 {project.weeklyDownloads}
               </span>
-              <span className="text-brand-navy/60 text-xs">weekly</span>
+              <span className="text-brand-navy text-xs">weekly</span>
             </div>
           )}
         </div>
@@ -74,17 +80,24 @@ export default function OpenSourceCard({
         {project.name}
       </h3>
 
-      <p data-testid={`open-source-description-${project.uuid}`} className="text-brand-navy/70 text-sm leading-relaxed mb-4 flex-1">
+      <p
+        data-testid={`open-source-description-${project.uuid}`}
+        className="text-brand-navy text-sm leading-relaxed mb-4 flex-1"
+      >
         {project.description}
       </p>
 
       <div className="flex items-center justify-between pt-4 border-t border-brand-navy/10">
-        <span data-testid={`open-source-contributions-${project.uuid}`} className="text-xs text-brand-navy/60 font-medium">
+        <span
+          data-testid={`open-source-contributions-${project.uuid}`}
+          className="text-xs text-brand-navy font-medium"
+        >
           {project.contributions}
         </span>
         <HiExternalLink
-          className="text-brand-navy/40 group-hover:text-brand-navy transition-colors"
+          className="text-brand-steel group-hover:text-brand-navy transition-colors"
           size={18}
+          aria-hidden
         />
       </div>
     </a>

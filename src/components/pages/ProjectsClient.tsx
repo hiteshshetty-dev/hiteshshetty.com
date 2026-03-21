@@ -90,7 +90,7 @@ export default function ProjectsClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-brand-navy/70 hover:text-brand-navy mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-brand-steel hover:text-brand-navy mb-8 transition-colors"
           >
             <HiArrowLeft size={20} />
             <span>Back to Home</span>
@@ -100,7 +100,7 @@ export default function ProjectsClient() {
             <h1 className="text-4xl md:text-6xl font-bold text-brand-navy font-sora mb-4">
               Projects
             </h1>
-            <p className="text-lg text-brand-navy/70">
+            <p className="text-lg text-brand-navy">
               A collection of professional work and personal projects showcasing
               my expertise in full-stack development, system design, and
               problem-solving.
@@ -127,7 +127,7 @@ export default function ProjectsClient() {
                 <span className="w-2 h-8 bg-brand-steel rounded-full"></span>
                 Open Source Contributions
               </h2>
-              <p className="text-lg text-brand-navy/70">
+              <p className="text-lg text-brand-navy">
                 Contributing to the developer community and maintaining
                 open-source projects
               </p>
@@ -145,14 +145,14 @@ export default function ProjectsClient() {
 
             <div className="mt-12 text-center">
               <div className="inline-flex items-center gap-2 px-6 py-3 bg-brand-navy/5 rounded-xl">
-                <SiGithub size={20} className="text-brand-navy" />
+                <SiGithub size={20} className="text-brand-navy" aria-hidden />
                 <span className="text-brand-navy font-medium">
                   Find more on my{" "}
                   <a
                     href="https://github.com/hiteshshetty-dev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-brand-steel hover:text-brand-navy underline"
+                    className="text-brand-navy underline decoration-brand-steel underline-offset-2 hover:decoration-brand-navy"
                   >
                     GitHub profile
                   </a>
