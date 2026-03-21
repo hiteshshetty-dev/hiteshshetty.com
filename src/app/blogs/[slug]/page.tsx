@@ -19,6 +19,7 @@ export async function generateMetadata({
     return {
       title: "Blog Post Not Found",
       description: "The requested blog post could not be found.",
+      robots: { index: false, follow: true },
     };
   }
 
@@ -64,7 +65,8 @@ export async function generateMetadata({
       title,
       description,
       images: [ogImageUrl],
-      creator: "@hiteshshetty_dev",
+      creator: "@hiteshshettydev",
+      site: "@hiteshshettydev",
     },
   };
 }
