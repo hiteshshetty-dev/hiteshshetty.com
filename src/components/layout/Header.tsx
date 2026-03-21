@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { SiLinkedin } from "react-icons/si";
+import LogoMarkInverted from "@/components/layout/LogoMarkInverted";
 import profileData from "@/data/profile.json";
 
 const navLinks = [
@@ -36,16 +36,9 @@ export default function Header() {
               href="/"
               className="flex items-center"
               data-testid="header-logo-link"
+              aria-label="Hitesh Shetty — Home"
             >
-              <Image
-                src="/icons/logo-inverted.svg"
-                alt="Hitesh Shetty Logo"
-                width={40}
-                height={40}
-                className="w-10 h-10"
-                priority
-                fetchPriority="high"
-              />
+              <LogoMarkInverted className="w-10 h-10 shrink-0" />
             </Link>
 
             <div className="hidden md:flex items-center space-x-10">
