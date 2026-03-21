@@ -8,16 +8,15 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { SiLinkedin } from "react-icons/si";
 import profileData from "@/data/profile.json";
 
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/projects", label: "Projects" },
+  { href: "/blogs", label: "Blogs" },
+] as const;
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/projects", label: "Projects" },
-    { href: "/blogs", label: "Blogs" },
-  ];
-
   const isActive = (href: string) => {
     if (href === "/") {
       return pathname === "/";

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const ARTICLE_SELECTOR = "[data-reading-content]";
 
@@ -22,10 +22,15 @@ function getProgress(): number {
 }
 
 export default function ReadingProgressBar() {
-  const [progress, setProgress] = useState(0);
+  const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const updateProgress = () => setProgress(getProgress());
+    const updateProgress = () => {
+      const node = barRef.current;
+      if (node) {
+        node.style.transform = `scaleX(${getProgress()})`;
+      }
+    };
 
     updateProgress();
 
@@ -44,9 +49,10 @@ export default function ReadingProgressBar() {
       aria-hidden
     >
       <div
+        ref={barRef}
         className="h-full bg-brand-amber transition-[transform] duration-100 ease-out"
         style={{
-          transform: `scaleX(${progress})`,
+          transform: "scaleX(0)",
           transformOrigin: "left",
         }}
       />
