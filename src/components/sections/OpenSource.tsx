@@ -14,7 +14,10 @@ export default function OpenSource() {
           <h2 className="text-4xl md:text-5xl font-bold text-brand-navy font-sora mb-4">
             Open Source Contributions
           </h2>
-          <p data-testid="open-source-description" className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
+          <p
+            data-testid="open-source-description"
+            className="text-lg text-brand-navy max-w-2xl mx-auto"
+          >
             Contributing to the developer community and maintaining open-source
             projects
           </p>
@@ -28,14 +31,14 @@ export default function OpenSource() {
 
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-brand-navy/5 rounded-xl">
-            <SiGithub size={20} className="text-brand-navy" />
+            <SiGithub size={20} className="text-brand-navy" aria-hidden />
             <span className="text-brand-navy font-medium">
               Find more on my{" "}
               <a
                 href="https://github.com/hiteshshetty-dev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-steel hover:text-brand-navy underline"
+                className="text-brand-navy underline decoration-brand-steel underline-offset-2 hover:decoration-brand-navy"
                 data-testid="open-source-github-profile-link"
               >
                 GitHub profile

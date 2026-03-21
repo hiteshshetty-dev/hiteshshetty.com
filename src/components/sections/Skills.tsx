@@ -64,7 +64,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-bold text-brand-navy font-sora mb-4">
             Skills & Technologies
           </h2>
-          <p className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
+          <p className="text-lg text-brand-navy max-w-2xl mx-auto">
             Tools and technologies I work with to build modern applications
           </p>
         </div>

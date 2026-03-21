@@ -59,7 +59,7 @@ const MarqueeContentSpan = ({
   ariaHidden = false,
 }: MarqueeContentSpanProps) => (
   <span
-    className="text-brand-navy/70 text-xs sm:text-sm whitespace-nowrap font-medium inline-flex items-center"
+    className="text-brand-navy text-xs sm:text-sm whitespace-nowrap font-medium inline-flex items-center"
     aria-hidden={ariaHidden}
   >
     {children}

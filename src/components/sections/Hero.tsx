@@ -17,7 +17,7 @@ export default function Hero() {
               {profileData.title}
             </h2>
 
-            <p className="text-lg md:text-xl text-brand-navy/70 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up [animation-delay:0.4s]">
+            <p className="text-lg md:text-xl text-brand-navy mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up [animation-delay:0.4s]">
               {profileData.bio}
             </p>
 

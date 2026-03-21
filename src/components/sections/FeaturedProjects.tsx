@@ -32,7 +32,7 @@ export default function FeaturedProjects() {
           <h2 className="text-4xl md:text-5xl font-bold text-brand-navy font-sora mb-4">
             Featured Projects
           </h2>
-          <p data-testid="featured-projects-description" className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
+          <p data-testid="featured-projects-description" className="text-lg text-brand-navy max-w-2xl mx-auto">
             Showcase of my work in building scalable platforms and innovative
             solutions
           </p>

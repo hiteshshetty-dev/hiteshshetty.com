@@ -35,7 +35,7 @@ export default function Achievements() {
           <h2 className="text-4xl md:text-5xl font-bold text-brand-navy font-sora mb-4">
             Achievements & Awards
           </h2>
-          <p data-testid="achievements-description" className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
+          <p data-testid="achievements-description" className="text-lg text-brand-navy max-w-2xl mx-auto">
             Recognition for innovation, security, and technical excellence
           </p>
         </div>
@@ -65,7 +65,7 @@ export default function Achievements() {
                   {achievement.title}
                 </h3>
 
-                <p data-testid={`achievement-description-${achievement.uuid}`} className="text-brand-navy/70 text-sm leading-relaxed">
+                <p data-testid={`achievement-description-${achievement.uuid}`} className="text-brand-navy text-sm leading-relaxed">
                   {achievement.description}
                 </p>
               </div>

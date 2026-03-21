@@ -9,7 +9,7 @@ export default function Education() {
           <h2 className="text-4xl md:text-5xl font-bold text-brand-navy font-sora mb-4">
             Education
           </h2>
-          <p className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
+          <p className="text-lg text-brand-navy max-w-2xl mx-auto">
             Academic background and qualifications
           </p>
         </div>
@@ -37,11 +37,11 @@ export default function Education() {
                   </p>
 
                   <div className="flex flex-wrap gap-4 mb-4">
-                    <div className="flex items-center gap-2 text-brand-navy/70">
+                    <div className="flex items-center gap-2 text-brand-navy">
                       <HiLocationMarker size={18} />
                       <span className="text-sm">{edu.location}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-brand-navy/70">
+                    <div className="flex items-center gap-2 text-brand-navy">
                       <HiCalendar size={18} />
                       <span className="text-sm">{edu.period}</span>
                     </div>
@@ -52,7 +52,7 @@ export default function Education() {
                     <span className="text-brand-navy font-bold text-lg">
                       {edu.cgpa}
                     </span>
-                    <span className="text-brand-navy/70 text-sm">/ 10</span>
+                    <span className="text-brand-navy text-sm">/ 10</span>
                   </div>
                 </div>
               </div>

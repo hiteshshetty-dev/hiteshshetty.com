@@ -14,7 +14,7 @@ function RoleContent({ role }: { role: { achievements: string[] } }) {
       {role.achievements.map((achievement) => (
         <li
           key={achievement}
-          className="flex items-start gap-3 text-brand-navy/80"
+          className="flex items-start gap-3 text-brand-navy"
         >
           <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-brand-rust mt-2" />
           <span className="leading-relaxed">{achievement}</span>
@@ -53,13 +53,16 @@ function RoleCard({ role, isLast = false }: { role: Role; isLast?: boolean }) {
 
 export default function Experience() {
   return (
-    <section data-testid="professional-experience-section" className="py-20 bg-white">
+    <section
+      data-testid="professional-experience-section"
+      className="py-20 bg-white"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-navy mb-4">
             Professional Experience
           </h2>
-          <p className="text-lg text-brand-navy/70 max-w-2xl mx-auto">
+          <p className="text-lg text-brand-navy max-w-2xl mx-auto">
             My journey in software engineering and product development
           </p>
         </div>
