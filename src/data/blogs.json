@@ -5,7 +5,7 @@
     "description": "Every pull request sat for about 15 minutes behind one long unit-test job, and the team felt it. Splitting Vitest across parallel shards in GitHub Actions cut that to roughly 4 minutes, and it only took changing four files.",
     "date": "2026-06-25",
     "readingTime": "7 min read",
-    "url": "https://medium.com/@hitesh.shetty2011",
+    "url": "https://medium.com/@hitesh.shetty2011/the-waiting-tax-on-every-pr-how-sharding-vitest-cut-ci-from-15-minutes-to-4-5-0e552f91253b",
     "tags": [
       "CI/CD",
       "GitHub Actions",
