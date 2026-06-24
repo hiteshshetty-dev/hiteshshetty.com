@@ -1,5 +1,20 @@
 [
   {
+    "slug": "test-sharding-cut-our-ci-wait-from-15-minutes-to-4",
+    "title": "The Waiting Tax on Every PR: How Sharding Vitest Cut CI From 15 Minutes to 4.5",
+    "description": "Every pull request sat for about 15 minutes behind one long unit-test job, and the team felt it. Splitting Vitest across parallel shards in GitHub Actions cut that to roughly 4 minutes, and it only took changing four files.",
+    "date": "2026-06-25",
+    "readingTime": "7 min read",
+    "url": "https://medium.com/@hitesh.shetty2011",
+    "tags": [
+      "CI/CD",
+      "GitHub Actions",
+      "Vitest",
+      "Testing",
+      "Developer Experience"
+    ]
+  },
+  {
     "slug": "how-i-improved-seo-score-from-82-to-100",
     "title": "My Site's SEO Score Was 82. Here's How I Got it to 100",
     "description": "My portfolio's Lighthouse SEO score was stuck at 82. See the exact steps I took with meta tags, sitemaps, open graph, and structured data to get a perfect 100 score.",
