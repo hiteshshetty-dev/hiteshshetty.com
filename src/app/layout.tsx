@@ -120,6 +120,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://hiteshshetty.com",
+    types: {
+      "application/rss+xml": [
+        { url: "/rss.xml", title: "Hitesh Shetty's Blog" },
+      ],
+    },
   },
   category: "technology",
   classification: "Portfolio Website",

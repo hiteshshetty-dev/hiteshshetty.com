@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { HiArrowLeft, HiCalendar, HiExternalLink } from "react-icons/hi";
+import { HiArrowLeft, HiCalendar, HiExternalLink, HiRss } from "react-icons/hi";
 import JsonLd from "@/components/ui/JsonLd";
 import blogsData from "@/data/blogs.json";
 import profileData from "@/data/profile.json";
@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   description,
   alternates: {
     canonical: url,
+    types: {
+      "application/rss+xml": [
+        { url: "/rss.xml", title: "Hitesh Shetty's Blog" },
+      ],
+    },
   },
   openGraph: {
     type: "website",
@@ -65,9 +70,23 @@ export default function BlogsPage() {
           </Link>
 
           <div className="mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-brand-navy font-sora mb-4">
-              Blog Posts
-            </h1>
+            <div className="flex items-start justify-between gap-4 mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-brand-navy font-sora">
+                Blog Posts
+              </h1>
+              <a
+                href="/rss.xml"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Subscribe via RSS"
+                title="Subscribe via RSS"
+                data-umami-event="RSS Click"
+                className="inline-flex items-center gap-2 flex-shrink-0 px-3 py-2 rounded-lg border border-brand-navy/15 text-brand-navy hover:text-brand-amber hover:border-brand-amber/50 transition-colors"
+              >
+                <HiRss size={20} />
+                <span className="hidden sm:inline text-sm font-medium">RSS</span>
+              </a>
+            </div>
             <p className="text-lg text-brand-navy max-w-2xl">
               Technical articles, tutorials, and insights on software
               development. Read the full articles here or find them on Medium.

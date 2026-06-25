@@ -12,6 +12,11 @@ import { generateHomePageSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://hiteshshetty.com",
+    types: {
+      "application/rss+xml": [
+        { url: "/rss.xml", title: "Hitesh Shetty's Blog" },
+      ],
+    },
   },
 };
 export default function Home() {
