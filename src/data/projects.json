@@ -36,8 +36,8 @@
   {
     "uuid": "visual-editing-platform",
     "title": "Visual Editing Platform",
-    "subtitle": "Seemless Content Editing Platform",
-    "description": "Led development of the flagship Visual Editing Platform using Module Federation, enabling secure real-time inline editing with iframe sandboxing and post-message communication, optimized with React Query.",
+    "subtitle": "Seamless Content Editing Platform",
+    "description": "Led development of the flagship Visual Editing Platform using Module Federation, enabling secure real-time inline editing with iframe sandboxing and postMessage communication, optimized with React Query.",
     "tech": [
       "React",
       "Module Federation",
@@ -60,7 +60,7 @@
     "title": "JSON Rich Text Editor",
     "subtitle": "Advanced Document Editor",
     "description": "Designed and developed a JSON-based Rich Text Editor with advanced features such as drag-and-drop, table support, and seamless copy-paste from Google Docs and MS Word.",
-    "tech": ["React", "State.js", "React-DND", "Prism.js", "Storybook"],
+    "tech": ["React", "Slate.js", "React-DND", "Prism.js", "Storybook"],
     "type": "professional",
     "featured": true,
     "company": "Contentstack",
